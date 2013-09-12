@@ -1,9 +1,255 @@
 <!DOCTYPE html>
-<html>
+
+<!--[if lt IE 7 ]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
-    <title></title>
+    <meta charset="utf-8">
+    <title>Wojtek Erbetowski</title>
+    <script src="js/lib/modernizr.min.js"></script>
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="shortcut icon" href="/img/favicon.png" type="image/png" />
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-22993484-1']);
+        _gaq.push(['_setDomainName', 'erbetowski.pl']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
 </head>
 <body>
+<div id="page">
 
+<header id="header">
+    <hgroup id="logo">
+        <h1>Wojtek Erbetowski</h1>
+    </hgroup>
+
+    <nav id="nav">
+        <h1>Navigation</h1>
+        <ul>
+            <li class="blog"><a href="#/blog"><b></b><span>Blog</span></a></li>
+            <li class="about"><a href="#/about-me"><b></b><span>About me</span></a></li>
+            <li class="contact"><a href="#/contact-me"><b></b><span>Contact me</span></a></li>
+        </ul>
+    </nav>
+</header>
+
+<article id="blog" class="page">
+<header class="overview-mode">
+    <div class="container">
+        <h1 class="title">Blog</h1>
+        <nav class="proj-nav">
+            <h1>Project Overview</h1>
+            <ul class="thumbnails">
+                {% for post in site.posts %}
+                <li class="{{ post.category }}">
+                    <figure class="thumbnail">
+                        <a class="image" href="#/blog/{{ post.id }}">
+                            <img data-src="{{ post.thumbnail }}">
+                        </a>
+                        <figcaption class="title">{{ post.title }}</figcaption>
+                    </figure>
+                </li>
+                {% endfor %}
+            </ul>
+        </nav>
+    </div>
+</header>
+
+{% for post in site.posts %}
+<article class="project">
+    <header>
+        <div class="container">
+            <a href="#/blog" class="back">Back to Blog</a>
+            <h1 class="title">{{ post.title }}</h1>
+        </div>
+    </header>
+    <div class="container">
+        {% if post.details %}
+        <section class="details">
+            <h1>Details</h1>
+            {% for detail in post.details %}
+            <dl>
+                <dt>{{ detail[0] }}</dt>
+                <dd>{{ detail[1] }}</dd>
+            </dl>
+            {% endfor %}
+        </section>
+        {% endif %}
+        <section class="intro">
+            {{ post.content | split:'<!--break-->' | first }}
+            {% if post.content contains '<!--break-->' %}
+                <a href="{{ post.url }}">... read more</a>
+            {% endif %}
+        </section>
+    </div>
+</article>
+{% endfor %}
+
+</article>
+
+<article id="about" class="page">
+    <header>
+        <div class="container">
+            <a href="#/" class="back">Back to Home</a>
+            <h1 class="title">About Me</h1>
+        </div>
+    </header>
+    <div class="container">
+        <section class="intro">
+            <h1>Introduction</h1>
+            <figure class="portrait">
+                <div class="mask"></div>
+                <img data-src="img/fb.jpg">
+            </figure>
+            <div class="content">
+                <p>Not yet ready, expect this page in a couple of days/months/years...</p>
+            </div>
+        </section>
+        <section class="skills">
+            <h1>My Skills</h1>
+            <dl>
+                <dt>Java</dt>
+                <dd><b></b><span>90</span></dd>
+                <dt>Groovy</dt>
+                <dd><b></b><span>70</span></dd>
+                <dt>Scala</dt>
+                <dd><b></b><span>70</span></dd>
+                <dt>JavaScript</dt>
+                <dd><b></b><span>45</span></dd>
+                <dt>Linux/Unix</dt>
+                <dd><b></b><span>75</span></dd>
+                <dt>OOP</dt>
+                <dd><b></b><span>75</span></dd>
+                <dt>TDD</dt>
+                <dd><b></b><span>80</span></dd>
+                <dt>Web Frameworks</dt>
+                <dd><b></b><span>90</span></dd>
+                <dt>Spring/Guice</dt>
+                <dd><b></b><span>90</span></dd>
+                <dt>Build tools</dt>
+                <dd><b></b><span>85</span></dd>
+                <dt>App servers</dt>
+                <dd><b></b><span>85</span></dd>
+                <dt>RDBMS</dt>
+                <dd><b></b><span>75</span></dd>
+            </dl>
+        </section>
+        <section class="downloads">
+            <h1>Downloads</h1>
+            <div class="resume">
+                <a href="files/cv.pdf" target="_blank"><span>Download my Résumé</span></a>
+            </div>
+        </section>
+    </div>
+</article>
+
+<article id="contact" class="page">
+    <header>
+        <div class="container">
+            <h1 class="title">Contact Me</h1>
+        </div>
+    </header>
+    <div class="container">
+        <section class="info">
+            <h1>Contact Information</h1>
+            <dl>
+                <dt class="phone">Phone</dt>
+                <dd class="phone">+48 790 028 608</dd>
+                <dt class="address">Address</dt>
+                <dd class="address">Osowska 23, 04-302 Warszawa, Polska</dd>
+                <dt>VAT ID</dt>
+                <dd>5342222700</dd>
+                <dt>Bank account no</dt>
+                <dd>77 1950 0001 2006 0240 3210 0002</dd>
+            </dl>
+        </section>
+        <section class="social">
+            <h1>Social Networks</h1>
+            <ul>
+                <li class="email"><a href="mailto:wojciech@erbetowski.pl">wojciech@erbetowski.pl</a></li>
+                <li class="twitter"><a href="http://twitter.com/wojtassj" target="_blank">Follow me on Twitter</a></li>
+                <li class="facebook"><a href="http://www.facebook.com/wojtassj" target="_blank">Follow me on Facebook</a></li>
+                <li class="linkedin"><a href="http://pl.linkedin.com/in/wojtekerbetowski">Check me out on LinkedIn</a></li>
+                <li class="skype"><a href="skype:wojtek.erbetowski?call">Contact me on Skype</a></li>
+            </ul>
+        </section>
+        <section class="map">
+            <figure>
+            </figure>
+        </section>
+    </div>
+</article>
+
+<footer id="footer">
+    <div class="container">
+        <a class="back-to-top" href="#">Back To Top</a>
+        <div class="legal">&copy; 2013 Marmurka Wojciech Erbetowski.</div>
+    </div>
+</footer>
+</div>
+<!-- Client-side Template -->
+<script id="tooltip-tpl" type="text/html">
+		<span class="tooltip">
+			<b class="arrow"></b>
+			<span class="content"><%= text %></span>
+		</span>
+</script>
+<script id="filter-tpl" type="text/html">
+    <div class="filter">
+        <b></b>
+        <ul>
+            <li class="active">Everything</li>
+            <li>Programming</li>
+            <li>Community</li>
+        </ul>
+        <span class="thumb"><b></b><span></span></span>
+    </div>
+</script>
+<script id="pagination-tpl" type="text/html">
+		<span class="pagination">
+			<span class="prev"></span><span class="num"></span><span class="next"></span>
+		</span>
+</script>
+<script id="indicators-tpl" type="text/html">
+    <div class="indicators">
+        <span class="progress">Sending message...</span>
+        <span class="success">Message sent successfully</span>
+        <span class="error">Error sending message</span>
+    </div>
+</script>
+<!-- /Client-side Template -->
+
+<!-- JavaScript Libraries -->
+<script src="js/lib/jquery.js"></script>
+<script src="js/lib/underscore.js"></script>
+<script src="js/lib/backbone.js"></script>
+<script src="js/lib/jquery-css-transform.js"></script>
+<script src="js/lib/jquery-animate-css-rotate-scale.js"></script>
+<script src="js/lib/jquery.quicksand.js"></script>
+<script src="js/custom/jquery.slider.js"></script>
+<script src="js/custom/jquery.lava.js"></script>
+<script src="js/custom/jquery.gmaps.js"></script>
+<script src="js/custom/jquery.h5f.js"></script>
+<script src="js/custom/interactivevalidation.js"></script>
+<!-- /JavaScript Libraries -->
+
+<!-- Custom JavaScript -->
+<script src="js/model.js"></script>
+<script src="js/router.js"></script>
+<script src="js/view.js"></script>
+<script src="js/bootstrap.js"></script>
+<!-- /Custom JavaScript -->
+
+<a href="https://github.com/wojtekerbetowski"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
 </body>
 </html>
