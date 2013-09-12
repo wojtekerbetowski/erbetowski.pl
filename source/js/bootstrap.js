@@ -39,7 +39,7 @@ var blogView = new BlogView({model: blog,
 var projNavView = new ProjNavView({el: $('>header', $blog)});
 
 $('.project').each(function(i, proj) {
-	var id = blog.id + '/' + App.txt2name($('>header h1', proj).text());
+    var id = $('>header input[name=path]', proj).val();
 	
 	var project = new Page({id: id, index: i});
 	pSect.pages.add(project);
