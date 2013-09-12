@@ -245,7 +245,7 @@ var PageView = View.extend({
 
 var HSectView = SectView.extend({
 	hide: function(next) {
-		$('#nav .portfolio-back a, #nav .contact-back a')
+		$('#nav .blog-back a, #nav .contact-back a')
 			.attr('href', '#' + this.model.get('activePage'));
 		next();
 	}
@@ -276,24 +276,24 @@ var PSectView = SectView.extend({
 	init: function() {
 		// Add a nav button to allow user go back to other sect
 		$('#nav .about')
-			.clone().toggleClass('about portfolio-back')
+			.clone().toggleClass('about blog-back')
 			.show().appendTo('#nav ul');
 
 		// Clone thumbnails, make them ready for being used in slider
-		var $thumbnails = $('#portfolio .thumbnails');
+		var $thumbnails = $('#blog .thumbnails');
 		$thumbnails.clone().toggleClass('thumbnails thumbnail-list')
 			.insertAfter($thumbnails);
 	},
 
 	hide: function(next) {
-		// When user leaves pSect, portfolio nav should link to
+		// When user leaves pSect, blog nav should link to
 		// whatever page that is currently active in pSect
-		$('#nav .portfolio a')
+		$('#nav .blog a')
 			.attr('href', '#' + pSect.get('activePage'));
 		next();
 	}
 });
-var PortfolioView = PageView.extend({
+var BlogView = PageView.extend({
 	initialize: function() {
 		PageView.prototype.initialize.apply(this, arguments);
 		this.queue('changeClass');
@@ -361,8 +361,8 @@ var ProjectView = PageView.extend({
 			// Animate if sect has changed and app has inited
 			var animate = !options.sectChanged && app.inited;
 
-			// If change from portfolio page
-			if (oldPage.view instanceof PortfolioView) {
+			// If change from blog page
+			if (oldPage.view instanceof BlogView) {
 				this.show('fadeIn', animate);
 				projNavView.activate(oldPage, newPage, options);
 
@@ -382,8 +382,8 @@ var ProjectView = PageView.extend({
 		if (newPage) {
 			var animate = !options.sectChanged && app.inited;
 
-			// If change to portfolio page
-			if (newPage.view instanceof PortfolioView) {
+			// If change to blog page
+			if (newPage.view instanceof BlogView) {
 				this.hide('fadeOut', animate);
 
 			// If change to project page
@@ -508,8 +508,8 @@ var ProjNavView = PageView.extend({
 		if (oldPage) {
 			var animate = !options.sectChanged && app.inited;
 
-			// If change from portfolio page
-			if (oldPage.view instanceof PortfolioView) {
+			// If change from blog page
+			if (oldPage.view instanceof BlogView) {
 				this.changeClass();
 				this.init(index);				
 				this.show('slideIn', index, animate);
@@ -524,8 +524,8 @@ var ProjNavView = PageView.extend({
 	deactivate: function(oldPage, newPage, options) {
 		// If change to antoher page in the same sect
 		if (newPage) {
-			// If change to portfolio page
-			if (newPage.view instanceof PortfolioView) {
+			// If change to blog page
+			if (newPage.view instanceof BlogView) {
 				var animate = !options.sectChanged && app.inited;
 				this.hide('slideOut', animate);
 			}

@@ -321,18 +321,18 @@ hr {
  * Sprites
  *
  * =============================================== */
-.old-sprite, .ns-capsule, #nav .about a, #about .downloads .vcard a, #about .downloads .resume a, #contact .form .buttons button > span, .ns-capsule_left, #nav .about b, #about .downloads .vcard b, #about .downloads .resume b, #contact .form .buttons button > span b, .ns-capsule_middle, #nav .about span, #about .downloads .vcard span, #about .downloads .resume span, #contact .form .buttons button > span span, .ns-lava, #portfolio .filter, .ns-lava_left, #portfolio .filter > b, .ns-lava_middle, #portfolio .filter ul, .ns-lava_thumb, #portfolio .filter .thumb, .ns-lava_thumb_left, #portfolio .filter .thumb b, .ns-lava_thumb_middle, #portfolio .filter .thumb span, .ns-tictoc, .project .back, #about .back, .ns-bandage, #about .skills dd, .ns-bandage_left, #about .skills dd b {
+.old-sprite, .ns-capsule, #nav .about a, #about .downloads .vcard a, #about .downloads .resume a, #contact .form .buttons button > span, .ns-capsule_left, #nav .about b, #about .downloads .vcard b, #about .downloads .resume b, #contact .form .buttons button > span b, .ns-capsule_middle, #nav .about span, #about .downloads .vcard span, #about .downloads .resume span, #contact .form .buttons button > span span, .ns-lava, #blog .filter, .ns-lava_left, #blog .filter > b, .ns-lava_middle, #blog .filter ul, .ns-lava_thumb, #blog .filter .thumb, .ns-lava_thumb_left, #blog .filter .thumb b, .ns-lava_thumb_middle, #blog .filter .thumb span, .ns-tictoc, .project .back, #about .back, .ns-bandage, #about .skills dd, .ns-bandage_left, #about .skills dd b {
   background: url('../img/old-s79612800a9.png') no-repeat; }
 
 .modern-sprite, .ns-drop-down, .ns-drop-up, #nav .contact,
-#nav .portfolio-back, #nav .portfolio,
+#nav .blog-back, #nav .blog,
 #nav .contact-back, .ns-drop-down_bd, .ns-drop-up_bd, #nav .contact a,
-#nav .portfolio-back a, #nav .portfolio a,
+#nav .blog-back a, #nav .blog a,
 #nav .contact-back a, .ns-drop-down_left, .ns-drop-up_left, #nav .contact b,
-#nav .portfolio-back b, #nav .portfolio b,
+#nav .blog-back b, #nav .blog b,
 #nav .contact-back b, .ns-drop-down_middle, .ns-drop-up_middle, #nav .contact span,
-#nav .portfolio-back span, #nav .portfolio span,
-#nav .contact-back span, .ns-dotted-nav_prev, #portfolio .pagination .prev, .ns-dotted-nav_next, #portfolio .pagination .next, .ns-dotted-nav_num, #portfolio .pagination .num, .ns-tooltip_harrow, .project .tooltip .arrow, #about .tooltip .arrow, .ns-tooltip_varrow, #contact .social .tooltip .arrow, .footer .back-to-top {
+#nav .blog-back span, #nav .blog span,
+#nav .contact-back span, .ns-dotted-nav_prev, #blog .pagination .prev, .ns-dotted-nav_next, #blog .pagination .next, .ns-dotted-nav_num, #blog .pagination .num, .ns-tooltip_harrow, .project .tooltip .arrow, #about .tooltip .arrow, .ns-tooltip_varrow, #contact .social .tooltip .arrow, .footer .back-to-top {
   background: url('../img/modern-s10a8e71190.png') no-repeat; }
 
 /* ===============================================
@@ -351,23 +351,23 @@ hr {
  *
  * =============================================== */
 .ns-button, .ns-drop-down_bd, .ns-drop-up_bd, #nav .contact a,
-#nav .portfolio-back a, #nav .portfolio a,
-#nav .contact-back a, .ns-capsule, #nav .about a, #about .downloads .vcard a, #about .downloads .resume a, #contact .form .buttons button > span, .ns-lava_item, #portfolio .filter li, .ns-dotted-nav_prev, #portfolio .pagination .prev, .ns-dotted-nav_next, #portfolio .pagination .next, .ns-dotted-nav_num, #portfolio .pagination .num, .ns-tictoc, .project .back, #about .back {
+#nav .blog-back a, #nav .blog a,
+#nav .contact-back a, .ns-capsule, #nav .about a, #about .downloads .vcard a, #about .downloads .resume a, #contact .form .buttons button > span, .ns-lava_item, #blog .filter li, .ns-dotted-nav_prev, #blog .pagination .prev, .ns-dotted-nav_next, #blog .pagination .next, .ns-dotted-nav_num, #blog .pagination .num, .ns-tictoc, .project .back, #about .back {
   display: inline-block;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
   vertical-align: middle; }
   .ns-button.active, .active.ns-drop-down_bd, .active.ns-drop-up_bd, #nav .contact a.active,
-  #nav .portfolio-back a.active, #nav .portfolio a.active,
-  #nav .contact-back a.active, .active.ns-capsule, #nav .about a.active, #about .downloads .vcard a.active, #about .downloads .resume a.active, #contact .form .buttons button > span.active, .active.ns-lava_item, #portfolio .filter li.active, .active.ns-dotted-nav_prev, #portfolio .pagination .active.prev, .active.ns-dotted-nav_next, #portfolio .pagination .active.next, .active.ns-dotted-nav_num, #portfolio .pagination .active.num, .active.ns-tictoc, .project .active.back, #about .active.back {
+  #nav .blog-back a.active, #nav .blog a.active,
+  #nav .contact-back a.active, .active.ns-capsule, #nav .about a.active, #about .downloads .vcard a.active, #about .downloads .resume a.active, #contact .form .buttons button > span.active, .active.ns-lava_item, #blog .filter li.active, .active.ns-dotted-nav_prev, #blog .pagination .active.prev, .active.ns-dotted-nav_next, #blog .pagination .active.next, .active.ns-dotted-nav_num, #blog .pagination .active.num, .active.ns-tictoc, .project .active.back, #about .active.back {
     cursor: default; }
   .ns-button a, .ns-drop-down_bd a, .ns-drop-up_bd a, #nav .contact a a,
-  #nav .portfolio-back a a, #nav .portfolio a a,
-  #nav .contact-back a a, .ns-capsule a, #nav .about a a, #about .downloads .vcard a a, #about .downloads .resume a a, #contact .form .buttons button > span a, .ns-lava_item a, #portfolio .filter li a, .ns-dotted-nav_prev a, #portfolio .pagination .prev a, .ns-dotted-nav_next a, #portfolio .pagination .next a, .ns-dotted-nav_num a, #portfolio .pagination .num a, .ns-tictoc a, .project .back a, #about .back a {
+  #nav .blog-back a a, #nav .blog a a,
+  #nav .contact-back a a, .ns-capsule a, #nav .about a a, #about .downloads .vcard a a, #about .downloads .resume a a, #contact .form .buttons button > span a, .ns-lava_item a, #blog .filter li a, .ns-dotted-nav_prev a, #blog .pagination .prev a, .ns-dotted-nav_next a, #blog .pagination .next a, .ns-dotted-nav_num a, #blog .pagination .num a, .ns-tictoc a, .project .back a, #about .back a {
     text-decoration: none; }
 
-.ns-shadow, #portfolio .thumbnails .image, #portfolio .thumbnail-list .image {
+.ns-shadow, #blog .thumbnails .image, #blog .thumbnail-list .image {
   -moz-box-shadow: 0 1px 4px #b1b3b8;
   -webkit-box-shadow: 0 1px 4px #b1b3b8;
   -o-box-shadow: 0 1px 4px #b1b3b8;
@@ -376,7 +376,7 @@ hr {
 /* Drop down module
  * ----------------------------------------------- */
 .ns-drop-down, .ns-drop-up, #nav .contact,
-#nav .portfolio-back, #nav .portfolio,
+#nav .blog-back, #nav .blog,
 #nav .contact-back {
   background-position: 0 -463px;
   height: 5px;
@@ -385,7 +385,7 @@ hr {
   text-align: center; }
 
 .ns-drop-down_bd, .ns-drop-up_bd, #nav .contact a,
-#nav .portfolio-back a, #nav .portfolio a,
+#nav .blog-back a, #nav .blog a,
 #nav .contact-back a {
   background-position: 100% -185px;
   vertical-align: top;
@@ -395,7 +395,7 @@ hr {
   left: 50%; }
 
 .ns-drop-down_left, .ns-drop-up_left, #nav .contact b,
-#nav .portfolio-back b, #nav .portfolio b,
+#nav .blog-back b, #nav .blog b,
 #nav .contact-back b {
   background-position: 0 -115px;
   height: 35px;
@@ -405,7 +405,7 @@ hr {
   top: 0; }
 
 .ns-drop-down_middle, .ns-drop-up_middle, #nav .contact span,
-#nav .portfolio-back span, #nav .portfolio span,
+#nav .blog-back span, #nav .blog span,
 #nav .contact-back span {
   background-position: 0 -393px;
   background-repeat: repeat-x;
@@ -418,21 +418,21 @@ hr {
 /* Drop up module
  * ----------------------------------------------- */
 .ns-drop-up, #nav .contact,
-#nav .portfolio-back {
+#nav .blog-back {
   background-position: 0 -468px; }
 
 .ns-drop-up_bd, #nav .contact a,
-#nav .portfolio-back a {
+#nav .blog-back a {
   background-position: 100% -80px;
   top: auto;
   bottom: 0; }
 
 .ns-drop-up_left, #nav .contact b,
-#nav .portfolio-back b {
+#nav .blog-back b {
   background-position: 0 -150px; }
 
 .ns-drop-up_middle, #nav .contact span,
-#nav .portfolio-back span {
+#nav .blog-back span {
   background-position: 0 -428px; }
 
 /* Capsule module
@@ -513,24 +513,24 @@ hr {
 
 /* Lava module
  * ----------------------------------------------- */
-.ns-lava, #portfolio .filter {
+.ns-lava, #blog .filter {
   position: relative;
   display: inline-block;
   background-position: 100% -377px; }
-  .borderradius.boxshadow.cssgradients .ns-lava, .borderradius.boxshadow.cssgradients #portfolio .filter, #portfolio .borderradius.boxshadow.cssgradients .filter {
+  .borderradius.boxshadow.cssgradients .ns-lava, .borderradius.boxshadow.cssgradients #blog .filter, #blog .borderradius.boxshadow.cssgradients .filter {
     background: none; }
 
-.ns-lava_left, #portfolio .filter > b {
+.ns-lava_left, #blog .filter > b {
   background-position: 0 -340px;
   height: 37px;
   width: 19px;
   position: absolute;
   left: 0;
   top: 0; }
-  .borderradius.boxshadow.cssgradients .ns-lava_left, .borderradius.boxshadow.cssgradients #portfolio .filter > b, #portfolio .borderradius.boxshadow.cssgradients .filter > b {
+  .borderradius.boxshadow.cssgradients .ns-lava_left, .borderradius.boxshadow.cssgradients #blog .filter > b, #blog .borderradius.boxshadow.cssgradients .filter > b {
     display: none; }
 
-.ns-lava_middle, #portfolio .filter ul {
+.ns-lava_middle, #blog .filter ul {
   background-position: 0 -669px;
   background-repeat: repeat-x;
   background-color: #cecfd5;
@@ -540,7 +540,7 @@ hr {
   margin: 0 19px;
   color: #3c3e45;
   overflow: hidden; }
-  .borderradius.boxshadow.cssgradients .ns-lava_middle, .borderradius.boxshadow.cssgradients #portfolio .filter ul, #portfolio .filter .borderradius.boxshadow.cssgradients ul {
+  .borderradius.boxshadow.cssgradients .ns-lava_middle, .borderradius.boxshadow.cssgradients #blog .filter ul, #blog .filter .borderradius.boxshadow.cssgradients ul {
     height: 36px;
     line-height: 36px;
     margin: 0 0 1px 0;
@@ -562,40 +562,40 @@ hr {
     -o-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.28), 0 1px white;
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.28), 0 1px white; }
 
-.ns-lava_item, #portfolio .filter li {
+.ns-lava_item, #blog .filter li {
   position: relative;
   z-index: 2;
   margin: 0 0 0 30px;
   float: left;
   color: #3c3e45; }
-  .ns-lava_item:first-child, #portfolio .filter li:first-child {
+  .ns-lava_item:first-child, #blog .filter li:first-child {
     margin: 0; }
-  .ns-lava_item:hover, #portfolio .filter li:hover {
+  .ns-lava_item:hover, #blog .filter li:hover {
     color: #0090ff; }
-  .ns-lava_item.active, #portfolio .filter li.active {
+  .ns-lava_item.active, #blog .filter li.active {
     color: #3c3e45; }
 
-.ns-lava_thumb, #portfolio .filter .thumb {
+.ns-lava_thumb, #blog .filter .thumb {
   background-position: 100% -414px;
   position: absolute;
   top: 0;
   left: 0;
   z-index: 1;
   margin: 3px 15px 0 3px; }
-  .borderradius.boxshadow.cssgradients .ns-lava_thumb, .borderradius.boxshadow.cssgradients #portfolio .filter .thumb, #portfolio .filter .borderradius.boxshadow.cssgradients .thumb {
+  .borderradius.boxshadow.cssgradients .ns-lava_thumb, .borderradius.boxshadow.cssgradients #blog .filter .thumb, #blog .filter .borderradius.boxshadow.cssgradients .thumb {
     background: none; }
 
-.ns-lava_thumb_left, #portfolio .filter .thumb b {
+.ns-lava_thumb_left, #blog .filter .thumb b {
   background-position: 0 -445px;
   height: 31px;
   width: 15px;
   position: absolute;
   left: 0;
   top: 0; }
-  .borderradius.boxshadow.cssgradients .ns-lava_thumb_left, .borderradius.boxshadow.cssgradients #portfolio .filter .thumb b, #portfolio .filter .thumb .borderradius.boxshadow.cssgradients b {
+  .borderradius.boxshadow.cssgradients .ns-lava_thumb_left, .borderradius.boxshadow.cssgradients #blog .filter .thumb b, #blog .filter .thumb .borderradius.boxshadow.cssgradients b {
     display: none; }
 
-.ns-lava_thumb_middle, #portfolio .filter .thumb span {
+.ns-lava_thumb_middle, #blog .filter .thumb span {
   background-position: 0 -638px;
   background-repeat: repeat-x;
   background-color: #e8eaf0;
@@ -603,7 +603,7 @@ hr {
   line-height: 30px;
   display: block;
   margin: 0 15px; }
-  .borderradius.boxshadow.cssgradients .ns-lava_thumb_middle, .borderradius.boxshadow.cssgradients #portfolio .filter .thumb span, #portfolio .filter .thumb .borderradius.boxshadow.cssgradients span {
+  .borderradius.boxshadow.cssgradients .ns-lava_thumb_middle, .borderradius.boxshadow.cssgradients #blog .filter .thumb span, #blog .filter .thumb .borderradius.boxshadow.cssgradients span {
     height: 30px;
     line-height: 30px;
     margin: 0 0 1px 0;
@@ -627,34 +627,34 @@ hr {
 
 /* Dotted nav module
  * ----------------------------------------------- */
-.ns-dotted-nav, #portfolio .pagination {
+.ns-dotted-nav, #blog .pagination {
   overflow: hidden; }
 
-.ns-dotted-nav_prev, #portfolio .pagination .prev {
+.ns-dotted-nav_prev, #blog .pagination .prev {
   background-position: 6px -284px;
   height: 12px;
   width: 8px;
   padding: 8px 6px;
   float: left; }
-  .ns-dotted-nav_prev:hover, #portfolio .pagination .prev:hover {
+  .ns-dotted-nav_prev:hover, #blog .pagination .prev:hover {
     background-position: 6px -244px; }
 
-.ns-dotted-nav_next, #portfolio .pagination .next {
+.ns-dotted-nav_next, #blog .pagination .next {
   background-position: 6px -304px;
   height: 12px;
   width: 8px;
   padding: 8px 6px;
   float: left; }
-  .ns-dotted-nav_next:hover, #portfolio .pagination .next:hover {
+  .ns-dotted-nav_next:hover, #blog .pagination .next:hover {
     background-position: 6px -264px; }
 
-.ns-dotted-nav_num, #portfolio .pagination .num {
+.ns-dotted-nav_num, #blog .pagination .num {
   background-position: 4px -365px;
   height: 8px;
   width: 8px;
   padding: 10px 4px;
   float: left; }
-  .ns-dotted-nav_num:hover, #portfolio .pagination .num:hover, .ns-dotted-nav_num.active, #portfolio .pagination .active.num {
+  .ns-dotted-nav_num:hover, #blog .pagination .num:hover, .ns-dotted-nav_num.active, #blog .pagination .active.num {
     background-position: 4px -347px; }
 
 /* Tictoc module
@@ -710,7 +710,7 @@ hr {
 
 /* Rollover module
  * ----------------------------------------------- */
-.ns-rollover, .ns-rollover-thin, #portfolio .thumbnail-list .image, #portfolio .thumbnails .image {
+.ns-rollover, .ns-rollover-thin, #blog .thumbnail-list .image, #blog .thumbnails .image {
   border: 5px solid;
   overflow: hidden;
   display: inline-block;
@@ -725,13 +725,13 @@ hr {
   -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.28);
   -o-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.28);
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.28); }
-  .ns-rollover:hover, .ns-rollover-thin:hover, #portfolio .thumbnail-list .image:hover, #portfolio .thumbnails .image:hover, .ns-rollover.active, .active.ns-rollover-thin, #portfolio .thumbnail-list .active.image, #portfolio .thumbnails .active.image {
+  .ns-rollover:hover, .ns-rollover-thin:hover, #blog .thumbnail-list .image:hover, #blog .thumbnails .image:hover, .ns-rollover.active, .active.ns-rollover-thin, #blog .thumbnail-list .active.image, #blog .thumbnails .active.image {
     color: #0090ff; }
-  .ns-rollover img, .ns-rollover-thin img, #portfolio .thumbnail-list .image img, #portfolio .thumbnails .image img {
+  .ns-rollover img, .ns-rollover-thin img, #blog .thumbnail-list .image img, #blog .thumbnails .image img {
     display: block;
     margin: -5px; }
 
-.ns-rollover-thin, #portfolio .thumbnail-list .image {
+.ns-rollover-thin, #blog .thumbnail-list .image {
   border-width: 3px;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
@@ -739,7 +739,7 @@ hr {
   -ms-border-radius: 3px;
   -khtml-border-radius: 3px;
   border-radius: 3px; }
-  .ns-rollover-thin img, #portfolio .thumbnail-list .image img {
+  .ns-rollover-thin img, #blog .thumbnail-list .image img {
     margin: -3px; }
 
 /* Bandage module
@@ -779,7 +779,7 @@ hr {
 
 /* Basin module
  * ----------------------------------------------- */
-.ns-basin, #portfolio .list-mode {
+.ns-basin, #blog .list-mode {
   background-color: #dadce2;
   -moz-box-shadow: inset 0 -1px 5px rgba(0, 0, 0, 0.13), 0 1px white;
   -webkit-box-shadow: inset 0 -1px 5px rgba(0, 0, 0, 0.13), 0 1px white;
@@ -948,96 +948,96 @@ h1 {
 
 /* ===============================================
  *
- * Portfolio page styles
+ * Blog page styles
  *
  * =============================================== */
-#portfolio {
+#blog {
   top: 0;
   bottom: 75%;
   border-top: none;
   overflow-y: scroll;
   padding-top: 0;
   margin-top: 0; }
-  #portfolio > header .title {
+  #blog > header .title {
     margin: 0 0 120px 0; }
-  #portfolio .overview-mode .proj-nav {
+  #blog .overview-mode .proj-nav {
     margin: 0 0 0 -20px;
     position: relative; }
-  #portfolio .overview-mode .pagination, #portfolio .overview-mode .thumbnail-list {
+  #blog .overview-mode .pagination, #blog .overview-mode .thumbnail-list {
     display: none; }
-  #portfolio .list-mode {
+  #blog .list-mode {
     padding: 60px 0 24px;
     margin: 0;
     zoom: 1; }
-    #portfolio .list-mode h1 {
+    #blog .list-mode h1 {
       display: none; }
-    #portfolio .list-mode .proj-nav {
+    #blog .list-mode .proj-nav {
       overflow: hidden;
       position: relative;
       text-align: center; }
-    #portfolio .list-mode .filter,
-    #portfolio .list-mode .thumbnails,
-    #portfolio .list-mode .thumbnail-list .title {
+    #blog .list-mode .filter,
+    #blog .list-mode .thumbnails,
+    #blog .list-mode .thumbnail-list .title {
       display: none; }
-  #portfolio .filter {
+  #blog .filter {
     position: absolute;
     font-size: 14px;
     right: 0;
     top: -170px; }
-  #portfolio .thumbnails {
+  #blog .thumbnails {
     *zoom: 1; }
-    #portfolio .thumbnails:after {
+    #blog .thumbnails:after {
       content: "";
       display: table;
       clear: both; }
-    #portfolio .thumbnails li {
+    #blog .thumbnails li {
       display: inline;
       float: left;
       margin-right: 20px;
       width: 300px;
       margin: 0 0 60px 20px; }
-      * html #portfolio .thumbnails li {
+      * html #blog .thumbnails li {
         overflow-x: hidden; }
-    #portfolio .thumbnails img {
+    #blog .thumbnails img {
       width: 300px;
       height: 185px; }
-    #portfolio .thumbnails .title {
+    #blog .thumbnails .title {
       display: block;
       text-align: center;
       margin: 15px 0 0 0;
       font-size: 14px; }
-    #portfolio .figure .title {
+    #blog .figure .title {
       display: block;
       text-align: center;
       margin: 15px 0 0 0;
       font-size: 14px; }
-  #portfolio .thumbnail-list {
+  #blog .thumbnail-list {
     position: relative;
     width: 999999px;
     *zoom: 1; }
-    #portfolio .thumbnail-list:after {
+    #blog .thumbnail-list:after {
       content: "";
       display: table;
       clear: both; }
-    #portfolio .thumbnail-list li {
+    #blog .thumbnail-list li {
       display: inline;
       float: left;
       margin-right: 20px;
       width: 140px;
       margin: 0 20px 0 0; }
-      * html #portfolio .thumbnail-list li {
+      * html #blog .thumbnail-list li {
         overflow-x: hidden; }
-    #portfolio .thumbnail-list img {
+    #blog .thumbnail-list img {
       width: 140px;
       height: 87px; }
-  #portfolio .pagination {
+  #blog .pagination {
     display: inline-block;
     margin: 10px 0 0; }
-    #portfolio .pagination.disabled {
+    #blog .pagination.disabled {
       visibility: hidden; }
-    #portfolio .pagination .prev.disabled {
+    #blog .pagination .prev.disabled {
       visibility: hidden; }
-    #portfolio .pagination .next.disabled {
+    #blog .pagination .next.disabled {
       visibility: hidden; }
 
 /* ===============================================
@@ -1163,16 +1163,16 @@ h1 {
   #nav li a {
     width: 150px;
     margin-left: -75px; }
-#nav .portfolio,
+#nav .blog,
 #nav .contact-back,
 #nav .contact,
-#nav .portfolio-back {
+#nav .blog-back {
   font-family: "League Gothic", Arial, sans-serif;
   font-size: 18px;
   text-transform: uppercase; }
-#nav .portfolio {
+#nav .blog {
   top: 25%; }
-#nav .portfolio-back {
+#nav .blog-back {
   bottom: 75%; }
 #nav .contact {
   bottom: 50%; }

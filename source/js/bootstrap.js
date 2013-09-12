@@ -7,15 +7,15 @@ $('#footer')
 	.addClass('footer')
 	.appendTo('.page, .project');
 
-var portfolio = new Page({id: '/portfolio'});
+var blog = new Page({id: '/blog'});
 var home = new Page({id: '/'});
 var about = new Page({id: '/about-me'});
 var contact = new Page({id: '/contact-me'});
 
-var pSect = new Sect({id: 0, activePage: portfolio.id});
+var pSect = new Sect({id: 0, activePage: blog.id});
 var hSect = new Sect({id: 1, activePage: home.id});
 var cSect = new Sect({id: 2, activePage: contact.id});
-pSect.pages.add(portfolio);
+pSect.pages.add(blog);
 hSect.pages.add([home, about]);
 cSect.pages.add(contact);
 
@@ -32,21 +32,21 @@ var homeView = new HomeView({model: home,
 var aboutView = new AboutView({model: about, el: $('#about')});
 
 var pSectView = new PSectView({model: pSect});
-var $portfolio = $('#portfolio');
-var portfolioView = new PortfolioView({model: portfolio, 
-	container: $portfolio, el: $('>header, >footer', $portfolio)});
+var $blog = $('#blog');
+var blogView = new BlogView({model: blog,
+	container: $blog, el: $('>header, >footer', $blog)});
 
-var projNavView = new ProjNavView({el: $('>header', $portfolio)});
+var projNavView = new ProjNavView({el: $('>header', $blog)});
 
 $('.project').each(function(i, proj) {
-	var id = portfolio.id + '/' + App.txt2name($('>header h1', proj).text());
+	var id = blog.id + '/' + App.txt2name($('>header h1', proj).text());
 	
 	var project = new Page({id: id, index: i});
 	pSect.pages.add(project);
 
 	new ProjectView({
 		model: project,
-		container: $portfolio,
+		container: $blog,
 		el: proj
 	});
 });
