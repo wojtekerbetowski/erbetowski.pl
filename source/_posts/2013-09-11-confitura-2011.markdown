@@ -1,12 +1,11 @@
 ---
 
 layout: post
-title: "Migration"
+title: "PlayFramework at Confitura 2011 conference"
 date: 2013-09-11 15:57
 comments: true
 
 category: community
-id: migration
 thumbnail: img/community/confitura2011/confitura_logo.png
 
 details:
@@ -26,10 +25,10 @@ dedicated to a <a href="http://playframework.org/">Java/Scala web development fr
 showing participants some advantages (and disadvantages) of this tool. Play have already been there for a while,
 so most of you have probably already heard of it.
 
-<!--break-->
-
 Presentation was 60 minutes long and I assume there were ~150 participants. I used Prezi as presentation tool
 and official Play's screencast to present basic coding patterns.
+
+<!--break-->
 
 Abstract
 --------

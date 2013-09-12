@@ -53,7 +53,7 @@
                 {% for post in site.posts %}
                 <li class="{{ post.category }}">
                     <figure class="thumbnail">
-                        <a class="image" href="#/blog/{{ post.id }}">
+                        <a class="image" href="#/{{ post.id }}">
                             <img data-src="{{ post.thumbnail }}">
                         </a>
                         <figcaption class="title">{{ post.title }}</figcaption>

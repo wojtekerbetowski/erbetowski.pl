@@ -1,0 +1,33 @@
+---
+layout: post
+title: A deep dive into Tapestry Plastic - part 1
+categories:
+- Technical
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+---
+<img class="alignleft" title="Tapestry" src="http://tapestry.apache.org/images/tapestry.png" alt="" width="330" height="138" />End of the year is coming and I'm starting the next year with talk on <a title="WJUG" href="http://warszawa.jug.pl" target="_blank">WJUG</a> about Plastic - code generation tool from <a title="Tapestry" href="http://tapestry.apache.org" target="_blank">Tapestry</a> author - <a href="http://howardlewisship.com/" target="_blank">Howard Lewis Ship</a>. It's definitely time to start preparing.
+
+I was impressed by authors talk about the library you may see here - <a href="http://www.infoq.com/presentations/Have-Your-Cake-and-Eat-It-Too-Meta-Programming-Java">http://www.infoq.com/presentations/Have-Your-Cake-and-Eat-It-Too-Meta-Programming-Java</a>
+
+<a href="http://blog.erbetowski.pl/wp-content/uploads/2012/11/gh.gif"><img class="size-medium wp-image-102 alignright" title="gh" src="http://blog.erbetowski.pl/wp-content/uploads/2012/11/gh-300x161.gif" alt="" width="300" height="161" /></a>
+
+So let's start by jumping to the source... and there's a sad surprise - it's not that easy to find the source :-( Author said Plastic is separate from the rest of Tapestry 5, but all the links for GitHub repo leads to 404 page. It seems that the idea of an independent library is past.
+
+But there's hope! On Lewis' GitHub page there's a repo named <a href="https://github.com/hlship/plastic-demos/" target="_blank">plastic-demos</a>. Fast git clone and you may see it's a <a href="http://gradle.org" target="_blank">Gradle</a> project with <a href="http://code.google.com/p/spock/" target="_blank">Spock</a> unit tests presenting simple Plastic functions. Trying <code>gradle test</code> would be natural next step, but still no luck there:
+
+[gist id="b6115bf9b9758b1a2980"]
+
+Missing dependency, huh? Let's take a quick search in <a href="http://mvnrepository.com/artifact/org.apache.tapestry/plastic/5.3.5">http://mvnrepository.com/</a> and there it is, <a href="http://mvnrepository.com/artifact/org.apache.tapestry/plastic/5.3.5">http://mvnrepository.com/artifact/org.apache.tapestry/plastic/5.3.5</a>. I'm changing version in <code>build.gradle</code> to 'org.apache.tapestry:plastic:5.3.5' and it worked:
+
+[gist id="4df97a8cf51325afde4c"]
+
+So where do I find the sources? Well, it wasn't hard to guess, it's inside <a href="http://tapestry.apache.org/download.html" target="_blank">Tapestry source package</a>, which actually isn't that nice, because the promise was, it's a separate project.
+
+Now that we have the source and some examples we can have some more fun... in the next part.
+
+One thing you can see already is that Howard L. Ship is using all the new, cool stuff to develop (Spock, Gradle), which makes it so much better experience to use the code, than it would be using old mainstream tools like Maven2 or JUnit.
