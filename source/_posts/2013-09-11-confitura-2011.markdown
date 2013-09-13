@@ -28,8 +28,6 @@ so most of you have probably already heard of it.
 Presentation was 60 minutes long and I assume there were ~150 participants. I used Prezi as presentation tool
 and official Play's screencast to present basic coding patterns.
 
-<!--break-->
-
 Abstract
 --------
 
