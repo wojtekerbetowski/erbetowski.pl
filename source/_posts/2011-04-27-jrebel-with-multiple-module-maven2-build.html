@@ -18,7 +18,7 @@ This post is dedicated to put together Maven2 project with JRebel reloading.
 Until now i worked only with single module apps or apps I didn't need to reload dynamically because of all the tests that didn't need application started. But now is the day to do the configuration and I had some trouble with it. I hope this post helps someone not to loose 2-3 hours senseless, because it is an extremely easy thing to do.
 
 <strong>jrebel.xml</strong>
-
+<!--break-->
 Until now all all I needed was jrebel in JVM opts (-noverify -javaagent:/path/to/jrebel.jar). But when Maven2 builds our WAR file (instead of using exploded app) we need to tell JRebel where it can find our compiles classes. Thanks to this information it can scan the whole destination and replace classes when needed.
 <pre lang="xml">
 <!-- rebel.xml -->

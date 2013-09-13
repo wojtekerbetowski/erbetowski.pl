@@ -1036,9 +1036,17 @@ h1 {
       margin: 0 20px 0 0; }
       * html #blog .thumbnail-list li {
         overflow-x: hidden; }
-    #blog .thumbnail-list img {
-      width: 140px;
-      height: 87px; }
+    #blog .thumbnail-list .image img {
+        max-width: 140px;
+        max-height: 87px;
+        margin: 0 auto;
+    }
+    #blog .thumbnail-list .image {
+        width: 140px;
+        height: 87px;
+        display: table-cell;
+        vertical-align: middle;
+    }
   #blog .pagination {
     display: inline-block;
     margin: 10px 0 0; }
