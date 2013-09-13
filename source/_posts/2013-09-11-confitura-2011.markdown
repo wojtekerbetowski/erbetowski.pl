@@ -6,7 +6,7 @@ date: 2013-09-11 15:57
 comments: true
 
 category: community
-thumbnail: img/community/confitura2011/confitura_logo.png
+thumbnail: img/posts/confitura.png
 
 details:
   Organizer: Warsaw JUG
