@@ -5,7 +5,7 @@ title: "PlayFramework at Confitura 2011 conference"
 date: 2013-09-11 15:57
 comments: true
 
-category: community
+categories: [community]
 thumbnail: img/posts/confitura.png
 
 details:
