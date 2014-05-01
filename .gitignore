@@ -14,4 +14,6 @@ dist
 /RUNNING_PID
 /_deploy
 /public
+/\.gist-cache
+/\.sass-cache
 
