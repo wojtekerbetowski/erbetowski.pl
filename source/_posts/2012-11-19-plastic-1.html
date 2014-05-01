@@ -19,11 +19,11 @@ So let's start by jumping to the source... and there's a sad surprise - it's not
 
 But there's hope! On Lewis' GitHub page there's a repo named <a href="https://github.com/hlship/plastic-demos/" target="_blank">plastic-demos</a>. Fast git clone and you may see it's a <a href="http://gradle.org" target="_blank">Gradle</a> project with <a href="http://code.google.com/p/spock/" target="_blank">Spock</a> unit tests presenting simple Plastic functions. Trying <code>gradle test</code> would be natural next step, but still no luck there:
 
-[gist id="b6115bf9b9758b1a2980"]
+{% gist b6115bf9b9758b1a2980 %}
 
 Missing dependency, huh? Let's take a quick search in <a href="http://mvnrepository.com/artifact/org.apache.tapestry/plastic/5.3.5">http://mvnrepository.com/</a> and there it is, <a href="http://mvnrepository.com/artifact/org.apache.tapestry/plastic/5.3.5">http://mvnrepository.com/artifact/org.apache.tapestry/plastic/5.3.5</a>. I'm changing version in <code>build.gradle</code> to 'org.apache.tapestry:plastic:5.3.5' and it worked:
 
-[gist id="4df97a8cf51325afde4c"]
+{% gist 4df97a8cf51325afde4c %}
 
 So where do I find the sources? Well, it wasn't hard to guess, it's inside <a href="http://tapestry.apache.org/download.html" target="_blank">Tapestry source package</a>, which actually isn't that nice, because the promise was, it's a separate project.
 
