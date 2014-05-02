@@ -7,20 +7,21 @@ tags: []
 status: publish
 type: post
 published: true
-thumbnail: img/posts/confitura.png
+thumbnail: /img/posts/confitura.png
 ---
-Right now I'm on the last lecture of <a href="http://confitura.pl">Confitura 2011</a>, so it's the time to write a summary.
+Right now I'm on the last lecture of [Confitura 2011](http://2011.confitura.pl), so it's the time to write a summary.
 
 First things first - great thanks to organizers! Javars... Confitura is a great and huge conference and it isn't easy to make it all work. Thank guys (and girls).
-<!--break-->
-And what did go wrong? <strong>Where the hell is my coffee?!</strong> Why couldn't I get a cup of coffee during a lecture? I have to wait until some special break? C'mon! It is the first time you couldn't drink coffee on a Java conference I remember. Another (and last) thing I'm complaining about is the food - it was weak and it was hard to find some place to eat it.
+
+And what did go wrong? **Where the hell is my coffee?!**
+Why couldn't I get a cup of coffee during a lecture?
+I have to wait until some special break? C'mon!
+It is the first time you couldn't drink coffee on a Java conference I remember.
+Another (and last) thing I'm complaining about is the food - it was weak and it was hard to find some place to eat it.
 
 &lt;off-topic&gt;
-
-<em>At this moment a guy sitting next to me after noticing I'm writing memos suggested me to write that it's stuffy and I fully agree. But I've never seen anyone solving problem of 1-2 hundred people sharing air in one room. :-(</em>
-
-<em>&lt;/off-topic&gt;
-</em>
+*At this moment a guy sitting next to me after noticing I'm writing memos suggested me to write that it's stuffy and I fully agree. But I've never seen anyone solving problem of 1-2 hundred people sharing air in one room. :-(*
+&lt;/off-topic&gt;
 
 And now the lectures: first in the morning was the keynote given by <strong>WorldIT Systems</strong> guy. I'm gonna remember two things:
 <ul>
