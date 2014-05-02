@@ -12,6 +12,7 @@ status: publish
 type: post
 published: true
 thumbnail: /img/posts/jrebel.png
+comments: true
 ---
 This post is dedicated to put together Maven2 project with JRebel reloading.
 

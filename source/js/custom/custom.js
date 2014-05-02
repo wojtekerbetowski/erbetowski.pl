@@ -1039,7 +1039,7 @@ jQuery(document).ready(function($) {
 
 		function fetchFeed( url, element ) {
 
-			element.html('<img src="img/loader.gif" height="11" width="16" alt="Loading..." />');
+			element.html('<img src="/img/loader.gif" height="11" width="16" alt="Loading..." />');
 
 			$.ajax({
 				url: url,
@@ -1080,7 +1080,7 @@ jQuery(document).ready(function($) {
 
 		// Setup any needed variables.
 		var $form   = $('.contact-form'),
-			$loader = '<img src="img/loader.gif" height="11" width="16" alt="Loading..." />';
+			$loader = '<img src="/img/loader.gif" height="11" width="16" alt="Loading..." />';
 
 		$form.append('<div id="response" class="hidden">');
 		var $response = $('#response');

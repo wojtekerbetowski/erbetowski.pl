@@ -1,12 +1,12 @@
-<a href="index.html" id="logo">
-    <img src="img/logo.png" alt="SmartStart">
+<a href="/" id="logo">
+    <img src="/img/logo.png" alt="SmartStart">
 </a>
 
 <nav id="main-nav">
 
     <ul>
-        <li class="current">
-            <a href="index.html" data-description="All starts here">Home</a>
+        <li {% if page.current_navigation == 'home' %}class="current"{% endif %}>
+            <a href="/" data-description="All starts here">Home</a>
             <ul>
                 <li><a href="logos-slider.html">Logos Slider</a></li>
                 <li><a href="photos-slider.html">Photos Slider</a></li>
@@ -33,10 +33,10 @@
                 </li>
             </ul>
         </li>
-        <li>
-            <a href="blog.html" data-description="What we think">Blog</a>
+        <li {% if page.current_navigation == 'blog' %}class="current"{% endif %}>
+            <a href="/blog/" data-description="What we think">Blog</a>
             <ul>
-                <li><a href="single-post.html">Single Post</a></li>
+                <li><a href="/single-post.html">Single Post</a></li>
             </ul>
         </li>
         <li>

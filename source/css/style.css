@@ -1895,6 +1895,7 @@ input.placeholder, textarea.placeholder { color: #b0b0b0; }
 	.entry-image, .entry-video, .entry-audio {
 		display: block;
 		margin: 0 auto 25px;
+        max-height: 150px;
 	}
 
 	.entry .entry-audio {
