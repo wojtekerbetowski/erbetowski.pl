@@ -3691,3 +3691,8 @@ input.placeholder, textarea.placeholder { color: #b0b0b0; }
 		.social-links li:nth-child(8n) { margin-right: 15px; }
 
 }
+
+/* Better GH repos displaying by WE */
+p {
+    margin-bottom: 3px;
+}
