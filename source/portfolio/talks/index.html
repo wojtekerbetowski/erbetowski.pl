@@ -15,7 +15,7 @@ footer: true
 
 <section id="portfolio-items" class="clearfix">
 
-  {% for project in site.pages %}
+  {% for project in site.pages reversed %}
   {% if project.url contains 'portfolio/talks' and project.url != page.url %}
   <article class="one-half">
 

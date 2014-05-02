@@ -12,10 +12,10 @@
             <a href="/aboutme" data-description="Choose a perspective">About me</a>
             <ul>
                 <li><a href="/aboutme">In general</a></li>
-                <li><a href="/aboutme/comunity">Community Activist</a></li>
+                <li><a href="/aboutme/community_activist">Community Activist</a></li>
                 <li><a href="/aboutme/programmer">Programmer</a></li>
                 <li><a href="/aboutme/organiser">Organiser</a></li>
-                <li><a href="/aboutme/techlead">Technical Leader</a></li>
+                <li><a href="/aboutme/technical_leader">Technical Leader</a></li>
             </ul>
         </li>
         <li {% if page.current_navigation == 'blog' %}class="current"{% endif %}>
@@ -32,7 +32,7 @@
 
             </ul>
         </li>
-        <li>
+        <li {% if page.current_navigation == 'portfolio' %}class="current"{% endif %}>
             <a href="#" data-description="My path">Portfolio</a>
             <ul>
                 <li>
@@ -45,12 +45,21 @@
                     {% endfor %}
                   </ul>
                 </li>
-                <li><a href="/portfolio/talks">Public speaking</a></li>
+                <li>
+                  <a href="/portfolio/talks">Public speaking</a>
+                  <ul>
+                    {% for project in site.pages %}
+                    {% if project.url contains 'portfolio/talks' and project.url != '/portfolio/talks/index.html' %}
+                    <li><a href="{{ project.url }}">{{ project.title }}</a></li>
+                    {% endif %}
+                    {% endfor %}
+                  </ul>
+                </li>
                 <li><a href="/portfolio/events">Events</a></li>
             </ul>
         </li>
-        <li>
-            <a href="contact-us.html" data-description="Enquire here">Contact</a>
+        <li {% if page.current_navigation == 'contact' %}class="current"{% endif %}>
+            <a href="/contact" data-description="What's in your mind?">Contact me</a>
         </li>
     </ul>
 
