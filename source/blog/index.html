@@ -17,7 +17,8 @@ header_title: "Welcome to my blog"
       <h1 class="title">{{ post.title }}</h1>
     </a>
 
-    <p>Lorem ipsum dolor sit amet nec, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes. Lorem ipsum dolor sit amet nec, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+    {% capture description %}{% if post.description %}{{ post.description }}{% else %}{{ post.content | post.raw_content }}{% endif %}{% endcapture %}
+    <p>{{ description | strip_html | condense_spaces | truncate:400 }}</p>
 
   </div><!-- end .entry-body -->
 
