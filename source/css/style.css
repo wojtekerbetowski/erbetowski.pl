@@ -3705,3 +3705,11 @@ p {
 .entry-content {
     margin-bottom: 40px;
 }
+
+ul, ul ul, ul ol, ol, ol ul, ol ol {
+    margin-left: 0em;
+}
+
+.one-half img {
+    max-width: 440px;
+}

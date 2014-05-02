@@ -1,0 +1,36 @@
+---
+layout: page
+title: "Projects Portfolio"
+date: 2014-05-02 15:04
+comments: false
+sharing: false
+footer: true
+---
+
+<header class="page-header">
+
+  <h1 class="page-title">My path to where I am right now</h1>
+
+</header><!-- end .page-header -->
+
+<section id="portfolio-items" class="clearfix">
+
+{% for project in site.pages %}
+  {% if project.url contains 'portfolio/projects' and project.url != page.url %}
+    <article class="one-half">
+
+      <a href="{{ project.thumbnail }}" class="single-image" title="Project image">
+        <img src="{{ project.thumbnail }}" alt="Project image">
+      </a>
+
+      <a href="{{ project.url }}" class="project-meta">
+        <h5 class="title">{{ project.title }}</h5>
+        <span class="categories">&nbsp;</span>
+      </a>
+
+    </article><!-- end .one-half (Altered) -->
+  {% endif %}
+{% endfor %}
+
+</section><!-- end #portfolio-items -->
+

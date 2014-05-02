@@ -1,0 +1,54 @@
+---
+layout: page
+comments: true
+sharing: false
+footer: false
+---
+
+<article class="single-project">
+
+  <header class="page-header">
+
+    <a href="/portfolio/projects" class="button no-bg medium align-right">
+      All Projects <img src="/img/icon-grid.png" alt="" class="icon">
+    </a>
+
+    <hr />
+
+    <h2 class="project-title">{{ page.title }}</h2>
+
+  </header><!-- end .page-header -->
+
+  <div id="main">
+
+    <div class="image-gallery-slider">
+
+      <ul>
+        {% if page.video_url %}
+          <li>
+            <a href="{{ page.video_url }}" class="iframe video" title="Talk recording">
+              <img src="{{ page.thumbnail }}" alt="">
+            </a>
+          </li>
+        {% else %}
+          <li>
+            <a href="{{ page.thumbnail }}" class="single-image" title="Project thumbnail" rel="single-project">
+              <img src="{{ page.thumbnail }}" alt="Project thumbnail">
+            </a>
+          </li>
+        {% endif %}
+
+      </ul>
+
+    </div><!-- end .image-gallery-slider -->
+
+  </div><!-- end #main -->
+
+  <div id="sidebar">
+
+    {{ content }}
+
+  </div><!-- end #sidebar -->
+
+</article><!-- end .single-project -->
+
