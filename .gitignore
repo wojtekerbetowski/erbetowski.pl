@@ -17,4 +17,6 @@ dist
 /\.gist-cache
 /\.sass-cache
 /\.pygments-cache
+.DS_Store
+*.swp
 
