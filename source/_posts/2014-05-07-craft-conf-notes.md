@@ -7,9 +7,8 @@ tags:
 - Software Craftsmanship
 - Craft Conf
 - Conference
-status: publish
 type: post
-published: true
+published: false
 thumbnail: /img/posts/craft.png
 comments: true
 ---
