@@ -18,5 +18,7 @@ ENV LC_ALL en_US.UTF-8
 RUN echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
 RUN locale-gen
 
+RUN  echo "    IdentityFile ~/.ssh/id_rsa" >> /etc/ssh/ssh_config
+
 CMD bundle exec rake preview
 
