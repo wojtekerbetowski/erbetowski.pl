@@ -19,4 +19,5 @@ dist
 /\.pygments-cache
 .DS_Store
 *.swp
+.preview-mode
 

@@ -5,61 +5,26 @@
 <nav id="main-nav">
 
     <ul>
-        <li {% if page.current_navigation == 'home' %}class="current"{% endif %}>
-            <a href="/" data-description="All starts here">Home</a>
-        </li>
         <li {% if page.current_navigation == 'aboutme' %}class="current"{% endif %}>
-            <a href="/aboutme" data-description="Choose a perspective">About me</a>
-            <ul>
-                <li><a href="/aboutme">In general</a></li>
-                <li><a href="/aboutme/community_activist">Community Activist</a></li>
-                <li><a href="/aboutme/programmer">Programmer</a></li>
-                <li><a href="/aboutme/organiser">Organiser</a></li>
-                <li><a href="/aboutme/technical_leader">Technical Leader</a></li>
-            </ul>
+            <a href="/aboutme">About me</a>
         </li>
         <li {% if page.current_navigation == 'blog' %}class="current"{% endif %}>
-            <a href="/blog/" data-description="What we think">Blog</a>
-            <ul>
-              {% for post in site.posts limit: 8 %}
-              <li>
-                <a href="{{ post.url }}">{% if site.titlecase %}{{ post.title | titlecase }}{% else %}{{ post.title }}{% endif %}</a>
-              </li>
-              {% endfor %}
-              <li>
-                <a href="/blog">...</a>
-              </li>
-
-            </ul>
+            <a href="/blog/">Blog</a>
         </li>
         <li {% if page.current_navigation == 'portfolio' %}class="current"{% endif %}>
-            <a href="#" data-description="My path">Portfolio</a>
+            <a href="#" data-description="Portfolio">My path</a>
             <ul>
                 <li>
                   <a href="/portfolio/projects/">Projects</a>
-                  <ul>
-                    {% for project in site.pages %}
-                      {% if project.url contains 'portfolio/projects' and project.url != '/portfolio/projects/index.html' %}
-                        <li><a href="{{ project.url }}">{{ project.title }}</a></li>
-                      {% endif %}
-                    {% endfor %}
-                  </ul>
                 </li>
                 <li>
                   <a href="/portfolio/talks">Public speaking</a>
-                  <ul>
-                    {% for project in site.pages %}
-                    {% if project.url contains 'portfolio/talks' and project.url != '/portfolio/talks/index.html' %}
-                    <li><a href="{{ project.url }}">{{ project.title }}</a></li>
-                    {% endif %}
-                    {% endfor %}
-                  </ul>
                 </li>
                 <li><a href="/portfolio/events">Events</a></li>
             </ul>
         </li>
         <li {% if page.current_navigation == 'contact' %}class="current"{% endif %}>
-            <a href="/contact" data-description="What's in your mind?">Contact me</a>
+            <a href="/contact">Contact me</a>
         </li>
     </ul>
 
