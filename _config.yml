@@ -70,5 +70,6 @@ theme: cvcard
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
-  type:
-
+      type: git
+      repository: git@github.com:wojtekerbetowski/erbetowski.pl.git
+      branch: gh-pages
