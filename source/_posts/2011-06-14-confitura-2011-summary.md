@@ -7,6 +7,7 @@ tags: []
 status: publish
 type: post
 published: true
+date: 06/14/2011
 thumbnail: /img/posts/confitura.png
 ---
 Right now I'm on the last lecture of [Confitura 2011](http://2011.confitura.pl), so it's the time to write a summary.

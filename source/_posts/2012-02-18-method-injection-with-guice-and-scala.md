@@ -8,6 +8,7 @@ tags: []
 status: publish
 type: post
 published: true
+date: 02/18/2012
 thumbnail: /img/posts/scala_logo.png
 ---
 This is English version of a <a href="http://scala.net.pl/wstrzykiwanie-metod-dzieki-guice/">post</a> I've written for <a href="http://scala.net.pl/wstrzykiwanie-metod-dzieki-guice/">Polish Scala User Group</a>.

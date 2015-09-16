@@ -7,6 +7,7 @@ tags: []
 status: publish
 type: post
 published: true
+date: 09/19/2011
 thumbnail: /img/posts/agilebyexample.png
 ---
 <img class="alignnone" src="https://lh4.googleusercontent.com/-4ODh0tEUd9I/TnNYkEdkT7I/AAAAAAAAAbc/GjhDO7axakU/s720/DSC_5903.jpg" alt="" width="720" height="478" />

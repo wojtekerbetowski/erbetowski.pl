@@ -6,6 +6,7 @@ tags: []
 status: publish
 type: post
 published: true
+date: 03/30/2012
 thumbnail: /img/posts/gmail.png
 ---
 There aren't much things I'm missing from working in corpo, but saving and attaching emails from M$ Exchange is one of them. You could simply save an email, put that to JIRA or any other store and your grandchildren could read the communication that led to this solution. And even more important functionality was to send someone this response 'you wanted it so - here's the email: &lt;url to that exact email&gt;.

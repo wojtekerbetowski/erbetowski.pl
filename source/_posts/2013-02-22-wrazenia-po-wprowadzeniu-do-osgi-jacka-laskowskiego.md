@@ -6,7 +6,7 @@ tags: []
 status: publish
 type: post
 published: true
-
+date: 02/22/2013
 thumbnail: /img/posts/20130205_wjug_osgi.png
 ---
 Na ostatnim spotkaniu Warszawskiego JUG założyciel tej grupy prezentował temat niezwykle ciekawy, choć często niedoceniany - OSGi. Nie mam większych doświadczeń z tą technologią (mniejszych też nie), więc tym bardziej ucieszyłem się na wieść o 'wprowadzeniu' do tematu.

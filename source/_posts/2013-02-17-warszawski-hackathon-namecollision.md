@@ -6,6 +6,7 @@ tags: []
 status: publish
 type: post
 published: true
+date: 02/17/2013
 thumbnail: /img/posts/20130222_namecollision.jpg
 ---
 <strong>NameCollision</strong> to nowy, niezależny hackathon dla <strong>warszawskich programistów</strong>, który odbędzie się w <strong>piątkowy wieczór, 22 lutego</strong> w centrum stolicy. Organizowane przez <strong>Google Developers Group</strong> i <strong>Warszawską Grupę Użytkowników Java</strong> wydarzenie ma na celu stworzenie sprzyjającej atmosfery dla dużej grupy programistów i pasjonatów. Luźna formuła hackathonu powinna pomóc w możliwie najlepszym wykorzystaniu czasu na programowanie oraz poznanie ciekawych osób z programistycznego środowiska.

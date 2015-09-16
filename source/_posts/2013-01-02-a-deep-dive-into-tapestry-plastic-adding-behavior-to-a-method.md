@@ -6,6 +6,7 @@ tags: []
 status: publish
 type: post
 published: true
+date: 02/01/2013
 thumbnail: /img/posts/tapestry.png
 ---
 In the <a title="A deep dive into Tapestry Plastic – part 1" href="http://blog.erbetowski.pl/index.php/plastic-1/" target="_blank">first part</a> we've prepared an environment for work. Now it's time to do some basic stuff with Plastic.

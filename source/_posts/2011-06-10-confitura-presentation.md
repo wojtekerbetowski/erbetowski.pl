@@ -1,13 +1,7 @@
 ---
-layout: post
 title: Confitura presentation
-categories:
-- community
-tags: []
-status: publish
-type: post
-published: true
 thumbnail: /img/posts/confitura.png
+date: 06/10/2011
 ---
 
 After reading <a href="http://art-of-software.blogspot.com/" target="_blank">Sławek Sobótka's</a>

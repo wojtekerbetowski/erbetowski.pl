@@ -6,6 +6,7 @@ tags: []
 status: publish
 type: post
 published: true
+date: 03/19/2012
 thumbnail: /img/posts/33rddegree.png
 ---
 <a title="33rd Degree" href="http://2012.33degree.org/">33rd degree</a> is where the Java Community is right now. Kudos to Grzegorz Duda once again.

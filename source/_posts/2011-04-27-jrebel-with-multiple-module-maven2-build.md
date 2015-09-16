@@ -11,6 +11,7 @@ tags:
 status: publish
 type: post
 published: true
+date: 04/27/2011
 thumbnail: /img/posts/jrebel.png
 comments: true
 ---
