@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://erbetowski.pl/"/>
-  <updated>2015-10-18T15:47:01.000Z</updated>
+  <updated>2015-10-30T16:23:43.000Z</updated>
   <id>http://erbetowski.pl/</id>
   
   <author>
@@ -13,6 +13,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Pain of a polyglot programmer]]></title>
+    <link href="http://erbetowski.pl/blog/pain-of-a-polyglot-programmer/"/>
+    <id>http://erbetowski.pl/blog/pain-of-a-polyglot-programmer/</id>
+    <published>2015-10-23T20:05:52.000Z</published>
+    <updated>2015-10-30T16:23:43.000Z</updated>
+    <content type="html"><![CDATA[<p>Couple of year ago it was quite rare to meet a developer, who would be fluent in more that one programming language.<br>There was no need for that. The only need was to know basic JavaScript to be able to add simple transitions on a website, which you most likely generated with languages like Ruby, Java, Python, PHP, etc.<br>Even then some developers tried to fix that “problem” of using JavaScript by creating solution porting their language to JavaScript (e.g. GWT).</p>
+<p>Back then a term ‘Polyglot Programmer’ was created (by Neal Ford, I believe) and, step by step, using multiple technologies began to be cool. I was always a fan of learning new things, especially languages.</p>
+<p>I began my programming career as a Java developer. Soon I discovered Groovy and truly loved it. I was using two os these in parallel (popular duet - Java for production and Groovy for testing and scripting). After a longer while I had the chance to join a project written in Scala, which I took. I was stunned by how much I got used to the former technologies, how hard it was to shift my mindset.</p>
+<p>I promised myself to change my environment even more often. This was a promise of the New Years resolution - I forgot it nearly right away. Some of the following projects took me through Python and Node.js ecosystems.</p>
+<p>And by the time I went back to Java (fancy Spring boot app), my concerns confirmed - I was a beginner once more. It was easier to recall things, than to learn them again, but for weeks I wasn’t fluent at all.</p>
+<p>Couple of days ago my colleague asked me, whether she would get to appropriate level of knowledge changing technologies so faster (I asked her to join Node.js project right after Java project) and I wasn’t able to answer.</p>
+<p>It’s great to be fluent in a technology. It’s also great to be good at several ecosystems and have a wide overview. My problem is - I cannot have both.</p>
+<p>Where to go next? There’s a couple of options.</p>
+<h1 id="JavaScript_All_the_Things!">JavaScript All the Things!</h1><p>I heard lately (as an anegdote) that in 5 years from now, we will send rockets into space on JavaScript. While it sounds funny, <a href="http://www.tricedesigns.com/2015/09/22/javascript-all-the-things-or-why-you-should-pay-attention-to-javascript/" target="_blank" rel="external">JavaScript is getting everywhere it can</a> - Server-Side, mobile (both Android and iOS), web (of course) and IoT. The downside is what <a href="http://deanwampler.github.io/polyglotprogramming/" target="_blank" rel="external">evangelists</a> were trying to tell - this way you won’t learn new paradigms nor ways to accomplish certain tasks better.</p>
+<h1 id="Distinct_languages_you_maintain">Distinct languages you maintain</h1><p>As Martin Mazur mentioned in <a href="https://www.youtube.com/watch?v=FPBVxpl8NMo" target="_blank" rel="external">his talk from DevDay</a> - he is maintaining his knowledge in some languages (five - wow!), and only learns more for new ideas and more context.</p>
+<h1 id="Standards_and_unification">Standards and unification</h1><p>Or maybe developers will be more into unifying things, and more and more technologies would share syntax, practices as much ass possible? <a href="http://www.techrepublic.com/article/developers-are-calling-it-quits-on-polyglot-programming/" target="_blank" rel="external">Matt Asay</a> sees a natural process in consolidate options.</p>
+<p>What about you? Do you have a single strong skill, or are actively maintaining several? What’s your solution?</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>Couple of year ago it was quite rare to meet a developer, who would be fluent in more that one programming language.<br>There was no need]]>
+    </summary>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[How long does it take for JIT in JVM to start?]]></title>
