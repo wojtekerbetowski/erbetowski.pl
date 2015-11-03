@@ -73,3 +73,8 @@ deploy:
       type: git
       repository: git@github.com:wojtekerbetowski/erbetowski.pl.git
       branch: gh-pages
+
+robotstxt:
+  useragent: "*"
+  sitemap: /sitemap.xml
+
