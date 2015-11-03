@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://erbetowski.pl/"/>
-  <updated>2015-10-30T16:23:43.000Z</updated>
+  <updated>2015-11-01T18:18:20.000Z</updated>
   <id>http://erbetowski.pl/</id>
   
   <author>
@@ -13,6 +13,25 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[PyPy vs Java - overview]]></title>
+    <link href="http://erbetowski.pl/blog/java-vs-pypy/"/>
+    <id>http://erbetowski.pl/blog/java-vs-pypy/</id>
+    <published>2015-10-23T20:05:52.000Z</published>
+    <updated>2015-11-01T18:18:20.000Z</updated>
+    <content type="html"><![CDATA[<p>I used to believe that Java has the fastest runtime to execute very typical, business apps. While it was possible to create a faster app with a low level language, I would bet that you wouldn’t write faster one. JVM, since <code>1.6</code> became blazing fast. JIT made running bytecode incredibly fast and one could take the advantage of that without even modifying already created code (not even recompiling existing bytecode).</p>
+<p>PyPy, on the other hand, is an alternative implementation of Python language (next to CPython, IronPython and Jython). It is known of it’s JIT compiler and support for parallel computing without Global Interpreter Lock (GIL).</p>
+<p>Since I’m familiar with both of these languages, I wanted to know, which one performs better in different scenarios, </p>
+<p>How they may be compared?</p>
+<p>What I found</p>
+<p>Coming next</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>I used to believe that Java has the fastest runtime to execute very typical, business apps. While it was possible to create a faster app ]]>
+    </summary>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Pain of a polyglot programmer]]></title>
