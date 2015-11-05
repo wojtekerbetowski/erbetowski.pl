@@ -10,19 +10,22 @@
   <meta name="author" content="Pixelwars">
 
   <meta name="description" content="This post is dedicated to put together Maven2 project with JRebel reloading.
-Until now i worked only with single module apps or apps I didn’t need to reload dynamicallybecause of all the tests that di">
+Until now i worked only with single module apps or apps I didn&apos;t need to reload dynamically
+because of all the tests that d">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JRebel with multiple module Maven2 build">
 <meta property="og:url" content="http://erbetowski.pl/blog/jrebel-with-multiple-module-maven2-build/index.html">
 <meta property="og:site_name" content="Wojtek Erbetowski homepage">
 <meta property="og:description" content="This post is dedicated to put together Maven2 project with JRebel reloading.
-Until now i worked only with single module apps or apps I didn’t need to reload dynamicallybecause of all the tests that di">
+Until now i worked only with single module apps or apps I didn&apos;t need to reload dynamically
+because of all the tests that d">
 <meta property="og:image" content="http://erbetowski.pl/img/posts/jrebel.png">
 <meta property="og:updated_time" content="2015-09-16T16:46:15.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JRebel with multiple module Maven2 build">
 <meta name="twitter:description" content="This post is dedicated to put together Maven2 project with JRebel reloading.
-Until now i worked only with single module apps or apps I didn’t need to reload dynamicallybecause of all the tests that di">
+Until now i worked only with single module apps or apps I didn&apos;t need to reload dynamically
+because of all the tests that d">
 
   <title>JRebel with multiple module Maven2 build - Wojtek Erbetowski</title>
 
@@ -161,10 +164,14 @@ Until now i worked only with single module apps or apps I didn’t need to reloa
         <!-- .entry-content -->
         <div class="entry-content">
           <p>This post is dedicated to put together Maven2 project with JRebel reloading.</p>
-<p>Until now i worked only with single module apps or apps I didn’t need to reload dynamically<br>because of all the tests that didn’t need application started.</p>
-<p>But now is the day to do the configuration and I had some trouble with it.<br>I hope this post helps someone not to loose 2-3 hours senseless, because it is an extremely easy thing to do.</p>
-<figure class="highlight xml"><figcaption><span>jrebel.xml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="pi">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">application</span></span><br><span class="line">  <span class="attribute">xmlns:xsi</span>=<span class="value">"http://www.w3.org/2001/XMLSchema-instance"</span></span><br><span class="line">  <span class="attribute">xmlns</span>=<span class="value">"http://www.zeroturnaround.com"</span></span><br><span class="line">  <span class="attribute">xsi:schemaLocation</span>=<span class="value">"http://www.zeroturnaround.com http://www.zeroturnaround.com/alderaan/rebel-2_0.xsd"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">classpath</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">dir</span> <span class="attribute">name</span>=<span class="value">"/home/wojtek/Projects/roche/multiapp/first/target/classes/"</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="title">classpath</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">application</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>Now when we add JRebel as javaagent to app it will start by reading this class and knows to check the directory<br>(instead of dir we can watch jars and other stuff). Like in our example we would probably like to exclude some paths<br>in directory not to scan the whole folder because it’s just too expensive.</p>
+<p>Until now i worked only with single module apps or apps I didn't need to reload dynamically
+because of all the tests that didn't need application started.</p>
+<p>But now is the day to do the configuration and I had some trouble with it.
+I hope this post helps someone not to loose 2-3 hours senseless, because it is an extremely easy thing to do.</p>
+<p><figure class="highlight xml"><figcaption><span>jrebel.xml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="pi">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">application</span></span><br><span class="line">  <span class="attribute">xmlns:xsi</span>=<span class="value">"http://www.w3.org/2001/XMLSchema-instance"</span></span><br><span class="line">  <span class="attribute">xmlns</span>=<span class="value">"http://www.zeroturnaround.com"</span></span><br><span class="line">  <span class="attribute">xsi:schemaLocation</span>=<span class="value">"http://www.zeroturnaround.com http://www.zeroturnaround.com/alderaan/rebel-2_0.xsd"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">classpath</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">dir</span> <span class="attribute">name</span>=<span class="value">"/home/wojtek/Projects/roche/multiapp/first/target/classes/"</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="title">classpath</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">application</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>Now when we add JRebel as javaagent to app it will start by reading this class and knows to check the directory
+(instead of dir we can watch jars and other stuff). Like in our example we would probably like to exclude some paths
+in directory not to scan the whole folder because it's just too expensive.</p>
 <p>How to do that? Just add exclude/include tags in <figure class="highlight"><figcaption><span>tag.</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#10;JRebel is a smart beast that can scan all the resources in classpath, including dependency jars.&#10;All we need to do is to put proper rebel.xml into each one of the (each we want to follow).&#10;Each has to say where JRebel can find new classes.&#10;&#10;I just lost about 2 hours because I called the file ```jrebel.xml``` instead of rebel.xml and wondered why doesn&#39;t it scan path... :-/&#10;&#10;Next thing to automate all of this is to add JRebel support to Maven build lifecycle,&#10;then we don&#39;t need to create rebel.xml by had, and all of developers can use unified pom.xml&#10;(which will add project root path to ```rebel.xml```). Remember to do this on all modules you want to have reloaded!&#10;Not just root or web project! Here&#39;s how mine looks:&#10;&#10;``` xml part of pom.xml&#10;&#60;plugin&#62;&#10;    &#60;groupId&#62;org.zeroturnaround&#60;/groupId&#62;&#10;    &#60;artifactId&#62;jrebel-maven-plugin&#60;/artifactId&#62;&#10;    &#60;executions&#62;&#10;        &#60;execution&#62;&#10;            &#60;id&#62;generate-rebel-xml&#60;/id&#62;&#10;            &#60;phase&#62;process-resources&#60;/phase&#62;&#10;            &#60;goals&#62;&#10;                &#60;goal&#62;generate&#60;/goal&#62;&#10;            &#60;/goals&#62;&#10;        &#60;/execution&#62;&#10;    &#60;/executions&#62;&#10;&#60;/plugin&#62;</span><br></pre></td></tr></table></figure></p>
 
         </div>

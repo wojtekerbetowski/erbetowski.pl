@@ -9,17 +9,17 @@
   <meta name="keywords" content="vcard, html5, portfolio">
   <meta name="author" content="Pixelwars">
 
-  <meta name="description" content="JIT stands for “just in time”. In JVM it’s a neat mechanism that makes it easy to go from low execution speed, common to interpreters, to speed similar to native code execution, without involving any">
+  <meta name="description" content="JIT stands for &amp;quot;just in time&amp;quot;. In JVM it&apos;s a neat mechanism that makes it easy to go from low execution speed, common to interpreters, to speed similar to native code execution, without invo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="How long does it take for JIT in JVM to start?">
 <meta property="og:url" content="http://erbetowski.pl/blog/how-long-jit-starts/index.html">
 <meta property="og:site_name" content="Wojtek Erbetowski homepage">
-<meta property="og:description" content="JIT stands for “just in time”. In JVM it’s a neat mechanism that makes it easy to go from low execution speed, common to interpreters, to speed similar to native code execution, without involving any">
+<meta property="og:description" content="JIT stands for &amp;quot;just in time&amp;quot;. In JVM it&apos;s a neat mechanism that makes it easy to go from low execution speed, common to interpreters, to speed similar to native code execution, without invo">
 <meta property="og:image" content="http://erbetowski.pl/img/posts/java-oracle.png">
 <meta property="og:updated_time" content="2015-10-18T15:47:01.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="How long does it take for JIT in JVM to start?">
-<meta name="twitter:description" content="JIT stands for “just in time”. In JVM it’s a neat mechanism that makes it easy to go from low execution speed, common to interpreters, to speed similar to native code execution, without involving any">
+<meta name="twitter:description" content="JIT stands for &amp;quot;just in time&amp;quot;. In JVM it&apos;s a neat mechanism that makes it easy to go from low execution speed, common to interpreters, to speed similar to native code execution, without invo">
 
   <title>How long does it take for JIT in JVM to start? - Wojtek Erbetowski</title>
 
@@ -157,17 +157,18 @@
 
         <!-- .entry-content -->
         <div class="entry-content">
-          <p>JIT stands for “just in time”. In JVM it’s a neat mechanism that makes it easy to go from low execution speed, common to interpreters, to speed similar to native code execution, without involving any of software developer’s work (at least in theory).</p>
-<p>Whenever I wrote a utility script in Groovy, I soon found myself translating it to bash or python. Why? Because of the <strong>slow startup</strong> phase. This made me curious of what exactly makes Java so slow at the start time. One of the ideas was JIT.<br>When you think of it - it’s a kind of monitor, working alongside your application, counting method calls, compiling them to native code, skipping irrelevant code, etc. How expensive must that be, right?</p>
-<p>Lately I noticed <code>-Xint</code> flag to <code>java</code> command, which makes Java Virtual Machine to start in <em>interpreter-only</em> mode. This means that JIT compiler will be turned off in that Java process.</p>
-<p>This way we may check what is the overhead of starting JIT. Let’s start with a very simple example, which will cause JIT to drop some of the code (since <code>Math.sqrt</code> doesn’t have side effects, so it’s safe for JIT to drop it).</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">doingNothingForALongTime</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  Math.<span class="built_in">sqrt</span>(<span class="number">10.0</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">long</span> i = <span class="number">0</span>; i &lt; LOOP_COUNT; i++) &#123;</span><br><span class="line">    <span class="keyword">new</span> EmptyLoops().doingNothingForALongTime();</span><br><span class="line">  &#125;</span><br><span class="line">  System.out.println(<span class="string">"Done"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          <p>JIT stands for &quot;just in time&quot;. In JVM it's a neat mechanism that makes it easy to go from low execution speed, common to interpreters, to speed similar to native code execution, without involving any of software developer's work (at least in theory).</p>
+<p>Whenever I wrote a utility script in Groovy, I soon found myself translating it to bash or python. Why? Because of the <strong>slow startup</strong> phase. This made me curious of what exactly makes Java so slow at the start time. One of the ideas was JIT.
+When you think of it - it's a kind of monitor, working alongside your application, counting method calls, compiling them to native code, skipping irrelevant code, etc. How expensive must that be, right?</p>
+<p>Lately I noticed <code>-Xint</code> flag to &lt;code&gt;java&lt;/code&gt; command, which makes Java Virtual Machine to start in <em>interpreter-only</em> mode. This means that JIT compiler will be turned off in that Java process.</p>
+<p>This way we may check what is the overhead of starting JIT. Let's start with a very simple example, which will cause JIT to drop some of the code (since <code>Math.sqrt</code> doesn't have side effects, so it's safe for JIT to drop it).</p>
+<p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">doingNothingForALongTime</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  Math.<span class="built_in">sqrt</span>(<span class="number">10.0</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">long</span> i = <span class="number">0</span>; i &lt; LOOP_COUNT; i++) &#123;</span><br><span class="line">    <span class="keyword">new</span> EmptyLoops().doingNothingForALongTime();</span><br><span class="line">  &#125;</span><br><span class="line">  System.out.println(<span class="string">"Done"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>After compilation we may run it with an insight to JIT actions:</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">$ java -XX:+PrintCompilation EmptyLoops</span><br><span class="line"><span class="number">89</span>    <span class="number">1</span>       <span class="number">3</span>       java.lang.String::hashCode (<span class="number">55</span> bytes)</span><br><span class="line">...</span><br><span class="line"><span class="comment">// JIT noticed many calls to the constructor and method</span></span><br><span class="line"><span class="number">111</span>   <span class="number">29</span>       <span class="number">3</span>       EmptyLoops::&lt;init&gt; (<span class="number">5</span> bytes)</span><br><span class="line"><span class="number">111</span>   <span class="number">30</span>       <span class="number">3</span>       EmptyLoops::doingNothingForALongTime (<span class="number">8</span> bytes)</span><br><span class="line"><span class="number">112</span>   <span class="number">31</span>       <span class="number">4</span>       EmptyLoops::&lt;init&gt; (<span class="number">5</span> bytes)</span><br><span class="line"><span class="number">112</span>   <span class="number">29</span>       <span class="number">3</span>       EmptyLoops::&lt;init&gt; (<span class="number">5</span> bytes)   made not entrant</span><br><span class="line"><span class="number">112</span>   <span class="number">32</span>       <span class="number">4</span>       EmptyLoops::doingNothingForALongTime (<span class="number">8</span> bytes)</span><br><span class="line"><span class="number">112</span>   <span class="number">30</span>       <span class="number">3</span>       EmptyLoops::doingNothingForALongTime (<span class="number">8</span> bytes)   made not</span><br><span class="line">entrant</span><br><span class="line">Done</span><br></pre></td></tr></table></figure>
-<p>What happened right there is out of this post’s scope, so let’s just execute that with <code>-Xint</code> flag:</p>
-<figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$java</span> -Xint -XX:+PrintCompilation EmptyLoops</span><br><span class="line">Done</span><br></pre></td></tr></table></figure>
-<p>It works. JIT didn’t generate any outputs as it was disabled.</p>
-<p>Let’s see how it influenced execution times:</p>
+<p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">$ java -XX:+PrintCompilation EmptyLoops</span><br><span class="line"><span class="number">89</span>    <span class="number">1</span>       <span class="number">3</span>       java.lang.String::hashCode (<span class="number">55</span> bytes)</span><br><span class="line">...</span><br><span class="line"><span class="comment">// JIT noticed many calls to the constructor and method</span></span><br><span class="line"><span class="number">111</span>   <span class="number">29</span>       <span class="number">3</span>       EmptyLoops::&lt;init&gt; (<span class="number">5</span> bytes)</span><br><span class="line"><span class="number">111</span>   <span class="number">30</span>       <span class="number">3</span>       EmptyLoops::doingNothingForALongTime (<span class="number">8</span> bytes)</span><br><span class="line"><span class="number">112</span>   <span class="number">31</span>       <span class="number">4</span>       EmptyLoops::&lt;init&gt; (<span class="number">5</span> bytes)</span><br><span class="line"><span class="number">112</span>   <span class="number">29</span>       <span class="number">3</span>       EmptyLoops::&lt;init&gt; (<span class="number">5</span> bytes)   made not entrant</span><br><span class="line"><span class="number">112</span>   <span class="number">32</span>       <span class="number">4</span>       EmptyLoops::doingNothingForALongTime (<span class="number">8</span> bytes)</span><br><span class="line"><span class="number">112</span>   <span class="number">30</span>       <span class="number">3</span>       EmptyLoops::doingNothingForALongTime (<span class="number">8</span> bytes)   made not</span><br><span class="line">entrant</span><br><span class="line">Done</span><br></pre></td></tr></table></figure></p>
+<p>What happened right there is out of this post's scope, so let's just execute that with <code>-Xint</code> flag:</p>
+<p><figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$java</span> -Xint -XX:+PrintCompilation EmptyLoops</span><br><span class="line">Done</span><br></pre></td></tr></table></figure></p>
+<p>It works. JIT didn't generate any outputs as it was disabled.</p>
+<p>Let's see how it influenced execution times:</p>
 <table>
 <thead>
 <tr>
@@ -178,20 +179,20 @@
 </thead>
 <tbody>
 <tr>
-<td>10<sup>0</sup></td>
+<td>10&lt;sup&gt;0&lt;/sup&gt;</td>
 <td>0.16s</td>
 <td>0.15s</td>
 </tr>
 <tr>
-<td>10<sup>7</sup></td>
+<td>10&lt;sup&gt;7&lt;/sup&gt;</td>
 <td>0.19s</td>
 <td>2.77s</td>
 </tr>
 </tbody>
 </table>
-<p>As expected - JIT dropped irrelevant code and ended up with a speed up for many loops. But that’s not our target. When you look at the first scenario, you will notice there’s no speedup in running that simple class. So JIT seems not to cause any overhead.</p>
-<p>Next, let’s check the same test for running a simple Groovy script (call system command, wait for it’s finish, print output):</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">time</span> groovy -e <span class="string">"println 'echo Hello from Groovy'.execute().text"</span></span><br></pre></td></tr></table></figure>
+<p>As expected - JIT dropped irrelevant code and ended up with a speed up for many loops. But that's not our target. When you look at the first scenario, you will notice there's no speedup in running that simple class. So JIT seems not to cause any overhead.</p>
+<p>Next, let's check the same test for running a simple Groovy script (call system command, wait for it's finish, print output):</p>
+<p><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">time</span> groovy -e <span class="string">"println 'echo Hello from Groovy'.execute().text"</span></span><br></pre></td></tr></table></figure></p>
 <p>Results (on avarage):</p>
 <table>
 <thead>
@@ -208,8 +209,8 @@
 </tbody>
 </table>
 <p>On avarage disabling JIT even caused execution time to increase by 23%! Which means that even when running the tiniest Groovy script, JIT already makes a big improvement. How much exactly work is being involved? Take a look:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ JAVA_OPTS=<span class="string">"-XX:+PrintCompilation"</span> groovy <span class="operator">-e</span> <span class="string">"println 'echo Hello from Groovy'.execute().text"</span> | wc <span class="operator">-l</span></span><br><span class="line"><span class="number">900</span></span><br></pre></td></tr></table></figure>
-<p>That’s it for now. There’s no reason to disable JIT in order to make JVM start faster. Soon I’ll take a look at some other things.</p>
+<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ JAVA_OPTS=<span class="string">"-XX:+PrintCompilation"</span> groovy <span class="operator">-e</span> <span class="string">"println 'echo Hello from Groovy'.execute().text"</span> | wc <span class="operator">-l</span></span><br><span class="line"><span class="number">900</span></span><br></pre></td></tr></table></figure></p>
+<p>That's it for now. There's no reason to disable JIT in order to make JVM start faster. Soon I'll take a look at some other things.</p>
 
         </div>
         <!-- .entry-content -->

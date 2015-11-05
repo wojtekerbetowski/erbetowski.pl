@@ -9,17 +9,17 @@
   <meta name="keywords" content="vcard, html5, portfolio">
   <meta name="author" content="Pixelwars">
 
-  <meta name="description" content="End of the year is coming and I’m starting the next year with talk on WJUG about Plastic - code generation tool from Tapestry author - Howard Lewis Ship. It’s definitely time to start preparing.&amp;lt;!--br">
+  <meta name="description" content="&amp;lt;img class=&amp;quot;alignleft&amp;quot; title=&amp;quot;Tapestry&amp;quot; src=&amp;quot;http://tapestry.apache.org/images/tapestry.png&amp;quot; alt=&amp;quot;&amp;quot; width=&amp;quot;330&amp;quot; height=&amp;quot;138&amp;quot; /&amp;gt;End of">
 <meta property="og:type" content="article">
 <meta property="og:title" content="A deep dive into Tapestry Plastic - part 1">
 <meta property="og:url" content="http://erbetowski.pl/blog/plastic-1/index.html">
 <meta property="og:site_name" content="Wojtek Erbetowski homepage">
-<meta property="og:description" content="End of the year is coming and I’m starting the next year with talk on WJUG about Plastic - code generation tool from Tapestry author - Howard Lewis Ship. It’s definitely time to start preparing.&amp;lt;!--br">
+<meta property="og:description" content="&amp;lt;img class=&amp;quot;alignleft&amp;quot; title=&amp;quot;Tapestry&amp;quot; src=&amp;quot;http://tapestry.apache.org/images/tapestry.png&amp;quot; alt=&amp;quot;&amp;quot; width=&amp;quot;330&amp;quot; height=&amp;quot;138&amp;quot; /&amp;gt;End of">
 <meta property="og:image" content="http://erbetowski.pl/img/posts/tapestry.png">
 <meta property="og:updated_time" content="2015-09-16T16:46:15.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="A deep dive into Tapestry Plastic - part 1">
-<meta name="twitter:description" content="End of the year is coming and I’m starting the next year with talk on WJUG about Plastic - code generation tool from Tapestry author - Howard Lewis Ship. It’s definitely time to start preparing.&amp;lt;!--br">
+<meta name="twitter:description" content="&amp;lt;img class=&amp;quot;alignleft&amp;quot; title=&amp;quot;Tapestry&amp;quot; src=&amp;quot;http://tapestry.apache.org/images/tapestry.png&amp;quot; alt=&amp;quot;&amp;quot; width=&amp;quot;330&amp;quot; height=&amp;quot;138&amp;quot; /&amp;gt;End of">
 
   <title>A deep dive into Tapestry Plastic - part 1 - Wojtek Erbetowski</title>
 
@@ -157,14 +157,16 @@
 
         <!-- .entry-content -->
         <div class="entry-content">
-          <p><img class="alignleft" title="Tapestry" src="http://tapestry.apache.org/images/tapestry.png" alt="" width="330" height="138">End of the year is coming and I’m starting the next year with talk on <a title="WJUG" href="http://warszawa.jug.pl" target="_blank">WJUG</a> about Plastic - code generation tool from <a title="Tapestry" href="http://tapestry.apache.org" target="_blank">Tapestry</a> author - <a href="http://howardlewisship.com/" target="_blank">Howard Lewis Ship</a>. It’s definitely time to start preparing.<br><!--break--><br>I was impressed by authors talk about the library you may see here - <a href="http://www.infoq.com/presentations/Have-Your-Cake-and-Eat-It-Too-Meta-Programming-Java" target="_blank" rel="external">http://www.infoq.com/presentations/Have-Your-Cake-and-Eat-It-Too-Meta-Programming-Java</a></p>
-<p>So let’s start by jumping to the source… and there’s a sad surprise - it’s not that easy to find the source :-( Author said Plastic is separate from the rest of Tapestry 5, but all the links for GitHub repo leads to 404 page. It seems that the idea of an independent library is past.</p>
-<p>But there’s hope! On Lewis’ GitHub page there’s a repo named <a href="https://github.com/hlship/plastic-demos/" target="_blank">plastic-demos</a>. Fast git clone and you may see it’s a <a href="http://gradle.org" target="_blank">Gradle</a> project with <a href="http://code.google.com/p/spock/" target="_blank">Spock</a> unit tests presenting simple Plastic functions. Trying <code>gradle test</code> would be natural next step, but still no luck there:</p>
-<script src="//gist.github.com/b6115bf9b9758b1a2980.js"></script>
-<p>Missing dependency, huh? Let’s take a quick search in <a href="http://mvnrepository.com/artifact/org.apache.tapestry/plastic/5.3.5" target="_blank" rel="external">http://mvnrepository.com/</a> and there it is, <a href="http://mvnrepository.com/artifact/org.apache.tapestry/plastic/5.3.5" target="_blank" rel="external">http://mvnrepository.com/artifact/org.apache.tapestry/plastic/5.3.5</a>. I’m changing version in <code>build.gradle</code> to ‘org.apache.tapestry:plastic:5.3.5’ and it worked:</p>
-<script src="//gist.github.com/4df97a8cf51325afde4c.js"></script>
-<p>So where do I find the sources? Well, it wasn’t hard to guess, it’s inside <a href="http://tapestry.apache.org/download.html" target="_blank">Tapestry source package</a>, which actually isn’t that nice, because the promise was, it’s a separate project.</p>
-<p>Now that we have the source and some examples we can have some more fun… in the next part.</p>
+          <p>&lt;img class=&quot;alignleft&quot; title=&quot;Tapestry&quot; src=&quot;http://tapestry.apache.org/images/tapestry.png&quot; alt=&quot;&quot; width=&quot;330&quot; height=&quot;138&quot; /&gt;End of the year is coming and I'm starting the next year with talk on &lt;a title=&quot;WJUG&quot; href=&quot;http://warszawa.jug.pl&quot; target=&quot;_blank&quot;&gt;WJUG&lt;/a&gt; about Plastic - code generation tool from &lt;a title=&quot;Tapestry&quot; href=&quot;http://tapestry.apache.org&quot; target=&quot;_blank&quot;&gt;Tapestry&lt;/a&gt; author - &lt;a href=&quot;http://howardlewisship.com/&quot; target=&quot;_blank&quot;&gt;Howard Lewis Ship&lt;/a&gt;. It's definitely time to start preparing.
+&lt;!--break--&gt;
+I was impressed by authors talk about the library you may see here - &lt;a href=&quot;http://www.infoq.com/presentations/Have-Your-Cake-and-Eat-It-Too-Meta-Programming-Java&quot;&gt;http://www.infoq.com/presentations/Have-Your-Cake-and-Eat-It-Too-Meta-Programming-Java&lt;/a&gt;</p>
+<p>So let's start by jumping to the source... and there's a sad surprise - it's not that easy to find the source :-( Author said Plastic is separate from the rest of Tapestry 5, but all the links for GitHub repo leads to 404 page. It seems that the idea of an independent library is past.</p>
+<p>But there's hope! On Lewis' GitHub page there's a repo named &lt;a href=&quot;https://github.com/hlship/plastic-demos/&quot; target=&quot;_blank&quot;&gt;plastic-demos&lt;/a&gt;. Fast git clone and you may see it's a &lt;a href=&quot;http://gradle.org&quot; target=&quot;_blank&quot;&gt;Gradle&lt;/a&gt; project with &lt;a href=&quot;http://code.google.com/p/spock/&quot; target=&quot;_blank&quot;&gt;Spock&lt;/a&gt; unit tests presenting simple Plastic functions. Trying &lt;code&gt;gradle test&lt;/code&gt; would be natural next step, but still no luck there:</p>
+<p><script src="//gist.github.com/b6115bf9b9758b1a2980.js"></script></p>
+<p>Missing dependency, huh? Let's take a quick search in &lt;a href=&quot;http://mvnrepository.com/artifact/org.apache.tapestry/plastic/5.3.5&quot;&gt;http://mvnrepository.com/&lt;/a&gt; and there it is, &lt;a href=&quot;http://mvnrepository.com/artifact/org.apache.tapestry/plastic/5.3.5&quot;&gt;http://mvnrepository.com/artifact/org.apache.tapestry/plastic/5.3.5&lt;/a&gt;. I'm changing version in &lt;code&gt;build.gradle&lt;/code&gt; to 'org.apache.tapestry:plastic:5.3.5' and it worked:</p>
+<p><script src="//gist.github.com/4df97a8cf51325afde4c.js"></script></p>
+<p>So where do I find the sources? Well, it wasn't hard to guess, it's inside &lt;a href=&quot;http://tapestry.apache.org/download.html&quot; target=&quot;_blank&quot;&gt;Tapestry source package&lt;/a&gt;, which actually isn't that nice, because the promise was, it's a separate project.</p>
+<p>Now that we have the source and some examples we can have some more fun... in the next part.</p>
 <p>One thing you can see already is that Howard L. Ship is using all the new, cool stuff to develop (Spock, Gradle), which makes it so much better experience to use the code, than it would be using old mainstream tools like Maven2 or JUnit.</p>
 
         </div>

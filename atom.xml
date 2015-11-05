@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://erbetowski.pl/"/>
-  <updated>2015-11-04T17:38:59.000Z</updated>
+  <updated>2015-11-05T08:42:55.000Z</updated>
   <id>http://erbetowski.pl/</id>
   
   <author>
@@ -19,17 +19,30 @@
     <link href="http://erbetowski.pl/blog/java-vs-pypy/"/>
     <id>http://erbetowski.pl/blog/java-vs-pypy/</id>
     <published>2015-10-23T20:05:52.000Z</published>
-    <updated>2015-11-04T17:38:59.000Z</updated>
-    <content type="html"><![CDATA[<p>I used to believe that Java has the fastest runtime to execute very typical, business apps. While it was possible to create a faster app with a low level language, I would bet that one wouldn’t write it in a reasonable time. JVM, by the release of <code>1.6</code> became blazing fast. JIT made running bytecode incredibly fast and one could take the advantage of that without even modifying existing code (furthermore, not even recompiling existing bytecode).</p>
-<p>PyPy, on the other hand, is an alternative implementation of Python language (next to CPython, IronPython and Jython). It is known of it’s JIT compiler and support for parallel computing without Global Interpreter Lock (GIL).</p>
-<p>Since I’m familiar with both of these languages, I wanted to know, which one performs better in several different scenarios. I use them for scripting, web apps and integration.</p>
-<h2 id="How_to_compare_them?">How to compare them?</h2><p>Most performance tests use single or batch of algorithms, implement them (either idiomatic or optimized) and execute against sets of data. Another way is to use a more complete stack (including popular libraries) to solve basic, but common problems. We want to try both of these ways.</p>
-<p>Let’s start with whatever there already is available.</p>
-<h2 id="Findings">Findings</h2><h3 id="Who_is_developing_them?">Who is developing them?</h3><p><a href="http://stackoverflow.com/a/5172833/990074" target="_blank" rel="external">This StackOverflow answer</a> points out, how important is the team working on the VM optimizations. Sun involved a team specializing in that kind of optimizations. Although PyPy project <a href="http://pypy.org/people.html" target="_blank" rel="external">team page</a> lists several smart developers, it doesn’t reveal that kind of previous experience. Also I wonder, whether core PyPy contributors are spending most of their working time on PyPy, or is it a side project for them.</p>
-<h3 id="Existing_benchmarks">Existing benchmarks</h3><p>Checking the <a href="http://benchmarksgame.alioth.debian.org/" target="_blank" rel="external">benchmark game</a> all I found was Java vs pure Python comparison. It supports the intuition, that for a number of problems, there’s <a href="http://benchmarksgame.alioth.debian.org/u64q/python.html" target="_blank" rel="external">a gulf between them</a> (up to <strong>42 times slower</strong>). This doesn’t necessarily apply to PyPy though.</p>
-<p>I wasn’t able to find a single benchmark comparing the two.</p>
-<h3 id="Side_note">Side note</h3><p>This post is completely subjective and targets only aspects, that I’m finding important. If you’d like to contribute or suggest a change - then please, leave a comment.</p>
-<h2 id="Coming_soon">Coming soon</h2><p>I plan to compare the performance of the two in three scenarios - simple algorithm, a typical script and a small, but full-stack web application. Stay tuned!</p>
+    <updated>2015-11-05T08:42:55.000Z</updated>
+    <content type="html"><![CDATA[<p>I used to believe that Java has the fastest runtime to execute very typical, business apps. While it was possible to create a faster app with a low level language, I would bet that one wouldn't write it in a reasonable time. JVM, by the release of <code>1.6</code> became blazing fast. JIT made running bytecode incredibly fast and one could take the advantage of that without even modifying existing code (furthermore, not even recompiling existing bytecode).</p>
+<p>PyPy, on the other hand, is an alternative implementation of Python language (next to CPython, IronPython and Jython). It is known of it's JIT compiler and support for parallel computing <s>without Global Interpreter Lock (GIL)</s><sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>.</p>
+<p>Since I'm familiar with both of these languages, I wanted to know, which one performs better in several different scenarios. I use them for scripting, web apps and integration.</p>
+<h2>How to compare them?</h2>
+<p>Most performance tests use single or batch of algorithms, implement them (either idiomatic or optimized) and execute against sets of data. Another way is to use a more complete stack (including popular libraries) to solve basic, but common problems. We want to try both of these ways.</p>
+<p>Let's start with whatever there already is available.</p>
+<h2>Findings</h2>
+<h3>Who is developing them?</h3>
+<p><a href="http://stackoverflow.com/a/5172833/990074" target="_blank" rel="external">This StackOverflow answer</a> points out, how important is the team working on the VM optimizations. Sun involved a team specializing in that kind of optimizations. Although PyPy project <a href="http://pypy.org/people.html" target="_blank" rel="external">team page</a> lists several smart developers, it doesn't reveal that kind of previous experience. Also I wonder, whether core PyPy contributors are spending most of their working time on PyPy, or is it a side project for them.</p>
+<h3>Existing benchmarks</h3>
+<p>Checking the <a href="http://benchmarksgame.alioth.debian.org/" target="_blank" rel="external">benchmark game</a> all I found was Java vs pure Python comparison. It supports the intuition, that for a number of problems, there's <a href="http://benchmarksgame.alioth.debian.org/u64q/python.html" target="_blank" rel="external">a gulf between them</a> (up to <strong>42 times slower</strong>). This doesn't necessarily apply to PyPy though.</p>
+<p>I wasn't able to find a single benchmark comparing the two.</p>
+<h3>Side note</h3>
+<p>This post is completely subjective and targets only aspects, that I'm finding important. If you'd like to contribute or suggest a change - then please, leave a comment.</p>
+<h2>Coming soon</h2>
+<p>I plan to compare the performance of the two in three scenarios - simple algorithm, a typical script and a small, but full-stack web application. Stay tuned!</p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>Thanks <a href="https://twitter.com/haxoza/status/662034220852858880" target="_blank" rel="external">@haxoza</a> for noticing it. <a href="http://doc.pypy.org/en/latest/faq.html#does-pypy-have-a-gil-why" target="_blank" rel="external">PyPy has GIL</a>. My mistake. <a href="#fnref1" class="footnote-backref">↩</a></p>
+</li>
+</ol>
+</section>
 ]]></content>
     <summary type="html">
     <![CDATA[<p>I used to believe that Java has the fastest runtime to execute very typical, business apps. While it was possible to create a faster app ]]>
@@ -43,21 +56,27 @@
     <id>http://erbetowski.pl/blog/pain-of-a-polyglot-programmer/</id>
     <published>2015-10-23T20:05:52.000Z</published>
     <updated>2015-10-30T16:23:43.000Z</updated>
-    <content type="html"><![CDATA[<p>Couple of year ago it was quite rare to meet a developer, who would be fluent in more that one programming language.<br>There was no need for that. The only need was to know basic JavaScript to be able to add simple transitions on a website, which you most likely generated with languages like Ruby, Java, Python, PHP, etc.<br>Even then some developers tried to fix that “problem” of using JavaScript by creating solution porting their language to JavaScript (e.g. GWT).</p>
-<p>Back then a term ‘Polyglot Programmer’ was created (by Neal Ford, I believe) and, step by step, using multiple technologies began to be cool. I was always a fan of learning new things, especially languages.</p>
+    <content type="html"><![CDATA[<p>Couple of year ago it was quite rare to meet a developer, who would be fluent in more that one programming language.
+There was no need for that. The only need was to know basic JavaScript to be able to add simple transitions on a website, which you most likely generated with languages like Ruby, Java, Python, PHP, etc.
+Even then some developers tried to fix that &quot;problem&quot; of using JavaScript by creating solution porting their language to JavaScript (e.g. GWT).</p>
+<p>Back then a term 'Polyglot Programmer' was created (by Neal Ford, I believe) and, step by step, using multiple technologies began to be cool. I was always a fan of learning new things, especially languages.</p>
 <p>I began my programming career as a Java developer. Soon I discovered Groovy and truly loved it. I was using two os these in parallel (popular duet - Java for production and Groovy for testing and scripting). After a longer while I had the chance to join a project written in Scala, which I took. I was stunned by how much I got used to the former technologies, how hard it was to shift my mindset.</p>
 <p>I promised myself to change my environment even more often. This was a promise of the New Years resolution - I forgot it nearly right away. Some of the following projects took me through Python and Node.js ecosystems.</p>
-<p>And by the time I went back to Java (fancy Spring boot app), my concerns confirmed - I was a beginner once more. It was easier to recall things, than to learn them again, but for weeks I wasn’t fluent at all.</p>
-<p>Couple of days ago my colleague asked me, whether she would get to appropriate level of knowledge changing technologies so faster (I asked her to join Node.js project right after Java project) and I wasn’t able to answer.</p>
-<p>It’s great to be fluent in a technology. It’s also great to be good at several ecosystems and have a wide overview. My problem is - I cannot have both.</p>
-<p>Where to go next? There’s a couple of options.</p>
-<h1 id="JavaScript_All_the_Things!">JavaScript All the Things!</h1><p>I heard lately (as an anegdote) that in 5 years from now, we will send rockets into space on JavaScript. While it sounds funny, <a href="http://www.tricedesigns.com/2015/09/22/javascript-all-the-things-or-why-you-should-pay-attention-to-javascript/" target="_blank" rel="external">JavaScript is getting everywhere it can</a> - Server-Side, mobile (both Android and iOS), web (of course) and IoT. The downside is what <a href="http://deanwampler.github.io/polyglotprogramming/" target="_blank" rel="external">evangelists</a> were trying to tell - this way you won’t learn new paradigms nor ways to accomplish certain tasks better.</p>
-<h1 id="Distinct_languages_you_maintain">Distinct languages you maintain</h1><p>As Martin Mazur mentioned in <a href="https://www.youtube.com/watch?v=FPBVxpl8NMo" target="_blank" rel="external">his talk from DevDay</a> - he is maintaining his knowledge in some languages (five - wow!), and only learns more for new ideas and more context.</p>
-<h1 id="Standards_and_unification">Standards and unification</h1><p>Or maybe developers will be more into unifying things, and more and more technologies would share syntax, practices as much ass possible? <a href="http://www.techrepublic.com/article/developers-are-calling-it-quits-on-polyglot-programming/" target="_blank" rel="external">Matt Asay</a> sees a natural process in consolidate options.</p>
-<p>What about you? Do you have a single strong skill, or are actively maintaining several? What’s your solution?</p>
+<p>And by the time I went back to Java (fancy Spring boot app), my concerns confirmed - I was a beginner once more. It was easier to recall things, than to learn them again, but for weeks I wasn't fluent at all.</p>
+<p>Couple of days ago my colleague asked me, whether she would get to appropriate level of knowledge changing technologies so faster (I asked her to join Node.js project right after Java project) and I wasn't able to answer.</p>
+<p>It's great to be fluent in a technology. It's also great to be good at several ecosystems and have a wide overview. My problem is - I cannot have both.</p>
+<p>Where to go next? There's a couple of options.</p>
+<h1>JavaScript All the Things!</h1>
+<p>I heard lately (as an anegdote) that in 5 years from now, we will send rockets into space on JavaScript. While it sounds funny, <a href="http://www.tricedesigns.com/2015/09/22/javascript-all-the-things-or-why-you-should-pay-attention-to-javascript/" target="_blank" rel="external">JavaScript is getting everywhere it can</a> - Server-Side, mobile (both Android and iOS), web (of course) and IoT. The downside is what <a href="http://deanwampler.github.io/polyglotprogramming/" target="_blank" rel="external">evangelists</a> were trying to tell - this way you won't learn new paradigms nor ways to accomplish certain tasks better.</p>
+<h1>Distinct languages you maintain</h1>
+<p>As Martin Mazur mentioned in <a href="https://www.youtube.com/watch?v=FPBVxpl8NMo" target="_blank" rel="external">his talk from DevDay</a> - he is maintaining his knowledge in some languages (five - wow!), and only learns more for new ideas and more context.</p>
+<h1>Standards and unification</h1>
+<p>Or maybe developers will be more into unifying things, and more and more technologies would share syntax, practices as much ass possible? <a href="http://www.techrepublic.com/article/developers-are-calling-it-quits-on-polyglot-programming/" target="_blank" rel="external">Matt Asay</a> sees a natural process in consolidate options.</p>
+<p>What about you? Do you have a single strong skill, or are actively maintaining several? What's your solution?</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>Couple of year ago it was quite rare to meet a developer, who would be fluent in more that one programming language.<br>There was no need]]>
+    <![CDATA[<p>Couple of year ago it was quite rare to meet a developer, who would be fluent in more that one programming language.
+There was no need fo]]>
     </summary>
     
   </entry>
@@ -68,17 +87,18 @@
     <id>http://erbetowski.pl/blog/how-long-jit-starts/</id>
     <published>2015-10-17T13:22:18.000Z</published>
     <updated>2015-10-18T15:47:01.000Z</updated>
-    <content type="html"><![CDATA[<p>JIT stands for “just in time”. In JVM it’s a neat mechanism that makes it easy to go from low execution speed, common to interpreters, to speed similar to native code execution, without involving any of software developer’s work (at least in theory).</p>
-<p>Whenever I wrote a utility script in Groovy, I soon found myself translating it to bash or python. Why? Because of the <strong>slow startup</strong> phase. This made me curious of what exactly makes Java so slow at the start time. One of the ideas was JIT.<br>When you think of it - it’s a kind of monitor, working alongside your application, counting method calls, compiling them to native code, skipping irrelevant code, etc. How expensive must that be, right?</p>
-<p>Lately I noticed <code>-Xint</code> flag to <code>java</code> command, which makes Java Virtual Machine to start in <em>interpreter-only</em> mode. This means that JIT compiler will be turned off in that Java process.</p>
-<p>This way we may check what is the overhead of starting JIT. Let’s start with a very simple example, which will cause JIT to drop some of the code (since <code>Math.sqrt</code> doesn’t have side effects, so it’s safe for JIT to drop it).</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">doingNothingForALongTime</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  Math.<span class="built_in">sqrt</span>(<span class="number">10.0</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">long</span> i = <span class="number">0</span>; i &lt; LOOP_COUNT; i++) &#123;</span><br><span class="line">    <span class="keyword">new</span> EmptyLoops().doingNothingForALongTime();</span><br><span class="line">  &#125;</span><br><span class="line">  System.out.println(<span class="string">"Done"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    <content type="html"><![CDATA[<p>JIT stands for &quot;just in time&quot;. In JVM it's a neat mechanism that makes it easy to go from low execution speed, common to interpreters, to speed similar to native code execution, without involving any of software developer's work (at least in theory).</p>
+<p>Whenever I wrote a utility script in Groovy, I soon found myself translating it to bash or python. Why? Because of the <strong>slow startup</strong> phase. This made me curious of what exactly makes Java so slow at the start time. One of the ideas was JIT.
+When you think of it - it's a kind of monitor, working alongside your application, counting method calls, compiling them to native code, skipping irrelevant code, etc. How expensive must that be, right?</p>
+<p>Lately I noticed <code>-Xint</code> flag to &lt;code&gt;java&lt;/code&gt; command, which makes Java Virtual Machine to start in <em>interpreter-only</em> mode. This means that JIT compiler will be turned off in that Java process.</p>
+<p>This way we may check what is the overhead of starting JIT. Let's start with a very simple example, which will cause JIT to drop some of the code (since <code>Math.sqrt</code> doesn't have side effects, so it's safe for JIT to drop it).</p>
+<p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">doingNothingForALongTime</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  Math.<span class="built_in">sqrt</span>(<span class="number">10.0</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">long</span> i = <span class="number">0</span>; i &lt; LOOP_COUNT; i++) &#123;</span><br><span class="line">    <span class="keyword">new</span> EmptyLoops().doingNothingForALongTime();</span><br><span class="line">  &#125;</span><br><span class="line">  System.out.println(<span class="string">"Done"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>After compilation we may run it with an insight to JIT actions:</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">$ java -XX:+PrintCompilation EmptyLoops</span><br><span class="line"><span class="number">89</span>    <span class="number">1</span>       <span class="number">3</span>       java.lang.String::hashCode (<span class="number">55</span> bytes)</span><br><span class="line">...</span><br><span class="line"><span class="comment">// JIT noticed many calls to the constructor and method</span></span><br><span class="line"><span class="number">111</span>   <span class="number">29</span>       <span class="number">3</span>       EmptyLoops::&lt;init&gt; (<span class="number">5</span> bytes)</span><br><span class="line"><span class="number">111</span>   <span class="number">30</span>       <span class="number">3</span>       EmptyLoops::doingNothingForALongTime (<span class="number">8</span> bytes)</span><br><span class="line"><span class="number">112</span>   <span class="number">31</span>       <span class="number">4</span>       EmptyLoops::&lt;init&gt; (<span class="number">5</span> bytes)</span><br><span class="line"><span class="number">112</span>   <span class="number">29</span>       <span class="number">3</span>       EmptyLoops::&lt;init&gt; (<span class="number">5</span> bytes)   made not entrant</span><br><span class="line"><span class="number">112</span>   <span class="number">32</span>       <span class="number">4</span>       EmptyLoops::doingNothingForALongTime (<span class="number">8</span> bytes)</span><br><span class="line"><span class="number">112</span>   <span class="number">30</span>       <span class="number">3</span>       EmptyLoops::doingNothingForALongTime (<span class="number">8</span> bytes)   made not</span><br><span class="line">entrant</span><br><span class="line">Done</span><br></pre></td></tr></table></figure>
-<p>What happened right there is out of this post’s scope, so let’s just execute that with <code>-Xint</code> flag:</p>
-<figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$java</span> -Xint -XX:+PrintCompilation EmptyLoops</span><br><span class="line">Done</span><br></pre></td></tr></table></figure>
-<p>It works. JIT didn’t generate any outputs as it was disabled.</p>
-<p>Let’s see how it influenced execution times:</p>
+<p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">$ java -XX:+PrintCompilation EmptyLoops</span><br><span class="line"><span class="number">89</span>    <span class="number">1</span>       <span class="number">3</span>       java.lang.String::hashCode (<span class="number">55</span> bytes)</span><br><span class="line">...</span><br><span class="line"><span class="comment">// JIT noticed many calls to the constructor and method</span></span><br><span class="line"><span class="number">111</span>   <span class="number">29</span>       <span class="number">3</span>       EmptyLoops::&lt;init&gt; (<span class="number">5</span> bytes)</span><br><span class="line"><span class="number">111</span>   <span class="number">30</span>       <span class="number">3</span>       EmptyLoops::doingNothingForALongTime (<span class="number">8</span> bytes)</span><br><span class="line"><span class="number">112</span>   <span class="number">31</span>       <span class="number">4</span>       EmptyLoops::&lt;init&gt; (<span class="number">5</span> bytes)</span><br><span class="line"><span class="number">112</span>   <span class="number">29</span>       <span class="number">3</span>       EmptyLoops::&lt;init&gt; (<span class="number">5</span> bytes)   made not entrant</span><br><span class="line"><span class="number">112</span>   <span class="number">32</span>       <span class="number">4</span>       EmptyLoops::doingNothingForALongTime (<span class="number">8</span> bytes)</span><br><span class="line"><span class="number">112</span>   <span class="number">30</span>       <span class="number">3</span>       EmptyLoops::doingNothingForALongTime (<span class="number">8</span> bytes)   made not</span><br><span class="line">entrant</span><br><span class="line">Done</span><br></pre></td></tr></table></figure></p>
+<p>What happened right there is out of this post's scope, so let's just execute that with <code>-Xint</code> flag:</p>
+<p><figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$java</span> -Xint -XX:+PrintCompilation EmptyLoops</span><br><span class="line">Done</span><br></pre></td></tr></table></figure></p>
+<p>It works. JIT didn't generate any outputs as it was disabled.</p>
+<p>Let's see how it influenced execution times:</p>
 <table>
 <thead>
 <tr>
@@ -89,20 +109,20 @@
 </thead>
 <tbody>
 <tr>
-<td>10<sup>0</sup></td>
+<td>10&lt;sup&gt;0&lt;/sup&gt;</td>
 <td>0.16s</td>
 <td>0.15s</td>
 </tr>
 <tr>
-<td>10<sup>7</sup></td>
+<td>10&lt;sup&gt;7&lt;/sup&gt;</td>
 <td>0.19s</td>
 <td>2.77s</td>
 </tr>
 </tbody>
 </table>
-<p>As expected - JIT dropped irrelevant code and ended up with a speed up for many loops. But that’s not our target. When you look at the first scenario, you will notice there’s no speedup in running that simple class. So JIT seems not to cause any overhead.</p>
-<p>Next, let’s check the same test for running a simple Groovy script (call system command, wait for it’s finish, print output):</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">time</span> groovy -e <span class="string">"println 'echo Hello from Groovy'.execute().text"</span></span><br></pre></td></tr></table></figure>
+<p>As expected - JIT dropped irrelevant code and ended up with a speed up for many loops. But that's not our target. When you look at the first scenario, you will notice there's no speedup in running that simple class. So JIT seems not to cause any overhead.</p>
+<p>Next, let's check the same test for running a simple Groovy script (call system command, wait for it's finish, print output):</p>
+<p><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">time</span> groovy -e <span class="string">"println 'echo Hello from Groovy'.execute().text"</span></span><br></pre></td></tr></table></figure></p>
 <p>Results (on avarage):</p>
 <table>
 <thead>
@@ -119,11 +139,11 @@
 </tbody>
 </table>
 <p>On avarage disabling JIT even caused execution time to increase by 23%! Which means that even when running the tiniest Groovy script, JIT already makes a big improvement. How much exactly work is being involved? Take a look:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ JAVA_OPTS=<span class="string">"-XX:+PrintCompilation"</span> groovy <span class="operator">-e</span> <span class="string">"println 'echo Hello from Groovy'.execute().text"</span> | wc <span class="operator">-l</span></span><br><span class="line"><span class="number">900</span></span><br></pre></td></tr></table></figure>
-<p>That’s it for now. There’s no reason to disable JIT in order to make JVM start faster. Soon I’ll take a look at some other things.</p>
+<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ JAVA_OPTS=<span class="string">"-XX:+PrintCompilation"</span> groovy <span class="operator">-e</span> <span class="string">"println 'echo Hello from Groovy'.execute().text"</span> | wc <span class="operator">-l</span></span><br><span class="line"><span class="number">900</span></span><br></pre></td></tr></table></figure></p>
+<p>That's it for now. There's no reason to disable JIT in order to make JVM start faster. Soon I'll take a look at some other things.</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>JIT stands for “just in time”. In JVM it’s a neat mechanism that makes it easy to go from low execution speed, common to interpreters, to]]>
+    <![CDATA[<p>JIT stands for &quot;just in time&quot;. In JVM it's a neat mechanism that makes it easy to go from low execution speed, common to interp]]>
     </summary>
     
   </entry>
@@ -134,25 +154,38 @@
     <id>http://erbetowski.pl/blog/4developers-2013-konferencyjne-notatki/</id>
     <published>2013-04-11T22:00:00.000Z</published>
     <updated>2015-09-16T16:46:15.000Z</updated>
-    <content type="html"><![CDATA[<p>W tym roku wyjątkowo mało szumu było wokół 4Developers. Aż dobrze, że miałem zapisane w kalendarzu, kiedy jest, bo bym przegapił :-) Zgłosiłem swoją prezentację na długo przed konferencją, ale dopiero na dwa tygodnie przed została zaakceptowana. Nie mniej jednak się cieszę, że dostałem możliwość zaprezentowania <a href="https://github.com/Polidea/Robospock" target="_blank">RoboSpocka</a>.<br><!--break--></p>
-<p></p><p style="text-align: center;"><a href="http://blog.erbetowski.pl/wp-content/uploads/2013/04/4dev_inter_PL.jpg" target="_blank" rel="external"></a></p><br>Wyruszyłem zatem z rana na <a href="http://2013.4developers.org.pl/pl/miejsce-pl" target="_blank">ulicę Bobrowiecką</a>, do kompleksu znanego choćby z dwóch (czy więcej?) edycji Javarsovii/Confitury. Po odebraniu skromnego pakietu rozstawiłem się w małej salce przygotowanej pod ścieżkę mobile, aby tuż po 9:00 móc zacząć swój wykład.<p></p>
-<p><a href="http://blog.erbetowski.pl/wp-content/uploads/2013/04/4devs-robospock.png" target="_blank" rel="external"></a></p>
-<p>Niewielkie grono słuchaczy przeszło ze mną ścieżkę od podstawowego schematu testów (niby) jednostkowych dla Androida, poprzez podmianę klas w czasie runtime aż <strong>do Spocka w połączeniu z Robolectric</strong>. Slajdy umieściłem <a href="http://wojtekerbetowski.github.io/robospock-4developers-2013/" target="_blank">na moim GitHubie</a>, a kod, który pokazywałem jest do zobaczenia na stronie projektu, oraz kolejny projekt Open Source, który z <a href="https://github.com/Polidea/Robospock" target="_blank">RoboSpocka</a> korzysta <a href="https://github.com/Polidea/AndroidImageCache" target="_blank">do zobaczenia tu</a>.</p>
-<p>&nbsp;</p>
-<p>Następnie wybrałem <strong>ścieżkę Python </strong>a tu czekał na mnie bardzo fajny wykład <a href="http://2013.4developers.org.pl/pl/program-pl/prelegenci-i-prezentacje#p=43" target="_blank" rel="external">Bartosza Kupidury</a> o <strong>OpenStack</strong>. Podobało mi się bardzo początkowe rozróżnienie pomiędzy chmurą a wirtualizacją! Prezentacja bardzo dobrze ułożona, a prowadzona dynamicznie i luźno. Dominowały opisy i schematy zamiast kodu pythona, a więc nawet ktoś niezwiązany z językiem mógł skorzystać. Poza tym Bartek pracuje z OpenStack na codzień w Allegro, jeśli dobrze zrozumiałem, więc mówił o doświadczeniach, nie tylko o teorii, co sprawiło, że łatwo było mu odpowiadać na pytania, nawet te już bardzo związane z konkretną sytuacją.</p>
-<p><strong>Neo4J</strong> jest tematem, o który już kilkukrotnie się ocierałem, ale coraz bardziej mnie ciekawi, zwłaszcza, że w <a href="http://polidea.pl" target="_blank">Polidei</a> ostatnio niektóre projekty bardzo pasują do abstrakcji bazy grafowej. Również i ta prezentacja zrobiła na mnie dobre wrażenie. Temat usłany przykładami i kodem. Polecam Grzegorza Godlewskiego i ten temat.</p>
-<p><a href="http://blog.erbetowski.pl/wp-content/uploads/2013/04/4dev_slawek.jpg" target="_blank" rel="external"></a>A na chwilę przed obiadem wybrałem prezentację <strong><a href="http://art-of-software.blogspot.com/" target="_blank">Sławka Sobótki</a> </strong>o tym, że<strong> model jest wszystkim czego potrzebujesz</strong>. Sławek nie ma łatwo prezentując swoje tematy, ponieważ wszyscy, którzy już mieli przyjemność wcześniej uczestniczyć w jego wykładzie, stawiają mu wysoko poprzeczkę (w tym ja po <strong>33rd Degree</strong> i “<a href="http://2013.33degree.org/talk/show/25" target="_blank">Czego mama nigdy nie mówiła Ci na temat testowania automatycznego</a>“). Nie mniej jednak udaje mu się utrzymać ten wysoki poziom i słuchaczy nigdy nie brakuje. Dla mnie bardzo wartościowy był przykład z przepełnieniem modelu i wydzieleniem wyliczania podatku z zamówienia. Z każdym wykładem o DDD, modelu czy lekturze (właśnie rozpocząłem <a href="http://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215" target="_blank">DDD Evansa</a>) zbliżam się, aby na poważnie spróbować tego podejścia w real life projekcie.</p>
-<p><a href="http://blog.erbetowski.pl/wp-content/uploads/2013/04/4dev_lunch.jpg" target="_blank" rel="external"></a>Ufff, po takiej dawce wiedzy cieszę się z chwili wytchnienia i lunchu. Posiłek to ostatnio gorący temat konferencji. Niby nikt nie przychodzi po to, aby się najeść, tylko aby się nauczyć, ale negatywne wrażenia przy jedzeniu potrafią solidnie popsuć wrażenia z całego dnia. O zgrozo, solidna kolejka daje dojść głodowi do głosu, więc już po otrzymaniu ciepłego posiłku wchłonąłem go z wilczym apetytem. Tu pewien minus dla organizatorów. Na bonach obiadowych podana była godzina przyjścia, z tym, że część wypadała w innych prezentacjach :-( Na szczęście była to tylko sugerowana godzina i dostałem swój posiłek trochę później. Ogólnie ocena obiadu: 4 (w skali szkolnej).</p>
-<p><a style="color: #ff4b33; line-height: 24px; font-size: 16px;" href="http://blog.erbetowski.pl/wp-content/uploads/2013/04/4dev_maciej.jpg" target="_blank" rel="external"></a></p>
-<p>Zaraz po lunchu udałem się do <a href="https://github.com/mg6maciej" target="_blank">Maćka Górskiego</a> <strong>znów w ścieżce Mobile</strong> na <strong>wycieki </strong><strong>pamięci</strong> oraz <strong>nowe API map Google</strong>. Maciek w pierwszej części miał zestaw anty-patternów i popularnych błędów popełnianych przez programistów Android. Co było najlepsze, bardzo często podawał źródła, dyskusje, skąd brały się przykłady, a także bardzo dobrze rozumiał o czym mówi. Może nieco gorzej z przekazem, bo (może głównie przez to, że nie jestem Androidowcem) ale miałem problem ze zrozumieniem niektórych use case’ów. W drugiej części także bardzo fajnie o nowym API. Luźna atmosfera i sporo żartów pozwoliło na z dystansem spojrzeć na API (jeszcze nie do końca stabline ;-)). Duży plus za te dwie krótkie prezentacje. Autor obiecał umieścić materiały na <a href="https://github.com/mg6maciej" target="_blank" rel="external">https://github.com/mg6maciej</a></p>
-<p>I znów <strong>ścieżka Python</strong>. Tym razem problem mi bliski, czyli <strong>skalowanie aplikacji</strong> (ostatnio właśnie pracujemy nad pomiarami wydajności i optymalizacją apki Pythonowej opartej o Heroku). Prowadzący to Marcin Lulek, kolejny praktyk, a więc słucham z przyjemnością. Zaczęło się od wstępu (i poparcia wiedzy prelegenta pracą nad portalem z 5mln użytkowników). Następnie prezentację ogarnia chaos - narzędzia mieszają się z praktykami czy use case’ami. Brakuje mi jasnej ścieżki prezentacji. Wydaje mi się też, że zbyt szybkie przeskoki między tematami dla początkujących i zbyt podstawowe tematy poruszane jak dla zaawansowanych. Ogólnie pierwsza słaba prezentacja tego dnia. Czułem, że Marcinowi nie brakuje wiedzy, ale zabrakło lepszego sposobu jej przekazania.</p>
-<p>Na sam koniec największy hit pod wodzą <a href="http://2013.4developers.org.pl/pl/program-pl/prelegenci-i-prezentacje#p=80" target="_blank">Jarka Pałki</a> - <strong>Architectural Kata</strong>. Otrzymaliśmy od niego zamówienie na system i mieliśmy szansę sprawdzić się w zespołach kilkuosobowych układając i definiując architekturę. Jarek zaś wystąpił w roli klienta doprecyzowującego wymagania. Bardzo mi to dużo dało i pomogło rozruszać szare komórki - super pomysł!</p>
-<p><strong>Podsumowanie</strong></p>
-<p>W porównaniu do zeszłorocznej edycji byłem <strong>bardzo pozytywnie</strong> zaskoczony! Zmieniło się wiele na plus i z pewnością będę wyczekiwał przyszłorocznej edycji. Dziękuję organizatorom za przygotowanie bardzo dobrego eventu!</p>
-<p><strong>W pigułce</strong></p>
-<p>Na plus:</p>
-<p><ul><br>    <li>listwy w salach</li><br>    <li>bogata agenda</li><br>    <li>poziom prezentacji</li><br>    <li>sprawny net</li><br>    <li>niezbyt wypchane sale</li><br></ul><br>Na minus:</p>
-<p><ul><br>    <li>kolejka po lunch</li><br>    <li>miejsce (jednak ciasne korytarze, sypiące się łazienki)</li><br></ul><br>PS. Wybaczcie nieco chaotyczny styl. Pisane nieraz w trakcie prezentacji pod wpływem chwili :-)</p>
+    <content type="html"><![CDATA[<p>W tym roku wyjątkowo mało szumu było wokół 4Developers. Aż dobrze, że miałem zapisane w kalendarzu, kiedy jest, bo bym przegapił :-) Zgłosiłem swoją prezentację na długo przed konferencją, ale dopiero na dwa tygodnie przed została zaakceptowana. Nie mniej jednak się cieszę, że dostałem możliwość zaprezentowania &lt;a href=&quot;https://github.com/Polidea/Robospock&quot; target=&quot;_blank&quot;&gt;RoboSpocka&lt;/a&gt;.
+&lt;!--break--&gt;</p>
+<p>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;a href=&quot;http://blog.erbetowski.pl/wp-content/uploads/2013/04/4dev_inter_PL.jpg&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+Wyruszyłem zatem z rana na &lt;a href=&quot;http://2013.4developers.org.pl/pl/miejsce-pl&quot; target=&quot;_blank&quot;&gt;ulicę Bobrowiecką&lt;/a&gt;, do kompleksu znanego choćby z dwóch (czy więcej?) edycji Javarsovii/Confitury. Po odebraniu skromnego pakietu rozstawiłem się w małej salce przygotowanej pod ścieżkę mobile, aby tuż po 9:00 móc zacząć swój wykład.</p>
+<p>&lt;a href=&quot;http://blog.erbetowski.pl/wp-content/uploads/2013/04/4devs-robospock.png&quot;&gt;&lt;/a&gt;</p>
+<p>Niewielkie grono słuchaczy przeszło ze mną ścieżkę od podstawowego schematu testów (niby) jednostkowych dla Androida, poprzez podmianę klas w czasie runtime aż &lt;strong&gt;do Spocka w połączeniu z Robolectric&lt;/strong&gt;. Slajdy umieściłem &lt;a href=&quot;http://wojtekerbetowski.github.io/robospock-4developers-2013/&quot; target=&quot;_blank&quot;&gt;na moim GitHubie&lt;/a&gt;, a kod, który pokazywałem jest do zobaczenia na stronie projektu, oraz kolejny projekt Open Source, który z &lt;a href=&quot;https://github.com/Polidea/Robospock&quot; target=&quot;_blank&quot;&gt;RoboSpocka&lt;/a&gt; korzysta &lt;a href=&quot;https://github.com/Polidea/AndroidImageCache&quot; target=&quot;_blank&quot;&gt;do zobaczenia tu&lt;/a&gt;.</p>
+<p> </p>
+<p>Następnie wybrałem &lt;strong&gt;ścieżkę Python &lt;/strong&gt;a tu czekał na mnie bardzo fajny wykład &lt;a href=&quot;http://2013.4developers.org.pl/pl/program-pl/prelegenci-i-prezentacje#p=43&quot;&gt;Bartosza Kupidury&lt;/a&gt; o &lt;strong&gt;OpenStack&lt;/strong&gt;. Podobało mi się bardzo początkowe rozróżnienie pomiędzy chmurą a wirtualizacją! Prezentacja bardzo dobrze ułożona, a prowadzona dynamicznie i luźno. Dominowały opisy i schematy zamiast kodu pythona, a więc nawet ktoś niezwiązany z językiem mógł skorzystać. Poza tym Bartek pracuje z OpenStack na codzień w Allegro, jeśli dobrze zrozumiałem, więc mówił o doświadczeniach, nie tylko o teorii, co sprawiło, że łatwo było mu odpowiadać na pytania, nawet te już bardzo związane z konkretną sytuacją.</p>
+<p>&lt;strong&gt;Neo4J&lt;/strong&gt; jest tematem, o który już kilkukrotnie się ocierałem, ale coraz bardziej mnie ciekawi, zwłaszcza, że w &lt;a href=&quot;http://polidea.pl&quot; target=&quot;_blank&quot;&gt;Polidei&lt;/a&gt; ostatnio niektóre projekty bardzo pasują do abstrakcji bazy grafowej. Również i ta prezentacja zrobiła na mnie dobre wrażenie. Temat usłany przykładami i kodem. Polecam Grzegorza Godlewskiego i ten temat.</p>
+<p>&lt;a href=&quot;http://blog.erbetowski.pl/wp-content/uploads/2013/04/4dev_slawek.jpg&quot;&gt;&lt;/a&gt;A na chwilę przed obiadem wybrałem prezentację &lt;strong&gt;&lt;a href=&quot;http://art-of-software.blogspot.com/&quot; target=&quot;_blank&quot;&gt;Sławka Sobótki&lt;/a&gt; &lt;/strong&gt;o tym, że&lt;strong&gt; model jest wszystkim czego potrzebujesz&lt;/strong&gt;. Sławek nie ma łatwo prezentując swoje tematy, ponieważ wszyscy, którzy już mieli przyjemność wcześniej uczestniczyć w jego wykładzie, stawiają mu wysoko poprzeczkę (w tym ja po &lt;strong&gt;33rd Degree&lt;/strong&gt; i &quot;&lt;a href=&quot;http://2013.33degree.org/talk/show/25&quot; target=&quot;_blank&quot;&gt;Czego mama nigdy nie mówiła Ci na temat testowania automatycznego&lt;/a&gt;&quot;). Nie mniej jednak udaje mu się utrzymać ten wysoki poziom i słuchaczy nigdy nie brakuje. Dla mnie bardzo wartościowy był przykład z przepełnieniem modelu i wydzieleniem wyliczania podatku z zamówienia. Z każdym wykładem o DDD, modelu czy lekturze (właśnie rozpocząłem &lt;a href=&quot;http://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215&quot; target=&quot;_blank&quot;&gt;DDD Evansa&lt;/a&gt;) zbliżam się, aby na poważnie spróbować tego podejścia w real life projekcie.</p>
+<p>&lt;a href=&quot;http://blog.erbetowski.pl/wp-content/uploads/2013/04/4dev_lunch.jpg&quot;&gt;&lt;/a&gt;Ufff, po takiej dawce wiedzy cieszę się z chwili wytchnienia i lunchu. Posiłek to ostatnio gorący temat konferencji. Niby nikt nie przychodzi po to, aby się najeść, tylko aby się nauczyć, ale negatywne wrażenia przy jedzeniu potrafią solidnie popsuć wrażenia z całego dnia. O zgrozo, solidna kolejka daje dojść głodowi do głosu, więc już po otrzymaniu ciepłego posiłku wchłonąłem go z wilczym apetytem. Tu pewien minus dla organizatorów. Na bonach obiadowych podana była godzina przyjścia, z tym, że część wypadała w innych prezentacjach :-( Na szczęście była to tylko sugerowana godzina i dostałem swój posiłek trochę później. Ogólnie ocena obiadu: 4 (w skali szkolnej).</p>
+<p>&lt;a style=&quot;color: #ff4b33; line-height: 24px; font-size: 16px;&quot; href=&quot;http://blog.erbetowski.pl/wp-content/uploads/2013/04/4dev_maciej.jpg&quot;&gt;&lt;/a&gt;</p>
+<p>Zaraz po lunchu udałem się do &lt;a href=&quot;https://github.com/mg6maciej&quot; target=&quot;_blank&quot;&gt;Maćka Górskiego&lt;/a&gt; &lt;strong&gt;znów w ścieżce Mobile&lt;/strong&gt; na &lt;strong&gt;wycieki &lt;/strong&gt;&lt;strong&gt;pamięci&lt;/strong&gt; oraz &lt;strong&gt;nowe API map Google&lt;/strong&gt;. Maciek w pierwszej części miał zestaw anty-patternów i popularnych błędów popełnianych przez programistów Android. Co było najlepsze, bardzo często podawał źródła, dyskusje, skąd brały się przykłady, a także bardzo dobrze rozumiał o czym mówi. Może nieco gorzej z przekazem, bo (może głównie przez to, że nie jestem Androidowcem) ale miałem problem ze zrozumieniem niektórych use case'ów. W drugiej części także bardzo fajnie o nowym API. Luźna atmosfera i sporo żartów pozwoliło na z dystansem spojrzeć na API (jeszcze nie do końca stabline ;-)). Duży plus za te dwie krótkie prezentacje. Autor obiecał umieścić materiały na &lt;a href=&quot;https://github.com/mg6maciej&quot;&gt;https://github.com/mg6maciej&lt;/a&gt;</p>
+<p>I znów &lt;strong&gt;ścieżka Python&lt;/strong&gt;. Tym razem problem mi bliski, czyli &lt;strong&gt;skalowanie aplikacji&lt;/strong&gt; (ostatnio właśnie pracujemy nad pomiarami wydajności i optymalizacją apki Pythonowej opartej o Heroku). Prowadzący to Marcin Lulek, kolejny praktyk, a więc słucham z przyjemnością. Zaczęło się od wstępu (i poparcia wiedzy prelegenta pracą nad portalem z 5mln użytkowników). Następnie prezentację ogarnia chaos - narzędzia mieszają się z praktykami czy use case'ami. Brakuje mi jasnej ścieżki prezentacji. Wydaje mi się też, że zbyt szybkie przeskoki między tematami dla początkujących i zbyt podstawowe tematy poruszane jak dla zaawansowanych. Ogólnie pierwsza słaba prezentacja tego dnia. Czułem, że Marcinowi nie brakuje wiedzy, ale zabrakło lepszego sposobu jej przekazania.</p>
+<p>Na sam koniec największy hit pod wodzą &lt;a href=&quot;http://2013.4developers.org.pl/pl/program-pl/prelegenci-i-prezentacje#p=80&quot; target=&quot;_blank&quot;&gt;Jarka Pałki&lt;/a&gt; - &lt;strong&gt;Architectural Kata&lt;/strong&gt;. Otrzymaliśmy od niego zamówienie na system i mieliśmy szansę sprawdzić się w zespołach kilkuosobowych układając i definiując architekturę. Jarek zaś wystąpił w roli klienta doprecyzowującego wymagania. Bardzo mi to dużo dało i pomogło rozruszać szare komórki - super pomysł!</p>
+<p>&lt;strong&gt;Podsumowanie&lt;/strong&gt;</p>
+<p>W porównaniu do zeszłorocznej edycji byłem &lt;strong&gt;bardzo pozytywnie&lt;/strong&gt; zaskoczony! Zmieniło się wiele na plus i z pewnością będę wyczekiwał przyszłorocznej edycji. Dziękuję organizatorom za przygotowanie bardzo dobrego eventu!</p>
+<p>&lt;strong&gt;W pigułce&lt;/strong&gt;</p>
+<p>Na plus:
+&lt;ul&gt;
+&lt;li&gt;listwy w salach&lt;/li&gt;
+&lt;li&gt;bogata agenda&lt;/li&gt;
+&lt;li&gt;poziom prezentacji&lt;/li&gt;
+&lt;li&gt;sprawny net&lt;/li&gt;
+&lt;li&gt;niezbyt wypchane sale&lt;/li&gt;
+&lt;/ul&gt;
+Na minus:
+&lt;ul&gt;
+&lt;li&gt;kolejka po lunch&lt;/li&gt;
+&lt;li&gt;miejsce (jednak ciasne korytarze, sypiące się łazienki)&lt;/li&gt;
+&lt;/ul&gt;
+PS. Wybaczcie nieco chaotyczny styl. Pisane nieraz w trakcie prezentacji pod wpływem chwili :-)</p>
 ]]></content>
     <summary type="html">
     <![CDATA[<p>W tym roku wyjątkowo mało szumu było wokół 4Developers. Aż dobrze, że miałem zapisane w kalendarzu, kiedy jest, bo bym przegapił :-) Zgło]]>
@@ -168,15 +201,18 @@
     <id>http://erbetowski.pl/blog/wrazenia-po-wprowadzeniu-do-osgi-jacka-laskowskiego/</id>
     <published>2013-02-21T23:00:00.000Z</published>
     <updated>2015-09-16T16:46:15.000Z</updated>
-    <content type="html"><![CDATA[<p>Na ostatnim spotkaniu Warszawskiego JUG założyciel tej grupy prezentował temat niezwykle ciekawy, choć często niedoceniany - OSGi. Nie mam większych doświadczeń z tą technologią (mniejszych też nie), więc tym bardziej ucieszyłem się na wieść o ‘wprowadzeniu’ do tematu.</p>
-<p>Wykład zasponsorowała firma <a title="ATM SI" href="http://www.atm-si.com.pl/" target="_blank">ATM SI</a>, której jak widać zależy na pracownikach z najwyższej półki, skoro zdecydowała się o nich pokusić wśród JUGowiczów. Podobało mi się wprowadzenie o firmie i projekcie. Prezenter wziął sobie do serca uwagi dotyczące prezentowania ofert i było bardzo technicznie. Mnie zainteresował!<br><!--break--><br>Później Jacek przystąpił do wykładu i rozpoczął od wytłumaczenia nam, że jeśli jego wykład nie sprosta naszym oczekiwaniom, jest to wina naszych zbyt wygórowanych oczekiwań :-) Myślę, że wielu z nas zna już Jacka dostatecznie i zna jego sposób prowadzenia prezentacji, który bardziej od wyczerpania tematu ma na celu zachęcenie słuchacza do dalszego zgłębienia wiedzy samodzielnie. Kto inaczej zakłada zawsze wyjdzie zawiedziony :-)</p>
-<p>W dalszej części po pobieżnym ustaleniu położenia tematu prezentacji  w całej dziedzinie Jacek przeszedł do przykładu, który już miał mu towarzyszyć przez całą prezentację. Dowiedziałem się między innymi czym jest Enterprise OSGi w wersji IBMowej i co ma nam do zaoferowania.</p>
+    <content type="html"><![CDATA[<p>Na ostatnim spotkaniu Warszawskiego JUG założyciel tej grupy prezentował temat niezwykle ciekawy, choć często niedoceniany - OSGi. Nie mam większych doświadczeń z tą technologią (mniejszych też nie), więc tym bardziej ucieszyłem się na wieść o 'wprowadzeniu' do tematu.</p>
+<p>Wykład zasponsorowała firma &lt;a title=&quot;ATM SI&quot; href=&quot;http://www.atm-si.com.pl/&quot; target=&quot;_blank&quot;&gt;ATM SI&lt;/a&gt;, której jak widać zależy na pracownikach z najwyższej półki, skoro zdecydowała się o nich pokusić wśród JUGowiczów. Podobało mi się wprowadzenie o firmie i projekcie. Prezenter wziął sobie do serca uwagi dotyczące prezentowania ofert i było bardzo technicznie. Mnie zainteresował!
+&lt;!--break--&gt;
+Później Jacek przystąpił do wykładu i rozpoczął od wytłumaczenia nam, że jeśli jego wykład nie sprosta naszym oczekiwaniom, jest to wina naszych zbyt wygórowanych oczekiwań :-) Myślę, że wielu z nas zna już Jacka dostatecznie i zna jego sposób prowadzenia prezentacji, który bardziej od wyczerpania tematu ma na celu zachęcenie słuchacza do dalszego zgłębienia wiedzy samodzielnie. Kto inaczej zakłada zawsze wyjdzie zawiedziony :-)</p>
+<p>W dalszej części po pobieżnym ustaleniu położenia tematu prezentacji  w całej dziedzinie Jacek przeszedł do przykładu, który już miał mu towarzyszyć przez całą prezentację. Dowiedziałem się między innymi czym jest Enterprise OSGi w wersji IBMowej i co ma nam do zaoferowania.</p>
 <p>Szkoda, że nie wyszedł niemal żaden z przykładów, co ewidentnie wybijało Jacka z rytmu. Ten znów także często wdawał się w dyskusję z pojedynczymi słuchaczami, co często bywa zgubne (nie dobrnęliśmy do planowanego końca), w tym jednak przypadku uważam, że bardzo pozytywnie wpłynęło na przebieg wykładu, co widać choćby po komentarzach do wykładu.</p>
-<p>To spotkanie obfitowało w nagrody. Dzięki firmom wspierającym JUG - <i><a href="http://www.retrospective.centeractive.com/?wjug" target="_blank">centeractive ag</a> </i>i<a href="http://jetbrains.com/" target="_blank"><i> JetBrains</i></a> mieliśmy do rozlosowania kilka książek Practical Unit Testing Tomka Kaczanowskiego oraz licencję Intellij IDEA i retrospective log analysera. Także dzięki Jackowi za trafne pytania książką o Enterprise OSGi<br>in Action nagrodzony został jeden z uczestników. Co za spotkanie!</p>
+<p>To spotkanie obfitowało w nagrody. Dzięki firmom wspierającym JUG - &lt;i&gt;&lt;a href=&quot;http://www.retrospective.centeractive.com/?wjug&quot; target=&quot;_blank&quot;&gt;centeractive ag&lt;/a&gt; &lt;/i&gt;i&lt;a href=&quot;http://jetbrains.com/&quot; target=&quot;_blank&quot;&gt;&lt;i&gt; JetBrains&lt;/i&gt;&lt;/a&gt; mieliśmy do rozlosowania kilka książek Practical Unit Testing Tomka Kaczanowskiego oraz licencję Intellij IDEA i retrospective log analysera. Także dzięki Jackowi za trafne pytania książką o Enterprise OSGi
+in Action nagrodzony został jeden z uczestników. Co za spotkanie!</p>
 <p>Po spotkaniu dobrą tradycją jest wyjście na piwo i kontynuacja tematu, a więc mogliśmy nacieszyć się dyskusją w klubokawiarni Mam Ochotę. Wszystkim, którzy po wykładach uciekają do domów polecam wybranie się choć raz aby zobaczyć co tracicie :-)</p>
-<p>&nbsp;</p>
+<p> </p>
 <p>Tyle relacji ze spotkania. Dzięki Jacku za fajny wykład! Do zobaczenia na NameCollision (jutro) i Rozmowach kwalifikacyjnych na JUGu (wtorek).</p>
-<p>&nbsp;</p>
+<p> </p>
 ]]></content>
     <summary type="html">
     <![CDATA[<p>Na ostatnim spotkaniu Warszawskiego JUG założyciel tej grupy prezentował temat niezwykle ciekawy, choć często niedoceniany - OSGi. Nie ma]]>
@@ -192,13 +228,18 @@
     <id>http://erbetowski.pl/blog/warszawski-hackathon-namecollision/</id>
     <published>2013-02-16T23:00:00.000Z</published>
     <updated>2015-09-16T16:46:15.000Z</updated>
-    <content type="html"><![CDATA[<p><strong>NameCollision</strong> to nowy, niezależny hackathon dla <strong>warszawskich programistów</strong>, który odbędzie się w <strong>piątkowy wieczór, 22 lutego</strong> w centrum stolicy. Organizowane przez <strong>Google Developers Group</strong> i <strong>Warszawską Grupę Użytkowników Java</strong> wydarzenie ma na celu stworzenie sprzyjającej atmosfery dla dużej grupy programistów i pasjonatów. Luźna formuła hackathonu powinna pomóc w możliwie najlepszym wykorzystaniu czasu na programowanie oraz poznanie ciekawych osób z programistycznego środowiska.<br><!--break--><br><b id="internal-source-marker_0.28748438763432205"><br><img alt="http://techcrunch.com/2011/05/21/the-hack-is-on-at-the-hackathon/" src="https://lh6.googleusercontent.com/2nmCq5ZuxaEt95T8Kev6H_okowW9EpF2u4NNFEUOQBSqL_uwPg7KRjH-lfpPfAWs2KG2QyZHCIJQEVorEU8AVov16Frcjk9ebB2QoiL0NGN9s0LPOG80pdxXyA" width="647px;" height="423px;"></b></p>
-<p></p><p style="text-align: left;">Jeśli jesteś zainteresowana(y) udziałem, zajrzyj na <strong><a href="http://namecollision.pl" target="_blank">stronę hackathonu</a></strong> gdzie możesz zobaczyć obecną listę uczestników, przejrzeć propozycję tematów i oczywiście zapisać się na wydarzenie. Jeśli spodobał Ci się któryś z <strong>opisanych już projektów</strong>, możesz na tej stronie <strong>do niego dołączyć</strong>, lub, jeśli wolisz inny temat, zaczekać z wyborem do samego hackathonu. Jeśli masz pomysł na własny projekt strona ułatwi Ci przybliżenie innym uczestnikom Twojego pomysłu i znalezienie chętnych.</p><br>Aby dzielnie pracujące głowy mogły się skupić nad problemami programistycznymi, a nie nad bardziej przyziemnymi sprawami, zapewnione będą przekąski, ciepły posiłek i napoje, a nawet <strong>domowe piwo</strong> warzone przez jednego z najlepiej rozpoznawanych domowych piwowarów w Polsce - Pawła Leszczyńskiego.<br><img alt="http://www.flickr.com/photos/gijsbertpeijs/7988262046/" src="https://lh6.googleusercontent.com/wdUeK7sqsnXfQ8vtGphHm-KVSvzpUKznFK3klV6jvmngslcisUGXm10A2Nb5eN3fddQSOGcJho2dUp8cldcMahU4cnuA76FK54H5bl7VJc7MLsSGTnPmO_GiLQ" width="494px;" height="331px;"><p></p>
-<p>Aby docenić ciężko pracujących hackerów, a z drugiej strony nie zamienić wieczoru w zawody za najlepsze projekty będą na Was czekały <strong>3 bony na książki w Amazonie</strong>, oraz w większej ilości <strong>Raspberry Pi</strong> - komputery niewiele większe od karty kredytowej.</p>
+    <content type="html"><![CDATA[<p>&lt;strong&gt;NameCollision&lt;/strong&gt; to nowy, niezależny hackathon dla &lt;strong&gt;warszawskich programistów&lt;/strong&gt;, który odbędzie się w &lt;strong&gt;piątkowy wieczór, 22 lutego&lt;/strong&gt; w centrum stolicy. Organizowane przez &lt;strong&gt;Google Developers Group&lt;/strong&gt; i &lt;strong&gt;Warszawską Grupę Użytkowników Java&lt;/strong&gt; wydarzenie ma na celu stworzenie sprzyjającej atmosfery dla dużej grupy programistów i pasjonatów. Luźna formuła hackathonu powinna pomóc w możliwie najlepszym wykorzystaniu czasu na programowanie oraz poznanie ciekawych osób z programistycznego środowiska.
+&lt;!--break--&gt;
+&lt;b id=&quot;internal-source-marker_0.28748438763432205&quot;&gt;
+&lt;img alt=&quot;http://techcrunch.com/2011/05/21/the-hack-is-on-at-the-hackathon/&quot; src=&quot;https://lh6.googleusercontent.com/2nmCq5ZuxaEt95T8Kev6H_okowW9EpF2u4NNFEUOQBSqL_uwPg7KRjH-lfpPfAWs2KG2QyZHCIJQEVorEU8AVov16Frcjk9ebB2QoiL0NGN9s0LPOG80pdxXyA&quot; width=&quot;647px;&quot; height=&quot;423px;&quot; /&gt;&lt;/b&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;Jeśli jesteś zainteresowana(y) udziałem, zajrzyj na &lt;strong&gt;&lt;a href=&quot;http://namecollision.pl&quot; target=&quot;_blank&quot;&gt;stronę hackathonu&lt;/a&gt;&lt;/strong&gt; gdzie możesz zobaczyć obecną listę uczestników, przejrzeć propozycję tematów i oczywiście zapisać się na wydarzenie. Jeśli spodobał Ci się któryś z &lt;strong&gt;opisanych już projektów&lt;/strong&gt;, możesz na tej stronie &lt;strong&gt;do niego dołączyć&lt;/strong&gt;, lub, jeśli wolisz inny temat, zaczekać z wyborem do samego hackathonu. Jeśli masz pomysł na własny projekt strona ułatwi Ci przybliżenie innym uczestnikom Twojego pomysłu i znalezienie chętnych.&lt;/p&gt;
+Aby dzielnie pracujące głowy mogły się skupić nad problemami programistycznymi, a nie nad bardziej przyziemnymi sprawami, zapewnione będą przekąski, ciepły posiłek i napoje, a nawet &lt;strong&gt;domowe piwo&lt;/strong&gt; warzone przez jednego z najlepiej rozpoznawanych domowych piwowarów w Polsce - Pawła Leszczyńskiego.
+&lt;img alt=&quot;http://www.flickr.com/photos/gijsbertpeijs/7988262046/&quot; src=&quot;https://lh6.googleusercontent.com/wdUeK7sqsnXfQ8vtGphHm-KVSvzpUKznFK3klV6jvmngslcisUGXm10A2Nb5eN3fddQSOGcJho2dUp8cldcMahU4cnuA76FK54H5bl7VJc7MLsSGTnPmO_GiLQ&quot; width=&quot;494px;&quot; height=&quot;331px;&quot; /&gt;</p>
+<p>Aby docenić ciężko pracujących hackerów, a z drugiej strony nie zamienić wieczoru w zawody za najlepsze projekty będą na Was czekały &lt;strong&gt;3 bony na książki w Amazonie&lt;/strong&gt;, oraz w większej ilości &lt;strong&gt;Raspberry Pi&lt;/strong&gt; - komputery niewiele większe od karty kredytowej.</p>
 <p>Do zobaczenia!</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p><strong>NameCollision</strong> to nowy, niezależny hackathon dla <strong>warszawskich programistów</strong>, który odbędzie się w <strong]]>
+    <![CDATA[<p>&lt;strong&gt;NameCollision&lt;/strong&gt; to nowy, niezależny hackathon dla &lt;strong&gt;warszawskich programistów&lt;/strong&gt;, któr]]>
     </summary>
     
       <category term="community" scheme="http://erbetowski.pl/categories/community/"/>
@@ -211,18 +252,20 @@
     <id>http://erbetowski.pl/blog/a-deep-dive-into-tapestry-plastic-adding-behavior-to-a-method/</id>
     <published>2013-01-31T23:00:00.000Z</published>
     <updated>2015-09-16T16:46:15.000Z</updated>
-    <content type="html"><![CDATA[<p>In the <a title="A deep dive into Tapestry Plastic – part 1" href="http://blog.erbetowski.pl/index.php/plastic-1/" target="_blank">first part</a> we’ve prepared an environment for work. Now it’s time to do some basic stuff with Plastic.<br><!--break--><br>The most basic AOP example often used in hello world examples is logging and we’re gonna do that as well. To follow the work you might wanna fork from <a href="https://github.com/wojtekerbetowski/plastic-logging" target="_blank">GitHub project</a>.</p>
-<p>So first to run a project we use Gradle, here’s the configuration <script src="//gist.github.com/4414700.js"></script></p>
-<p>I’ll create a simple nothing-producing method:<script src="//gist.github.com/4414801.js"></script></p>
-<p>Next let’s prepare a specification, that tests whether our method actually has logging behavior. You don’t need to know Spock to understand it. I will externalize creating a class reference to a method, so it’ll be easier to add Plastic code in the next step. <script src="//gist.github.com/4414910.js"></script></p>
+    <content type="html"><![CDATA[<p>In the &lt;a title=&quot;A deep dive into Tapestry Plastic – part 1&quot; href=&quot;http://blog.erbetowski.pl/index.php/plastic-1/&quot; target=&quot;_blank&quot;&gt;first part&lt;/a&gt; we've prepared an environment for work. Now it's time to do some basic stuff with Plastic.
+&lt;!--break--&gt;
+The most basic AOP example often used in hello world examples is logging and we're gonna do that as well. To follow the work you might wanna fork from &lt;a href=&quot;https://github.com/wojtekerbetowski/plastic-logging&quot; target=&quot;_blank&quot;&gt;GitHub project&lt;/a&gt;.</p>
+<p>So first to run a project we use Gradle, here's the configuration <script src="//gist.github.com/4414700.js"></script></p>
+<p>I'll create a simple nothing-producing method:<script src="//gist.github.com/4414801.js"></script></p>
+<p>Next let's prepare a specification, that tests whether our method actually has logging behavior. You don't need to know Spock to understand it. I will externalize creating a class reference to a method, so it'll be easier to add Plastic code in the next step. <script src="//gist.github.com/4414910.js"></script></p>
 <p>Of course no such behavior is there at the moment, so the spec fails:<script src="//gist.github.com/4414897.js"></script></p>
-<p>Let’s add Plastic code now. To create an object of modified class we need to prepare <code>org.apache.tapestry5.plastic.PlasticManager</code>. This we may build using static builder methods in it’s class, e.g.<script src="//gist.github.com/4432985.js"></script></p>
-<p>Next there’s a place for a delegate (meaning class transforming delegation). For this we will use <code>org.apache.tapestry5.internal.plastic.StandardDelegate</code> adapter, which brings <code>org.apache.tapestry5.plastic.PlasticClassTransformer</code> interface to <code>Delegate</code> interface. So now we end up needing a transformer, inside of which we’ll use an advice (<code>org.apache.tapestry5.plastic.MethodAdvice</code>). See creating and putting them together in the following snippet:<script src="//gist.github.com/4433014.js"></script></p>
-<p>As you have seen by now, <strong>Plastic is</strong> a pretty high level, object oriented and <strong>well designed</strong> tool for modifying classes. Although creating a simple case of adding an advise to a method requires a lot of boilerplate code.</p>
-<p>In next part we’ll go deeper into the Plastic API.</p>
+<p>Let's add Plastic code now. To create an object of modified class we need to prepare &lt;code&gt;org.apache.tapestry5.plastic.PlasticManager&lt;/code&gt;. This we may build using static builder methods in it's class, e.g.<script src="//gist.github.com/4432985.js"></script></p>
+<p>Next there's a place for a delegate (meaning class transforming delegation). For this we will use &lt;code&gt;org.apache.tapestry5.internal.plastic.StandardDelegate&lt;/code&gt; adapter, which brings &lt;code&gt;org.apache.tapestry5.plastic.PlasticClassTransformer&lt;/code&gt; interface to &lt;code&gt;Delegate&lt;/code&gt; interface. So now we end up needing a transformer, inside of which we'll use an advice (&lt;code&gt;org.apache.tapestry5.plastic.MethodAdvice&lt;/code&gt;). See creating and putting them together in the following snippet:<script src="//gist.github.com/4433014.js"></script></p>
+<p>As you have seen by now, &lt;strong&gt;Plastic is&lt;/strong&gt; a pretty high level, object oriented and &lt;strong&gt;well designed&lt;/strong&gt; tool for modifying classes. Although creating a simple case of adding an advise to a method requires a lot of boilerplate code.</p>
+<p>In next part we'll go deeper into the Plastic API.</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>In the <a title="A deep dive into Tapestry Plastic – part 1" href="http://blog.erbetowski.pl/index.php/plastic-1/" target="_blank">first ]]>
+    <![CDATA[<p>In the &lt;a title=&quot;A deep dive into Tapestry Plastic – part 1&quot; href=&quot;http://blog.erbetowski.pl/index.php/plastic-1/&quot;]]>
     </summary>
     
       <category term="technical" scheme="http://erbetowski.pl/categories/technical/"/>
@@ -235,18 +278,20 @@
     <id>http://erbetowski.pl/blog/plastic-1/</id>
     <published>2012-11-18T23:00:00.000Z</published>
     <updated>2015-09-16T16:46:15.000Z</updated>
-    <content type="html"><![CDATA[<p><img class="alignleft" title="Tapestry" src="http://tapestry.apache.org/images/tapestry.png" alt="" width="330" height="138">End of the year is coming and I’m starting the next year with talk on <a title="WJUG" href="http://warszawa.jug.pl" target="_blank">WJUG</a> about Plastic - code generation tool from <a title="Tapestry" href="http://tapestry.apache.org" target="_blank">Tapestry</a> author - <a href="http://howardlewisship.com/" target="_blank">Howard Lewis Ship</a>. It’s definitely time to start preparing.<br><!--break--><br>I was impressed by authors talk about the library you may see here - <a href="http://www.infoq.com/presentations/Have-Your-Cake-and-Eat-It-Too-Meta-Programming-Java" target="_blank" rel="external">http://www.infoq.com/presentations/Have-Your-Cake-and-Eat-It-Too-Meta-Programming-Java</a></p>
-<p>So let’s start by jumping to the source… and there’s a sad surprise - it’s not that easy to find the source :-( Author said Plastic is separate from the rest of Tapestry 5, but all the links for GitHub repo leads to 404 page. It seems that the idea of an independent library is past.</p>
-<p>But there’s hope! On Lewis’ GitHub page there’s a repo named <a href="https://github.com/hlship/plastic-demos/" target="_blank">plastic-demos</a>. Fast git clone and you may see it’s a <a href="http://gradle.org" target="_blank">Gradle</a> project with <a href="http://code.google.com/p/spock/" target="_blank">Spock</a> unit tests presenting simple Plastic functions. Trying <code>gradle test</code> would be natural next step, but still no luck there:</p>
-<script src="//gist.github.com/b6115bf9b9758b1a2980.js"></script>
-<p>Missing dependency, huh? Let’s take a quick search in <a href="http://mvnrepository.com/artifact/org.apache.tapestry/plastic/5.3.5" target="_blank" rel="external">http://mvnrepository.com/</a> and there it is, <a href="http://mvnrepository.com/artifact/org.apache.tapestry/plastic/5.3.5" target="_blank" rel="external">http://mvnrepository.com/artifact/org.apache.tapestry/plastic/5.3.5</a>. I’m changing version in <code>build.gradle</code> to ‘org.apache.tapestry:plastic:5.3.5’ and it worked:</p>
-<script src="//gist.github.com/4df97a8cf51325afde4c.js"></script>
-<p>So where do I find the sources? Well, it wasn’t hard to guess, it’s inside <a href="http://tapestry.apache.org/download.html" target="_blank">Tapestry source package</a>, which actually isn’t that nice, because the promise was, it’s a separate project.</p>
-<p>Now that we have the source and some examples we can have some more fun… in the next part.</p>
+    <content type="html"><![CDATA[<p>&lt;img class=&quot;alignleft&quot; title=&quot;Tapestry&quot; src=&quot;http://tapestry.apache.org/images/tapestry.png&quot; alt=&quot;&quot; width=&quot;330&quot; height=&quot;138&quot; /&gt;End of the year is coming and I'm starting the next year with talk on &lt;a title=&quot;WJUG&quot; href=&quot;http://warszawa.jug.pl&quot; target=&quot;_blank&quot;&gt;WJUG&lt;/a&gt; about Plastic - code generation tool from &lt;a title=&quot;Tapestry&quot; href=&quot;http://tapestry.apache.org&quot; target=&quot;_blank&quot;&gt;Tapestry&lt;/a&gt; author - &lt;a href=&quot;http://howardlewisship.com/&quot; target=&quot;_blank&quot;&gt;Howard Lewis Ship&lt;/a&gt;. It's definitely time to start preparing.
+&lt;!--break--&gt;
+I was impressed by authors talk about the library you may see here - &lt;a href=&quot;http://www.infoq.com/presentations/Have-Your-Cake-and-Eat-It-Too-Meta-Programming-Java&quot;&gt;http://www.infoq.com/presentations/Have-Your-Cake-and-Eat-It-Too-Meta-Programming-Java&lt;/a&gt;</p>
+<p>So let's start by jumping to the source... and there's a sad surprise - it's not that easy to find the source :-( Author said Plastic is separate from the rest of Tapestry 5, but all the links for GitHub repo leads to 404 page. It seems that the idea of an independent library is past.</p>
+<p>But there's hope! On Lewis' GitHub page there's a repo named &lt;a href=&quot;https://github.com/hlship/plastic-demos/&quot; target=&quot;_blank&quot;&gt;plastic-demos&lt;/a&gt;. Fast git clone and you may see it's a &lt;a href=&quot;http://gradle.org&quot; target=&quot;_blank&quot;&gt;Gradle&lt;/a&gt; project with &lt;a href=&quot;http://code.google.com/p/spock/&quot; target=&quot;_blank&quot;&gt;Spock&lt;/a&gt; unit tests presenting simple Plastic functions. Trying &lt;code&gt;gradle test&lt;/code&gt; would be natural next step, but still no luck there:</p>
+<p><script src="//gist.github.com/b6115bf9b9758b1a2980.js"></script></p>
+<p>Missing dependency, huh? Let's take a quick search in &lt;a href=&quot;http://mvnrepository.com/artifact/org.apache.tapestry/plastic/5.3.5&quot;&gt;http://mvnrepository.com/&lt;/a&gt; and there it is, &lt;a href=&quot;http://mvnrepository.com/artifact/org.apache.tapestry/plastic/5.3.5&quot;&gt;http://mvnrepository.com/artifact/org.apache.tapestry/plastic/5.3.5&lt;/a&gt;. I'm changing version in &lt;code&gt;build.gradle&lt;/code&gt; to 'org.apache.tapestry:plastic:5.3.5' and it worked:</p>
+<p><script src="//gist.github.com/4df97a8cf51325afde4c.js"></script></p>
+<p>So where do I find the sources? Well, it wasn't hard to guess, it's inside &lt;a href=&quot;http://tapestry.apache.org/download.html&quot; target=&quot;_blank&quot;&gt;Tapestry source package&lt;/a&gt;, which actually isn't that nice, because the promise was, it's a separate project.</p>
+<p>Now that we have the source and some examples we can have some more fun... in the next part.</p>
 <p>One thing you can see already is that Howard L. Ship is using all the new, cool stuff to develop (Spock, Gradle), which makes it so much better experience to use the code, than it would be using old mainstream tools like Maven2 or JUnit.</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p><img class="alignleft" title="Tapestry" src="http://tapestry.apache.org/images/tapestry.png" alt="" width="330" height="138">End of the y]]>
+    <![CDATA[<p>&lt;img class=&quot;alignleft&quot; title=&quot;Tapestry&quot; src=&quot;http://tapestry.apache.org/images/tapestry.png&quot; alt=&quot;&]]>
     </summary>
     
       <category term="technical" scheme="http://erbetowski.pl/categories/technical/"/>
@@ -259,30 +304,36 @@
     <id>http://erbetowski.pl/blog/hurray-to-33rd/</id>
     <published>2012-03-29T22:00:00.000Z</published>
     <updated>2015-09-16T16:46:15.000Z</updated>
-    <content type="html"><![CDATA[<p>So it starts like last year’s. Woo-hoo I love 33rd Degree conference. I could copy most things from last relation, so let me focus on couple concrete talks. This is my Top 5:</p>
-<h1 id="5-_Robert_C-_Martin_Demanding_Professionalism">5.  <a href="http://2012.33degree.org/speaker/show/8" target="_blank" rel="external">Robert C. Martin</a> <a href="http://2012.33degree.org/talk/show/15" target="_blank" rel="external">Demanding Professionalism</a></h1><p><img src="http://2012.33degree.org/images/speakers/RobertCMartin.jpg" alt="Uncle Bob"></p>
-<p>Shocking that he’s not no. 1 here. Shocking he didn’t get all 5 positions here, right? Am I a fan? Well, who isn’t?</p>
-<p>His talks could be fun for newcomers, but most of us know his speeches already and he didn’t say almost anything new (the LASER starter is not new to us any more). I liked the iPhone metaphor, but “demanding professionalism” should mean more that just fast builds.<br><!--break--></p>
-<p>The most valuable thing I think I’ve got from that talk is actually… a photo with Uncle Bob.</p>
-<p>On the other hand it’s the usual when you’re expecting too much from a talk and then comes the reality…</p>
-<p>Well, it’s still great he came to Poland :-) I wish he came next year!</p>
-<p>&nbsp;</p>
-<h1 id="4-_Raffi_Krikorian_Twitter:_From_Ruby_on_Rails_to_the_JVM">4. <a href="http://2012.33degree.org/speaker/show/17" target="_blank" rel="external">Raffi Krikorian</a> <a href="http://2012.33degree.org/talk/show/24" target="_blank" rel="external">Twitter: From Ruby on Rails to the JVM</a></h1><p><img src="http://2012.33degree.org/images/speakers/RaffiKrikorian.jpg" alt="Raffi"></p>
-<p>The news about Twitter JVM romance is there for a long time, so we (Java devs) should be already pretty familiar with that fact, but seeing the numbers is still amazing. It was a well prepared presentation for awesomely interesting subject. And I was expecting the leader of Ruby to JVM migration to hate Ruby more, but he wasn’t. That’s a nice thing he sees pros and cons of solution with such a distance.</p>
-<h1 id="3-_Jurgen_Appelo_How_to_Change_the_World">3. <a href="http://2012.33degree.org/speaker/show/7" target="_blank" rel="external">Jurgen Appelo</a> <a href="http://2012.33degree.org/talk/show/20" target="_blank" rel="external">How to Change the World</a></h1><p><img src="http://2012.33degree.org/images/speakers/JurgenAppelo.jpg" alt="Jurgen Appelo"></p>
-<p>I have to admin, I’ve never heard about this guy before. But Grzesiek gave him the keynote, so he must be good.</p>
-<p>He started with putting himself in a light of a total life failures. You think - hmmmm, so why do I listen to that guy? I don’t wont to follow his steps… But then the main content comes, the guy is great, extremely motivating and energetic. Exactly something I’ve needed for the conference ending.</p>
-<h1 id="2-_Sławomir_Sobótka_Ścisły_przewodnik_po_aspektach_miękkich_dla_ekspertów_IT_(Polish)">2. <a href="http://2012.33degree.org/speaker/show/38" target="_blank" rel="external">Sławomir Sobótka</a> <a href="http://2012.33degree.org/talk/show/52" target="_blank" rel="external">Ścisły przewodnik po aspektach miękkich dla ekspertów IT (Polish)</a></h1><p><img src="http://2012.33degree.org/images/speakers/SlawomirSobotka.jpg" alt="&quot;Sławek Sobótka&quot;"></p>
-<p>It’s a pleasure to see Sławek so well prepared! This guy is taking things seriously, how much practice does it take to prepare such talk, I wonder.</p>
-<p>He took us for a little trip through the steps of learning process, with many digressions to a human brain’s characteristics. Funny, dynamic talk, with lots of thing to remember and more to think through.</p>
-<p>&nbsp;</p>
-<h1 id="1-_Venkat_Subramaniam_for_the_whole_conference">1. <a href="http://2012.33degree.org/speaker/show/3" target="_blank" rel="external">Venkat Subramaniam</a> for the whole conference</h1><p><img src="http://2012.33degree.org/images/speakers/VenkatSubramaniam.jpg" alt="&quot;Venkat&quot;"></p>
-<p>Last year’s no. 1 is my 1. this year as well. Even knowing the subject well I still didn’t want to miss any of his talks. Venkat is a fame of 33rd conference and it’s easy to tell why - you get full pockets of his dynamism and go back to work with tons of motivation to make changes :-) especially the throw-away-java kind of changes.</p>
-<p>He’s a very positive person so don’t miss the chance to talk to him between the talks if he comes (I’m sure he’ll be invited) next year if you haven’t this year.</p>
-<p>Kudos to <strong>Grzesiek Duda</strong> to the 33rd degree once again! It’s hard to make the expectations after such a good event last year and you made it! Thanks again!</p>
+    <content type="html"><![CDATA[<p>So it starts like last year's. Woo-hoo I love 33rd Degree conference. I could copy most things from last relation, so let me focus on couple concrete talks. This is my Top 5:</p>
+<h1>5.  &lt;a href=&quot;http://2012.33degree.org/speaker/show/8&quot;&gt;Robert C. Martin&lt;/a&gt; &lt;a href=&quot;http://2012.33degree.org/talk/show/15&quot;&gt;Demanding Professionalism&lt;/a&gt;</h1>
+<p><img src="http://2012.33degree.org/images/speakers/RobertCMartin.jpg" alt="Uncle Bob"></p>
+<p>Shocking that he's not no. 1 here. Shocking he didn't get all 5 positions here, right? Am I a fan? Well, who isn't?</p>
+<p>His talks could be fun for newcomers, but most of us know his speeches already and he didn't say almost anything new (the LASER starter is not new to us any more). I liked the iPhone metaphor, but &quot;demanding professionalism&quot; should mean more that just fast builds.
+&lt;!--break--&gt;</p>
+<p>The most valuable thing I think I've got from that talk is actually... a photo with Uncle Bob.</p>
+<p>On the other hand it's the usual when you're expecting too much from a talk and then comes the reality...</p>
+<p>Well, it's still great he came to Poland :-) I wish he came next year!</p>
+<p> </p>
+<h1>4. &lt;a href=&quot;http://2012.33degree.org/speaker/show/17&quot;&gt;Raffi Krikorian&lt;/a&gt; &lt;a href=&quot;http://2012.33degree.org/talk/show/24&quot;&gt;Twitter: From Ruby on Rails to the JVM&lt;/a&gt;</h1>
+<p><img src="http://2012.33degree.org/images/speakers/RaffiKrikorian.jpg" alt="Raffi"></p>
+<p>The news about Twitter JVM romance is there for a long time, so we (Java devs) should be already pretty familiar with that fact, but seeing the numbers is still amazing. It was a well prepared presentation for awesomely interesting subject. And I was expecting the leader of Ruby to JVM migration to hate Ruby more, but he wasn't. That's a nice thing he sees pros and cons of solution with such a distance.</p>
+<h1>3. &lt;a href=&quot;http://2012.33degree.org/speaker/show/7&quot;&gt;Jurgen Appelo&lt;/a&gt; &lt;a href=&quot;http://2012.33degree.org/talk/show/20&quot;&gt;How to Change the World&lt;/a&gt;</h1>
+<p><img src="http://2012.33degree.org/images/speakers/JurgenAppelo.jpg" alt="Jurgen Appelo"></p>
+<p>I have to admin, I've never heard about this guy before. But Grzesiek gave him the keynote, so he must be good.</p>
+<p>He started with putting himself in a light of a total life failures. You think - hmmmm, so why do I listen to that guy? I don't wont to follow his steps... But then the main content comes, the guy is great, extremely motivating and energetic. Exactly something I've needed for the conference ending.</p>
+<h1>2. &lt;a href=&quot;http://2012.33degree.org/speaker/show/38&quot;&gt;Sławomir Sobótka&lt;/a&gt; &lt;a href=&quot;http://2012.33degree.org/talk/show/52&quot;&gt;Ścisły przewodnik po aspektach miękkich dla ekspertów IT (Polish)&lt;/a&gt;</h1>
+<p><img src="http://2012.33degree.org/images/speakers/SlawomirSobotka.jpg" alt="&amp;quot;Sławek Sobótka&amp;quot;"></p>
+<p>It's a pleasure to see Sławek so well prepared! This guy is taking things seriously, how much practice does it take to prepare such talk, I wonder.</p>
+<p>He took us for a little trip through the steps of learning process, with many digressions to a human brain's characteristics. Funny, dynamic talk, with lots of thing to remember and more to think through.</p>
+<p> </p>
+<h1>1. &lt;a href=&quot;http://2012.33degree.org/speaker/show/3&quot;&gt;Venkat Subramaniam&lt;/a&gt; for the whole conference</h1>
+<p><img src="http://2012.33degree.org/images/speakers/VenkatSubramaniam.jpg" alt="&amp;quot;Venkat&amp;quot;"></p>
+<p>Last year's no. 1 is my 1. this year as well. Even knowing the subject well I still didn't want to miss any of his talks. Venkat is a fame of 33rd conference and it's easy to tell why - you get full pockets of his dynamism and go back to work with tons of motivation to make changes :-) especially the throw-away-java kind of changes.</p>
+<p>He's a very positive person so don't miss the chance to talk to him between the talks if he comes (I'm sure he'll be invited) next year if you haven't this year.</p>
+<p>Kudos to &lt;strong&gt;Grzesiek Duda&lt;/strong&gt; to the 33rd degree once again! It's hard to make the expectations after such a good event last year and you made it! Thanks again!</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>So it starts like last year’s. Woo-hoo I love 33rd Degree conference. I could copy most things from last relation, so let me focus on cou]]>
+    <![CDATA[<p>So it starts like last year's. Woo-hoo I love 33rd Degree conference. I could copy most things from last relation, so let me focus on cou]]>
     </summary>
     
       <category term="community" scheme="http://erbetowski.pl/categories/community/"/>
@@ -295,22 +346,22 @@
     <id>http://erbetowski.pl/blog/how-to-send-a-link-to-a-gmail-email/</id>
     <published>2012-03-29T22:00:00.000Z</published>
     <updated>2015-09-16T16:46:15.000Z</updated>
-    <content type="html"><![CDATA[<p>There aren’t much things I’m missing from working in corpo, but saving and attaching emails from M$ Exchange is one of them. You could simply save an email, put that to JIRA or any other store and your grandchildren could read the communication that led to this solution. And even more important functionality was to send someone this response ‘you wanted it so - here’s the email: &lt;url to that exact email&gt;.</p>
-<p>The latter couldn’t be done with Exchange, but at least I could attach that conversation.</p>
-<p>So now being in a small, agile company devs would probably throw up when seeing Exchange. Everyone (including me) want to use GMail. But what about my beloved sending discussion functionality? I don’t think GMail has an option to link to the message, <strong>but there’s a solution</strong>. Not very good one or anything, but still worth sharing I think.</p>
-<p>Go to your inbox, let’s open some random spam message, settings &gt; show original:</p>
+    <content type="html"><![CDATA[<p>There aren't much things I'm missing from working in corpo, but saving and attaching emails from M$ Exchange is one of them. You could simply save an email, put that to JIRA or any other store and your grandchildren could read the communication that led to this solution. And even more important functionality was to send someone this response 'you wanted it so - here's the email: &lt;url to that exact email&gt;.</p>
+<p>The latter couldn't be done with Exchange, but at least I could attach that conversation.</p>
+<p>So now being in a small, agile company devs would probably throw up when seeing Exchange. Everyone (including me) want to use GMail. But what about my beloved sending discussion functionality? I don't think GMail has an option to link to the message, &lt;strong&gt;but there's a solution&lt;/strong&gt;. Not very good one or anything, but still worth sharing I think.</p>
+<p>Go to your inbox, let's open some random spam message, settings &gt; show original:</p>
 <p><img src="/img/posts/2012-03-30-how-to-send-a-link-to-a-gmail-email/menu.jpg" alt="Context menu"></p>
-<p>&nbsp;</p>
+<p> </p>
 <p>Then find message id</p>
 <p><img src="/img/posts/2012-03-30-how-to-send-a-link-to-a-gmail-email/message_id.jpg" alt="Message ID"></p>
-<p>And the ugly hack is that when searching for e-mails GMail searches message id as well, so let’s simply search for it and send the link to whom we’ve been mailing to (message id stays the same for all inboxes). So the url is like</p>
-<p><a href="https://mail.google.com/mail/u/0/#search/rfc822msgid%3A[message" target="_blank" rel="external">https://mail.google.com/mail/u/0/#search/rfc822msgid%3A[message</a> id]</p>
-<p>and in our case it’s:</p>
+<p>And the ugly hack is that when searching for e-mails GMail searches message id as well, so let's simply search for it and send the link to whom we've been mailing to (message id stays the same for all inboxes). So the url is like</p>
+<p>https://mail.google.com/mail/u/0/#search/rfc822msgid%3A[message id]</p>
+<p>and in our case it's:</p>
 <p><img src="/img/posts/2012-03-30-how-to-send-a-link-to-a-gmail-email/search.jpg" alt="Search"></p>
-<p>That’s it, the link is ready to send.</p>
+<p>That's it, the link is ready to send.</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>There aren’t much things I’m missing from working in corpo, but saving and attaching emails from M$ Exchange is one of them. You could si]]>
+    <![CDATA[<p>There aren't much things I'm missing from working in corpo, but saving and attaching emails from M$ Exchange is one of them. You could si]]>
     </summary>
     
       <category term="technical" scheme="http://erbetowski.pl/categories/technical/"/>
@@ -323,12 +374,14 @@
     <id>http://erbetowski.pl/blog/33rd-degree-scala-community-talk/</id>
     <published>2012-03-18T23:00:00.000Z</published>
     <updated>2015-09-16T16:46:15.000Z</updated>
-    <content type="html"><![CDATA[<p><a title="33rd Degree" href="http://2012.33degree.org/" target="_blank" rel="external">33rd degree</a> is where the Java Community is right now. Kudos to Grzegorz Duda once again.<br>I enjoyed few talks already (the great Venkat, long awaited non-blocking architecture in Play2 and the ‘must’ Raffi Krikorian with Twitter to JVM migration). Right now there’s a talk from Zeroturnaround about the LiveRebel and the continous delivery.</p>
-<p>I’ve you’re interested with Scala (or just curious) join us today @ BOF (Scala community talk) ~ 5.10 PM, just after Rebelion Beer Party. We’ll show a bit of state of the art in Scala world together with <a title="Venkat Subramaniam" href="http://2012.33degree.org/speaker/show/3" target="_blank">Venkat Subramaniam</a> and <a title="Sadek Drobi" href="http://2012.33degree.org/speaker/show/43" target="_blank" rel="external">Sadek Drobi</a>.</p>
-<p>Feel invited :-)<br><!--break--></p>
+    <content type="html"><![CDATA[<p>&lt;a title=&quot;33rd Degree&quot; href=&quot;http://2012.33degree.org/&quot;&gt;33rd degree&lt;/a&gt; is where the Java Community is right now. Kudos to Grzegorz Duda once again.
+I enjoyed few talks already (the great Venkat, long awaited non-blocking architecture in Play2 and the 'must' Raffi Krikorian with Twitter to JVM migration). Right now there's a talk from Zeroturnaround about the LiveRebel and the continous delivery.</p>
+<p>I've you're interested with Scala (or just curious) join us today @ BOF (Scala community talk) ~ 5.10 PM, just after Rebelion Beer Party. We'll show a bit of state of the art in Scala world together with &lt;a title=&quot;Venkat Subramaniam&quot; href=&quot;http://2012.33degree.org/speaker/show/3&quot; target=&quot;_blank&quot;&gt;Venkat Subramaniam&lt;/a&gt; and &lt;a title=&quot;Sadek Drobi&quot; href=&quot;http://2012.33degree.org/speaker/show/43&quot;&gt;Sadek Drobi&lt;/a&gt;.</p>
+<p>Feel invited :-)
+&lt;!--break--&gt;</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p><a title="33rd Degree" href="http://2012.33degree.org/" target="_blank" rel="external">33rd degree</a> is where the Java Community is rig]]>
+    <![CDATA[<p>&lt;a title=&quot;33rd Degree&quot; href=&quot;http://2012.33degree.org/&quot;&gt;33rd degree&lt;/a&gt; is where the Java Community is ri]]>
     </summary>
     
       <category term="community" scheme="http://erbetowski.pl/categories/community/"/>
@@ -341,18 +394,19 @@
     <id>http://erbetowski.pl/blog/method-injection-with-guice-and-scala/</id>
     <published>2012-02-17T23:00:00.000Z</published>
     <updated>2015-09-16T16:46:15.000Z</updated>
-    <content type="html"><![CDATA[<p>This is English version of a <a href="http://scala.net.pl/wstrzykiwanie-metod-dzieki-guice/" target="_blank" rel="external">post</a> I’ve written for <a href="http://scala.net.pl/wstrzykiwanie-metod-dzieki-guice/" target="_blank" rel="external">Polish Scala User Group</a>.<br>I have moved Scala recently from hard and heavy J2EE/Spring world. I know hord hard is testing when you don’t have a proper dependency injection mechanism. Mocking ability has been a priority for me for years now. On the other hand having several deps in object and delegating them work is not in the functional Spirit of Scala.</p>
+    <content type="html"><![CDATA[<p>This is English version of a &lt;a href=&quot;http://scala.net.pl/wstrzykiwanie-metod-dzieki-guice/&quot;&gt;post&lt;/a&gt; I've written for &lt;a href=&quot;http://scala.net.pl/wstrzykiwanie-metod-dzieki-guice/&quot;&gt;Polish Scala User Group&lt;/a&gt;.
+I have moved Scala recently from hard and heavy J2EE/Spring world. I know hord hard is testing when you don't have a proper dependency injection mechanism. Mocking ability has been a priority for me for years now. On the other hand having several deps in object and delegating them work is not in the functional Spirit of Scala.</p>
 <p>Scala makes it possible to move a step forward and inject methods, which gives you the pleasure of functional writing but still having object oriented flexibility.</p>
-<p>Let’s take a look at this example: let’s say you’re registering a user, and want to hash his password. But it’s generally a good idea to add some salt. Not hardcoded one :-) So we keep a salt in our DB, then something that would calculate the has (a hasher) needs to obtain DB connection. And when registering a user we need a hasher instance:</p>
-<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">UserRegisterer</span> <span class="title">@Inject</span>(</span>) (hasher: hasher) &#123;</span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">register</span>(</span>username, password) = <span class="type">User</span>(username, hasher.hash(password)).save</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>That is not the Scala beauty we could expect to see. What we want is: <em>password.hash. </em>So let’s take advantage of Scala mixins to use hasher as a hidden dependency and an implicit that would extend String class with <em>hash </em>method:</p>
-<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">trait</span> <span class="title">Hashing</span> &#123;</span></span><br><span class="line">  <span class="annotation">@Inject</span> <span class="keyword">private</span> <span class="function"><span class="keyword">val</span> <span class="title">hasher</span>:</span> <span class="type">Hasher</span> = <span class="literal">null</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">implicit</span> <span class="function"><span class="keyword">def</span> <span class="title">stringToHashable</span>(</span>toBeHashed: <span class="type">String</span>) = <span class="keyword">new</span> &#123;</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">hash</span> =</span> hasher.hash(toBeHashed)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Let's take a look at this example: let's say you're registering a user, and want to hash his password. But it's generally a good idea to add some salt. Not hardcoded one :-) So we keep a salt in our DB, then something that would calculate the has (a hasher) needs to obtain DB connection. And when registering a user we need a hasher instance:</p>
+<p><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">UserRegisterer</span> <span class="title">@Inject</span>(</span>) (hasher: hasher) &#123;</span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">register</span>(</span>username, password) = <span class="type">User</span>(username, hasher.hash(password)).save</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>That is not the Scala beauty we could expect to see. What we want is: &lt;em&gt;password.hash. &lt;/em&gt;So let's take advantage of Scala mixins to use hasher as a hidden dependency and an implicit that would extend String class with &lt;em&gt;hash &lt;/em&gt;method:</p>
+<p><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">trait</span> <span class="title">Hashing</span> &#123;</span></span><br><span class="line">  <span class="annotation">@Inject</span> <span class="keyword">private</span> <span class="function"><span class="keyword">val</span> <span class="title">hasher</span>:</span> <span class="type">Hasher</span> = <span class="literal">null</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">implicit</span> <span class="function"><span class="keyword">def</span> <span class="title">stringToHashable</span>(</span>toBeHashed: <span class="type">String</span>) = <span class="keyword">new</span> &#123;</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">hash</span> =</span> hasher.hash(toBeHashed)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>Now we may mixin hashing capability to our class and take a look at beautiful, but still flexible and possible to mock or whateva piece of code:</p>
-<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">UserRegistrator</span> <span class="keyword"><span class="keyword">with</span></span> <span class="title">Hashing</span> &#123;</span></span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">register</span>(</span>username, password) = <span class="type">User</span>(username, password.hash).save</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>Notice that thanks to minimal hasher scope UserRegistrator will never know about such details as hasher class nor such field existence.</p>
+<p><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">UserRegistrator</span> <span class="keyword"><span class="keyword">with</span></span> <span class="title">Hashing</span> &#123;</span></span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">register</span>(</span>username, password) = <span class="type">User</span>(username, password.hash).save</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>Notice that thanks to minimal hasher scope UserRegistrator will never know about such details as hasher class nor such field existence.</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>This is English version of a <a href="http://scala.net.pl/wstrzykiwanie-metod-dzieki-guice/" target="_blank" rel="external">post</a> I’ve]]>
+    <![CDATA[<p>This is English version of a &lt;a href=&quot;http://scala.net.pl/wstrzykiwanie-metod-dzieki-guice/&quot;&gt;post&lt;/a&gt; I've written ]]>
     </summary>
     
       <category term="technical" scheme="http://erbetowski.pl/categories/technical/"/>
@@ -365,23 +419,26 @@
     <id>http://erbetowski.pl/blog/agilebyexample-2011-survey/</id>
     <published>2011-09-18T22:00:00.000Z</published>
     <updated>2015-09-16T16:46:15.000Z</updated>
-    <content type="html"><![CDATA[<p><img class="alignnone" src="https://lh4.googleusercontent.com/-4ODh0tEUd9I/TnNYkEdkT7I/AAAAAAAAAbc/GjhDO7axakU/s720/DSC_5903.jpg" alt="" width="720" height="478"></p>
-<p><strong>What did I learn during <a href="http://www.agilebyexample.com/" target="_blank">ABE2011</a>?</strong><br>I earned some knowledge from practitioners, everyday tricks, straight from the tranches. I’m glad to know what kind of issues people have when introducing Agile to teams that weren’t familiar with it, or were using it in the wrong way. But most of all I’m happy to hear some incredible ideas from great agilers, like <a title="Marek Kirejczyk and his team rebuilt" href="http://www.agilebyexample.com/speaker/marek-kirejczyk/" target="_blank">Marek Kirejczyk and his team rebuilt</a>.<br><!--break--><br><strong>Did it fix into my expectations?</strong></p>
-<p>Absolutely. Most important part was to be a part of Warsaw Agile Community at one of the biggest Agile events in Poland. With that I’m fully satisfied. I even wasn’t expecting to learn that much of those speeches (I thought that value/show rate would be way lower, I’m glad to be wrong).</p>
-<p><img class="alignnone" src="https://lh6.googleusercontent.com/-qflq3YUHL-c/TnIzx6rMQhI/AAAAAAAAAHg/Nmwp8A2eu9g/s720/DSC_5735.jpg" alt="" width="720" height="478"></p>
-<p><strong>Three speeches I will remember</strong></p>
-<p><a href="http://www.agilebyexample.com/speaker/marek-kirejczyk/" target="_blank">Rebuilding Agile Team</a> - Marek told us a story of how did he accomplished rebuilding a team after loosing most of it in a short period of time. Story contained job interviews using <a href="http://codility.com/" target="_blank">Codility</a>, pair programming (with himself as a driver and a candidate as navigator) and other stuff. He showed an example of how to put effort in such an important part of building the team as choosing the right people, instead of simply ask few questions about last projects or try to solve deep programming language riddle [booooring].</p>
-<p><a href="http://www.agilebyexample.com/speaker/inbar-oren/" target="_blank">How to Lose a Team in 10 Days</a> - I’m not sure if the title fits the content well. Inbar Oren was speaking mostly about the role of Product Owner and about how it’s often degenerated to simple proxy between the team and the client. Also one VERY important issue pointed here - when you train a PO to actually play the extended role, to keep working with the team during the sprint and making decisions himself, you have to train him on how to handle additional work AND stress connected to additional responsibilities (but no additional working time).</p>
-<p><a href="http://www.agilebyexample.com/speaker/marcin-czenko/" target="_blank">Don’t Start with Kanban</a> - Marcin Czenko was in my opinion the best presenter on ABE. The title says for the presentation, don’t introduce an agile methodology by starting with Kanban. Marcin showed us some very important issues teams are facing when they are not familiar with scrum or XP.</p>
-<p><strong><img class="alignnone" src="https://lh6.googleusercontent.com/-jt4SWfH8dxs/TnKD4EK3B-I/AAAAAAAAAPE/uomC3ttmQrs/s720/_MG_0323.jpg" alt="" width="720" height="480">What about the place and coffee?</strong></p>
-<p>It was the first time I had a conference in a swimming pool :-) Great place for a conference in my opinion. Lots of air above our heads, original audience in pool placement and awesome acoustics made <a href="http://www.basen.art.pl/" target="_blank">CBA</a> the best conference room I remember of. Coffee and snacks were fine for me, but I would still appreciate to eat a sandwich perhaps, or a salad instead of tons of cookies (it’s hard to stop eating them ;)).</p>
-<p><strong>Anything else?</strong></p>
-<p>Let’s not forget of a cool ABE party after day 1. We enjoyed beer in the ticket price, pizza and great Agile community in unofficial mood :-) Great opportunity to get to know some new people, to ask speakers some additional questions or simply relax between two days full of lectures.</p>
+    <content type="html"><![CDATA[<p>&lt;img class=&quot;alignnone&quot; src=&quot;https://lh4.googleusercontent.com/-4ODh0tEUd9I/TnNYkEdkT7I/AAAAAAAAAbc/GjhDO7axakU/s720/DSC_5903.jpg&quot; alt=&quot;&quot; width=&quot;720&quot; height=&quot;478&quot; /&gt;</p>
+<p>&lt;strong&gt;What did I learn during &lt;a href=&quot;http://www.agilebyexample.com/&quot; target=&quot;_blank&quot;&gt;ABE2011&lt;/a&gt;?&lt;/strong&gt;
+I earned some knowledge from practitioners, everyday tricks, straight from the tranches. I'm glad to know what kind of issues people have when introducing Agile to teams that weren't familiar with it, or were using it in the wrong way. But most of all I'm happy to hear some incredible ideas from great agilers, like &lt;a title=&quot;Marek Kirejczyk and his team rebuilt&quot; href=&quot;http://www.agilebyexample.com/speaker/marek-kirejczyk/&quot; target=&quot;_blank&quot;&gt;Marek Kirejczyk and his team rebuilt&lt;/a&gt;.
+&lt;!--break--&gt;
+&lt;strong&gt;Did it fix into my expectations?&lt;/strong&gt;</p>
+<p>Absolutely. Most important part was to be a part of Warsaw Agile Community at one of the biggest Agile events in Poland. With that I'm fully satisfied. I even wasn't expecting to learn that much of those speeches (I thought that value/show rate would be way lower, I'm glad to be wrong).</p>
+<p>&lt;img class=&quot;alignnone&quot; src=&quot;https://lh6.googleusercontent.com/-qflq3YUHL-c/TnIzx6rMQhI/AAAAAAAAAHg/Nmwp8A2eu9g/s720/DSC_5735.jpg&quot; alt=&quot;&quot; width=&quot;720&quot; height=&quot;478&quot; /&gt;</p>
+<p>&lt;strong&gt;Three speeches I will remember&lt;/strong&gt;</p>
+<p>&lt;a href=&quot;http://www.agilebyexample.com/speaker/marek-kirejczyk/&quot; target=&quot;_blank&quot;&gt;Rebuilding Agile Team&lt;/a&gt; - Marek told us a story of how did he accomplished rebuilding a team after loosing most of it in a short period of time. Story contained job interviews using &lt;a href=&quot;http://codility.com/&quot; target=&quot;_blank&quot;&gt;Codility&lt;/a&gt;, pair programming (with himself as a driver and a candidate as navigator) and other stuff. He showed an example of how to put effort in such an important part of building the team as choosing the right people, instead of simply ask few questions about last projects or try to solve deep programming language riddle [booooring].</p>
+<p>&lt;a href=&quot;http://www.agilebyexample.com/speaker/inbar-oren/&quot; target=&quot;_blank&quot;&gt;How to Lose a Team in 10 Days&lt;/a&gt; - I'm not sure if the title fits the content well. Inbar Oren was speaking mostly about the role of Product Owner and about how it's often degenerated to simple proxy between the team and the client. Also one VERY important issue pointed here - when you train a PO to actually play the extended role, to keep working with the team during the sprint and making decisions himself, you have to train him on how to handle additional work AND stress connected to additional responsibilities (but no additional working time).</p>
+<p>&lt;a href=&quot;http://www.agilebyexample.com/speaker/marcin-czenko/&quot; target=&quot;_blank&quot;&gt;Don't Start with Kanban&lt;/a&gt; - Marcin Czenko was in my opinion the best presenter on ABE. The title says for the presentation, don't introduce an agile methodology by starting with Kanban. Marcin showed us some very important issues teams are facing when they are not familiar with scrum or XP.</p>
+<p>&lt;strong&gt;&lt;img class=&quot;alignnone&quot; src=&quot;https://lh6.googleusercontent.com/-jt4SWfH8dxs/TnKD4EK3B-I/AAAAAAAAAPE/uomC3ttmQrs/s720/_MG_0323.jpg&quot; alt=&quot;&quot; width=&quot;720&quot; height=&quot;480&quot; /&gt;What about the place and coffee?&lt;/strong&gt;</p>
+<p>It was the first time I had a conference in a swimming pool :-) Great place for a conference in my opinion. Lots of air above our heads, original audience in pool placement and awesome acoustics made &lt;a href=&quot;http://www.basen.art.pl/&quot; target=&quot;_blank&quot;&gt;CBA&lt;/a&gt; the best conference room I remember of. Coffee and snacks were fine for me, but I would still appreciate to eat a sandwich perhaps, or a salad instead of tons of cookies (it's hard to stop eating them ;)).</p>
+<p>&lt;strong&gt;Anything else?&lt;/strong&gt;</p>
+<p>Let's not forget of a cool ABE party after day 1. We enjoyed beer in the ticket price, pizza and great Agile community in unofficial mood :-) Great opportunity to get to know some new people, to ask speakers some additional questions or simply relax between two days full of lectures.</p>
 <p>Thanks for organizing it! It was a pleasure to attend</p>
-<p>&nbsp;</p>
+<p> </p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p><img class="alignnone" src="https://lh4.googleusercontent.com/-4ODh0tEUd9I/TnNYkEdkT7I/AAAAAAAAAbc/GjhDO7axakU/s720/DSC_5903.jpg" alt="" ]]>
+    <![CDATA[<p>&lt;img class=&quot;alignnone&quot; src=&quot;https://lh4.googleusercontent.com/-4ODh0tEUd9I/TnNYkEdkT7I/AAAAAAAAAbc/GjhDO7axakU/s720/DSC]]>
     </summary>
     
       <category term="community" scheme="http://erbetowski.pl/categories/community/"/>
@@ -394,19 +451,43 @@
     <id>http://erbetowski.pl/blog/confitura-2011/</id>
     <published>2011-09-10T22:00:00.000Z</published>
     <updated>2015-09-16T16:46:15.000Z</updated>
-    <content type="html"><![CDATA[<h2 id="Introduction">Introduction</h2><p>I have given a speech titled: <strong>Play!Framework - ewolucja w świecie aplikacji webowych</strong><br>(Play!Framework - evolution in web applications world)<br>dedicated to a <a href="http://playframework.org/" target="_blank" rel="external">Java/Scala web development framework</a>,<br>showing participants some advantages (and disadvantages) of this tool. Play have already been there for a while,<br>so most of you have probably already heard of it.</p>
-<p>Presentation was 60 minutes long and I assume there were ~150 participants. I used Prezi as presentation tool<br>and official Play’s screencast to present basic coding patterns.</p>
-<!--break-->
-<h2 id="Abstract">Abstract</h2><p>PlayFramework is a young web development framework for Java and Scala. It throws away some<br>fundamental Java world solutions (like Servlets) in advance to provide extremely robust<br>development environment. This presentation answers to couple basic question<br>each developer would ask about a new framework. It shows PlayFramework’s MVC fundamentals,<br>dynamic reloading and build system.</p>
-<p>Full stack web development framework is a subject more for a training than a short lecture,<br>so many topics will be at most just mentioned during 60 minute talk. That’s why I let<br>participants choose topics they want to hear about. Seeing a round of options with<br>small sub-presentation connected to each seemed a great idea for this purpose.</p>
-<h2 id="Survey">Survey</h2><p>About two weeks after I got a survey filled by participants.<br>Thanks to that I could see how bad idea was to use official PlafFramework’s<br>screencast. On the other hand the second part of the lecture<br>felt a lot better.</p>
-<h2 id="Video">Video</h2><p>You can see the full video at <a href="http://vimeo.com/27108154" target="_blank" rel="external">Vimeo</a>.</p>
-<h3 id="Me_speaking_at_Cofitura_2011">Me speaking at Cofitura 2011</h3><p><img src="/img/posts/2013-09-11-confitura-2011/confitura_myself.jpg" alt="Me speaking at Cofitura 2011"></p>
-<h3 id="Crowdy_opening">Crowdy opening</h3><p><img src="/img/posts/2013-09-11-confitura-2011/crowd.jpg" alt="Crowdy opening"></p>
-<h3 id="SPOINA">SPOINA</h3><p><img src="/img/posts/2013-09-11-confitura-2011/spoina.jpg" alt="SPOINA"></p>
+    <content type="html"><![CDATA[<h2>Introduction</h2>
+<p>I have given a speech titled: &lt;strong&gt;Play!Framework - ewolucja w świecie aplikacji webowych&lt;/strong&gt;
+(Play!Framework - evolution in web applications world)
+dedicated to a &lt;a href=&quot;http://playframework.org/&quot;&gt;Java/Scala web development framework&lt;/a&gt;,
+showing participants some advantages (and disadvantages) of this tool. Play have already been there for a while,
+so most of you have probably already heard of it.</p>
+<p>Presentation was 60 minutes long and I assume there were ~150 participants. I used Prezi as presentation tool
+and official Play's screencast to present basic coding patterns.</p>
+<p>&lt;!--break--&gt;</p>
+<h2>Abstract</h2>
+<p>PlayFramework is a young web development framework for Java and Scala. It throws away some
+fundamental Java world solutions (like Servlets) in advance to provide extremely robust
+development environment. This presentation answers to couple basic question
+each developer would ask about a new framework. It shows PlayFramework's MVC fundamentals,
+dynamic reloading and build system.</p>
+<p>Full stack web development framework is a subject more for a training than a short lecture,
+so many topics will be at most just mentioned during 60 minute talk. That's why I let
+participants choose topics they want to hear about. Seeing a round of options with
+small sub-presentation connected to each seemed a great idea for this purpose.</p>
+<h2>Survey</h2>
+<p>About two weeks after I got a survey filled by participants.
+Thanks to that I could see how bad idea was to use official PlafFramework's
+screencast. On the other hand the second part of the lecture
+felt a lot better.</p>
+<h2>Video</h2>
+<p>You can see the full video at <a href="http://vimeo.com/27108154" target="_blank" rel="external">Vimeo</a>.</p>
+<h3>Me speaking at Cofitura 2011</h3>
+<p><img src="/img/posts/2013-09-11-confitura-2011/confitura_myself.jpg" alt="Me speaking at Cofitura 2011"></p>
+<h3>Crowdy opening</h3>
+<p><img src="/img/posts/2013-09-11-confitura-2011/crowd.jpg" alt="Crowdy opening"></p>
+<h3>SPOINA</h3>
+<p><img src="/img/posts/2013-09-11-confitura-2011/spoina.jpg" alt="SPOINA"></p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<h2 id="Introduction">Introduction</h2><p>I have given a speech titled: <strong>Play!Framework - ewolucja w świecie aplikacji webowych</stro]]>
+    <![CDATA[<h2>Introduction</h2>
+<p>I have given a speech titled: &lt;strong&gt;Play!Framework - ewolucja w świecie aplikacji webowych&lt;/strong&gt;
+(]]>
     </summary>
     
       <category term="community" scheme="http://erbetowski.pl/categories/community/"/>
@@ -419,23 +500,33 @@
     <id>http://erbetowski.pl/blog/confitura-2011-summary/</id>
     <published>2011-06-13T22:00:00.000Z</published>
     <updated>2015-09-16T16:46:15.000Z</updated>
-    <content type="html"><![CDATA[<p>Right now I’m on the last lecture of <a href="http://2011.confitura.pl" target="_blank" rel="external">Confitura 2011</a>, so it’s the time to write a summary.</p>
-<p>First things first - great thanks to organizers! Javars… Confitura is a great and huge conference and it isn’t easy to make it all work. Thank guys (and girls).</p>
-<p>And what did go wrong? <strong>Where the hell is my coffee?!</strong><br>Why couldn’t I get a cup of coffee during a lecture?<br>I have to wait until some special break? C’mon!<br>It is the first time you couldn’t drink coffee on a Java conference I remember.<br>Another (and last) thing I’m complaining about is the food - it was weak and it was hard to find some place to eat it.</p>
-<p>&lt;off-topic&gt;<br><em>At this moment a guy sitting next to me after noticing I’m writing memos suggested me to write that it’s stuffy and I fully agree. But I’ve never seen anyone solving problem of 1-2 hundred people sharing air in one room. :-(</em><br>&lt;/off-topic&gt;</p>
-<p>And now the lectures: first in the morning was the keynote given by <strong>WorldIT Systems</strong> guy. I’m gonna remember two things:</p>
-<p><ul><br>    <li>He showed that server cost per performance is underlinear (1 big computer costs less that two small) - I always believed the opposite</li><br>    <li>He showed us the ease of vertical optimization as the future, not horizontal, as we see it.</li><br></ul><br>Somehow I just don’t buy it.</p>
-<p><em>[huh - I didn’t make the whole memo that day, so I am finishing it couple of days later, after cooling down]</em></p>
-<p>Next one - <strong>Jakub    Koperwas </strong>with webapps security. Some basic knowledge for beginners, too much about SQL injection (believe or not - we know not to concatenate strings for queries already). And when some more interesting examples were coming to the day light he ran out of time. Good luck next time - I hope to see other examples :-)</p>
-<p>I picked <strong>Adam and Tomek </strong>with the Amazon cloud stuff as last presentation before lunch, and I picked them because I didn’t want to risk :-) I knew that they are going to give a very good show with possible live coding and they didn’t disappointed me. It was the best presentation I that day.</p>
-<p>I wanted to prepare a bit for my presentation, so I picked the smallest room with <strong>jPalio </strong>lecture. For me it’s an awful tool (just making people to use not their favourite IDE is enough not to use it). I wish I went for Paweł’s or Jarek’s sessions that were on the same time, I heard a lot better comments on them.</p>
-<p>Last session - <strong>Mateusz Grzechociński. </strong>I picked it up because I am about to start some Android development and so I choose everything connected to Android lately. Mateusz has a lot of useful knowledge, but it was hard for me to understand problems he meant.</p>
-<p>That’s it, I will surely participate next year and I’m waiting for this years videos.</p>
-<p>And I am curious - organizers kept saying carefully that this is the biggest free Java conference in Poland. Isn’t that true that this is the biggest free European Java conference and one of the 2-3 biggest Java events in Europe (not necessarily free?).</p>
-<p>&nbsp;</p>
+    <content type="html"><![CDATA[<p>Right now I'm on the last lecture of <a href="http://2011.confitura.pl" target="_blank" rel="external">Confitura 2011</a>, so it's the time to write a summary.</p>
+<p>First things first - great thanks to organizers! Javars... Confitura is a great and huge conference and it isn't easy to make it all work. Thank guys (and girls).</p>
+<p>And what did go wrong? <strong>Where the hell is my coffee?!</strong>
+Why couldn't I get a cup of coffee during a lecture?
+I have to wait until some special break? C'mon!
+It is the first time you couldn't drink coffee on a Java conference I remember.
+Another (and last) thing I'm complaining about is the food - it was weak and it was hard to find some place to eat it.</p>
+<p>&lt;off-topic&gt;
+<em>At this moment a guy sitting next to me after noticing I'm writing memos suggested me to write that it's stuffy and I fully agree. But I've never seen anyone solving problem of 1-2 hundred people sharing air in one room. :-(</em>
+&lt;/off-topic&gt;</p>
+<p>And now the lectures: first in the morning was the keynote given by &lt;strong&gt;WorldIT Systems&lt;/strong&gt; guy. I'm gonna remember two things:
+&lt;ul&gt;
+&lt;li&gt;He showed that server cost per performance is underlinear (1 big computer costs less that two small) - I always believed the opposite&lt;/li&gt;
+&lt;li&gt;He showed us the ease of vertical optimization as the future, not horizontal, as we see it.&lt;/li&gt;
+&lt;/ul&gt;
+Somehow I just don't buy it.</p>
+<p>&lt;em&gt;[huh - I didn't make the whole memo that day, so I am finishing it couple of days later, after cooling down]&lt;/em&gt;</p>
+<p>Next one - &lt;strong&gt;Jakub    Koperwas &lt;/strong&gt;with webapps security. Some basic knowledge for beginners, too much about SQL injection (believe or not - we know not to concatenate strings for queries already). And when some more interesting examples were coming to the day light he ran out of time. Good luck next time - I hope to see other examples :-)</p>
+<p>I picked &lt;strong&gt;Adam and Tomek &lt;/strong&gt;with the Amazon cloud stuff as last presentation before lunch, and I picked them because I didn't want to risk :-) I knew that they are going to give a very good show with possible live coding and they didn't disappointed me. It was the best presentation I that day.</p>
+<p>I wanted to prepare a bit for my presentation, so I picked the smallest room with &lt;strong&gt;jPalio &lt;/strong&gt;lecture. For me it's an awful tool (just making people to use not their favourite IDE is enough not to use it). I wish I went for Paweł's or Jarek's sessions that were on the same time, I heard a lot better comments on them.</p>
+<p>Last session - &lt;strong&gt;Mateusz Grzechociński. &lt;/strong&gt;I picked it up because I am about to start some Android development and so I choose everything connected to Android lately. Mateusz has a lot of useful knowledge, but it was hard for me to understand problems he meant.</p>
+<p>That's it, I will surely participate next year and I'm waiting for this years videos.</p>
+<p>And I am curious - organizers kept saying carefully that this is the biggest free Java conference in Poland. Isn't that true that this is the biggest free European Java conference and one of the 2-3 biggest Java events in Europe (not necessarily free?).</p>
+<p> </p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>Right now I’m on the last lecture of <a href="http://2011.confitura.pl" target="_blank" rel="external">Confitura 2011</a>, so it’s the ti]]>
+    <![CDATA[<p>Right now I'm on the last lecture of <a href="http://2011.confitura.pl" target="_blank" rel="external">Confitura 2011</a>, so it's the ti]]>
     </summary>
     
       <category term="community" scheme="http://erbetowski.pl/categories/community/"/>
@@ -448,14 +539,31 @@
     <id>http://erbetowski.pl/blog/confitura-presentation/</id>
     <published>2011-06-09T22:00:00.000Z</published>
     <updated>2015-09-16T16:46:15.000Z</updated>
-    <content type="html"><![CDATA[<p>After reading <a href="http://art-of-software.blogspot.com/" target="_blank">Sławek Sobótka’s</a><br><a href="http://art-of-software.blogspot.com/2011/06/degustacja-confitury.html" target="_blank">blog entry</a><br>about showing his presentation before the lecture itself I decided to paste my too.</p>
-<p>I know that it’s only a couple of hours earlier and nobody is reading this blog anyway,<br>but I thought I won’t do it afterwards, because there are gonna be some higher prioritized tasks to do.</p>
-<p>So here are my slides, just like during<br><a href="https://github.com/warszawajug/warsjawa2010/wiki/Konferencja-Warsjawa-2010" target="_blank">Warsjawa 2010</a><br>I decided to do them in <a href="http://prezi.com/" target="_blank">Prezi</a>.</p>
-<p><strong>See you on <a href="http://confitura.pl/" target="_blank">Confitura 2011</a>.</strong></p>
-<div class="prezi-player"><br>  <object id="prezi_i_frfvofhldl" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="550" height="400" name="prezi_i_frfvofhldl"><br>    <param name="movie" value="http://prezi.com/bin/preziloader.swf"><br>    <param name="allowfullscreen" value="true"><br>    <param name="allowscriptaccess" value="always"><br>    <param name="bgcolor" value="#ffffff"><br>    <param name="flashvars" value="prezi_id=i_frfvofhldl&amp;lock_to_path=0&amp;color=ffffff&amp;autoplay=no&amp;autohide_ctrls=0"><br><br>    <embed id="preziEmbed_i_frfvofhldl" type="application/x-shockwave-flash" width="550" height="400" src="http://prezi.com/bin/preziloader.swf" name="preziEmbed_i_frfvofhldl" allowfullscreen="true" allowscriptaccess="always" bgcolor="#ffffff" flashvars="prezi_id=i_frfvofhldl&amp;lock_to_path=0&amp;color=ffffff&amp;autoplay=no&amp;autohide_ctrls=0"><br>  </object><br>  <a href="http://prezi.com/i_frfvofhldl/confitura-11/" target="_blank" rel="external">Confitura ‘11</a> on <a href="http://prezi.com" target="_blank" rel="external">Prezi</a><br></div>
+    <content type="html"><![CDATA[<p>After reading &lt;a href=&quot;http://art-of-software.blogspot.com/&quot; target=&quot;_blank&quot;&gt;Sławek Sobótka's&lt;/a&gt;
+&lt;a href=&quot;http://art-of-software.blogspot.com/2011/06/degustacja-confitury.html&quot; target=&quot;_blank&quot;&gt;blog entry&lt;/a&gt;
+about showing his presentation before the lecture itself I decided to paste my too.</p>
+<p>I know that it's only a couple of hours earlier and nobody is reading this blog anyway,
+but I thought I won't do it afterwards, because there are gonna be some higher prioritized tasks to do.</p>
+<p>So here are my slides, just like during
+&lt;a href=&quot;https://github.com/warszawajug/warsjawa2010/wiki/Konferencja-Warsjawa-2010&quot; target=&quot;_blank&quot;&gt;Warsjawa 2010&lt;/a&gt;
+I decided to do them in &lt;a href=&quot;http://prezi.com/&quot; target=&quot;_blank&quot;&gt;Prezi&lt;/a&gt;.</p>
+<p><strong>See you on &lt;a href=&quot;http://confitura.pl/&quot; target=&quot;_blank&quot;&gt;Confitura 2011&lt;/a&gt;.</strong></p>
+<p>&lt;div class=&quot;prezi-player&quot;&gt;
+&lt;object id=&quot;prezi_i_frfvofhldl&quot; classid=&quot;clsid:D27CDB6E-AE6D-11cf-96B8-444553540000&quot; width=&quot;550&quot; height=&quot;400&quot; name=&quot;prezi_i_frfvofhldl&quot;&gt;
+&lt;param name=&quot;movie&quot; value=&quot;http://prezi.com/bin/preziloader.swf&quot; /&gt;
+&lt;param name=&quot;allowfullscreen&quot; value=&quot;true&quot; /&gt;
+&lt;param name=&quot;allowscriptaccess&quot; value=&quot;always&quot; /&gt;
+&lt;param name=&quot;bgcolor&quot; value=&quot;#ffffff&quot; /&gt;
+&lt;param name=&quot;flashvars&quot; value=&quot;prezi_id=i_frfvofhldl&amp;lock_to_path=0&amp;color=ffffff&amp;autoplay=no&amp;autohide_ctrls=0&quot; /&gt;</p>
+<pre><code>&lt;embed id=&quot;preziEmbed_i_frfvofhldl&quot; type=&quot;application/x-shockwave-flash&quot; width=&quot;550&quot; height=&quot;400&quot; src=&quot;http://prezi.com/bin/preziloader.swf&quot; name=&quot;preziEmbed_i_frfvofhldl&quot; allowfullscreen=&quot;true&quot; allowscriptaccess=&quot;always&quot; bgcolor=&quot;#ffffff&quot; flashvars=&quot;prezi_id=i_frfvofhldl&amp;amp;lock_to_path=0&amp;amp;color=ffffff&amp;amp;autoplay=no&amp;amp;autohide_ctrls=0&quot;&gt;&lt;/embed&gt;
+</code></pre>
+<p>&lt;/object&gt;
+&lt;a href=&quot;http://prezi.com/i_frfvofhldl/confitura-11/&quot;&gt;Confitura '11&lt;/a&gt; on &lt;a href=&quot;http://prezi.com&quot;&gt;Prezi&lt;/a&gt;
+&lt;/div&gt;</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>After reading <a href="http://art-of-software.blogspot.com/" target="_blank">Sławek Sobótka’s</a><br><a href="http://art-of-software.blog]]>
+    <![CDATA[<p>After reading &lt;a href=&quot;http://art-of-software.blogspot.com/&quot; target=&quot;_blank&quot;&gt;Sławek Sobótka's&lt;/a&gt;
+&lt;a h]]>
     </summary>
     
   </entry>
@@ -467,10 +575,14 @@
     <published>2011-04-26T22:00:00.000Z</published>
     <updated>2015-09-16T16:46:15.000Z</updated>
     <content type="html"><![CDATA[<p>This post is dedicated to put together Maven2 project with JRebel reloading.</p>
-<p>Until now i worked only with single module apps or apps I didn’t need to reload dynamically<br>because of all the tests that didn’t need application started.</p>
-<p>But now is the day to do the configuration and I had some trouble with it.<br>I hope this post helps someone not to loose 2-3 hours senseless, because it is an extremely easy thing to do.</p>
-<figure class="highlight xml"><figcaption><span>jrebel.xml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="pi">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">application</span></span><br><span class="line">  <span class="attribute">xmlns:xsi</span>=<span class="value">"http://www.w3.org/2001/XMLSchema-instance"</span></span><br><span class="line">  <span class="attribute">xmlns</span>=<span class="value">"http://www.zeroturnaround.com"</span></span><br><span class="line">  <span class="attribute">xsi:schemaLocation</span>=<span class="value">"http://www.zeroturnaround.com http://www.zeroturnaround.com/alderaan/rebel-2_0.xsd"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">classpath</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">dir</span> <span class="attribute">name</span>=<span class="value">"/home/wojtek/Projects/roche/multiapp/first/target/classes/"</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="title">classpath</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">application</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>Now when we add JRebel as javaagent to app it will start by reading this class and knows to check the directory<br>(instead of dir we can watch jars and other stuff). Like in our example we would probably like to exclude some paths<br>in directory not to scan the whole folder because it’s just too expensive.</p>
+<p>Until now i worked only with single module apps or apps I didn't need to reload dynamically
+because of all the tests that didn't need application started.</p>
+<p>But now is the day to do the configuration and I had some trouble with it.
+I hope this post helps someone not to loose 2-3 hours senseless, because it is an extremely easy thing to do.</p>
+<p><figure class="highlight xml"><figcaption><span>jrebel.xml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="pi">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">application</span></span><br><span class="line">  <span class="attribute">xmlns:xsi</span>=<span class="value">"http://www.w3.org/2001/XMLSchema-instance"</span></span><br><span class="line">  <span class="attribute">xmlns</span>=<span class="value">"http://www.zeroturnaround.com"</span></span><br><span class="line">  <span class="attribute">xsi:schemaLocation</span>=<span class="value">"http://www.zeroturnaround.com http://www.zeroturnaround.com/alderaan/rebel-2_0.xsd"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">classpath</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">dir</span> <span class="attribute">name</span>=<span class="value">"/home/wojtek/Projects/roche/multiapp/first/target/classes/"</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="title">classpath</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">application</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>Now when we add JRebel as javaagent to app it will start by reading this class and knows to check the directory
+(instead of dir we can watch jars and other stuff). Like in our example we would probably like to exclude some paths
+in directory not to scan the whole folder because it's just too expensive.</p>
 <p>How to do that? Just add exclude/include tags in <figure class="highlight"><figcaption><span>tag.</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#10;JRebel is a smart beast that can scan all the resources in classpath, including dependency jars.&#10;All we need to do is to put proper rebel.xml into each one of the (each we want to follow).&#10;Each has to say where JRebel can find new classes.&#10;&#10;I just lost about 2 hours because I called the file ```jrebel.xml``` instead of rebel.xml and wondered why doesn&#39;t it scan path... :-/&#10;&#10;Next thing to automate all of this is to add JRebel support to Maven build lifecycle,&#10;then we don&#39;t need to create rebel.xml by had, and all of developers can use unified pom.xml&#10;(which will add project root path to ```rebel.xml```). Remember to do this on all modules you want to have reloaded!&#10;Not just root or web project! Here&#39;s how mine looks:&#10;&#10;``` xml part of pom.xml&#10;&#60;plugin&#62;&#10;    &#60;groupId&#62;org.zeroturnaround&#60;/groupId&#62;&#10;    &#60;artifactId&#62;jrebel-maven-plugin&#60;/artifactId&#62;&#10;    &#60;executions&#62;&#10;        &#60;execution&#62;&#10;            &#60;id&#62;generate-rebel-xml&#60;/id&#62;&#10;            &#60;phase&#62;process-resources&#60;/phase&#62;&#10;            &#60;goals&#62;&#10;                &#60;goal&#62;generate&#60;/goal&#62;&#10;            &#60;/goals&#62;&#10;        &#60;/execution&#62;&#10;    &#60;/executions&#62;&#10;&#60;/plugin&#62;</span><br></pre></td></tr></table></figure></p>
 ]]></content>
     <summary type="html">

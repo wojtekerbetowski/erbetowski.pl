@@ -9,17 +9,17 @@
   <meta name="keywords" content="vcard, html5, portfolio">
   <meta name="author" content="Pixelwars">
 
-  <meta name="description" content="In the first part we’ve prepared an environment for work. Now it’s time to do some basic stuff with Plastic.&amp;lt;!--break--&amp;gt;The most basic AOP example often used in hello world examples is logging and we’">
+  <meta name="description" content="In the &amp;lt;a title=&amp;quot;A deep dive into Tapestry Plastic – part 1&amp;quot; href=&amp;quot;http://blog.erbetowski.pl/index.php/plastic-1/&amp;quot; target=&amp;quot;_blank&amp;quot;&amp;gt;first part&amp;lt;/a&amp;gt; we&apos;ve prepar">
 <meta property="og:type" content="article">
 <meta property="og:title" content="A deep dive into Tapestry Plastic – adding behavior to a method">
 <meta property="og:url" content="http://erbetowski.pl/blog/a-deep-dive-into-tapestry-plastic-adding-behavior-to-a-method/index.html">
 <meta property="og:site_name" content="Wojtek Erbetowski homepage">
-<meta property="og:description" content="In the first part we’ve prepared an environment for work. Now it’s time to do some basic stuff with Plastic.&amp;lt;!--break--&amp;gt;The most basic AOP example often used in hello world examples is logging and we’">
+<meta property="og:description" content="In the &amp;lt;a title=&amp;quot;A deep dive into Tapestry Plastic – part 1&amp;quot; href=&amp;quot;http://blog.erbetowski.pl/index.php/plastic-1/&amp;quot; target=&amp;quot;_blank&amp;quot;&amp;gt;first part&amp;lt;/a&amp;gt; we&apos;ve prepar">
 <meta property="og:image" content="http://erbetowski.pl/img/posts/tapestry.png">
 <meta property="og:updated_time" content="2015-09-16T16:46:15.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="A deep dive into Tapestry Plastic – adding behavior to a method">
-<meta name="twitter:description" content="In the first part we’ve prepared an environment for work. Now it’s time to do some basic stuff with Plastic.&amp;lt;!--break--&amp;gt;The most basic AOP example often used in hello world examples is logging and we’">
+<meta name="twitter:description" content="In the &amp;lt;a title=&amp;quot;A deep dive into Tapestry Plastic – part 1&amp;quot; href=&amp;quot;http://blog.erbetowski.pl/index.php/plastic-1/&amp;quot; target=&amp;quot;_blank&amp;quot;&amp;gt;first part&amp;lt;/a&amp;gt; we&apos;ve prepar">
 
   <title>A deep dive into Tapestry Plastic – adding behavior to a method - Wojtek Erbetowski</title>
 
@@ -157,15 +157,17 @@
 
         <!-- .entry-content -->
         <div class="entry-content">
-          <p>In the <a title="A deep dive into Tapestry Plastic – part 1" href="http://blog.erbetowski.pl/index.php/plastic-1/" target="_blank">first part</a> we’ve prepared an environment for work. Now it’s time to do some basic stuff with Plastic.<br><!--break--><br>The most basic AOP example often used in hello world examples is logging and we’re gonna do that as well. To follow the work you might wanna fork from <a href="https://github.com/wojtekerbetowski/plastic-logging" target="_blank">GitHub project</a>.</p>
-<p>So first to run a project we use Gradle, here’s the configuration <script src="//gist.github.com/4414700.js"></script></p>
-<p>I’ll create a simple nothing-producing method:<script src="//gist.github.com/4414801.js"></script></p>
-<p>Next let’s prepare a specification, that tests whether our method actually has logging behavior. You don’t need to know Spock to understand it. I will externalize creating a class reference to a method, so it’ll be easier to add Plastic code in the next step. <script src="//gist.github.com/4414910.js"></script></p>
+          <p>In the &lt;a title=&quot;A deep dive into Tapestry Plastic – part 1&quot; href=&quot;http://blog.erbetowski.pl/index.php/plastic-1/&quot; target=&quot;_blank&quot;&gt;first part&lt;/a&gt; we've prepared an environment for work. Now it's time to do some basic stuff with Plastic.
+&lt;!--break--&gt;
+The most basic AOP example often used in hello world examples is logging and we're gonna do that as well. To follow the work you might wanna fork from &lt;a href=&quot;https://github.com/wojtekerbetowski/plastic-logging&quot; target=&quot;_blank&quot;&gt;GitHub project&lt;/a&gt;.</p>
+<p>So first to run a project we use Gradle, here's the configuration <script src="//gist.github.com/4414700.js"></script></p>
+<p>I'll create a simple nothing-producing method:<script src="//gist.github.com/4414801.js"></script></p>
+<p>Next let's prepare a specification, that tests whether our method actually has logging behavior. You don't need to know Spock to understand it. I will externalize creating a class reference to a method, so it'll be easier to add Plastic code in the next step. <script src="//gist.github.com/4414910.js"></script></p>
 <p>Of course no such behavior is there at the moment, so the spec fails:<script src="//gist.github.com/4414897.js"></script></p>
-<p>Let’s add Plastic code now. To create an object of modified class we need to prepare <code>org.apache.tapestry5.plastic.PlasticManager</code>. This we may build using static builder methods in it’s class, e.g.<script src="//gist.github.com/4432985.js"></script></p>
-<p>Next there’s a place for a delegate (meaning class transforming delegation). For this we will use <code>org.apache.tapestry5.internal.plastic.StandardDelegate</code> adapter, which brings <code>org.apache.tapestry5.plastic.PlasticClassTransformer</code> interface to <code>Delegate</code> interface. So now we end up needing a transformer, inside of which we’ll use an advice (<code>org.apache.tapestry5.plastic.MethodAdvice</code>). See creating and putting them together in the following snippet:<script src="//gist.github.com/4433014.js"></script></p>
-<p>As you have seen by now, <strong>Plastic is</strong> a pretty high level, object oriented and <strong>well designed</strong> tool for modifying classes. Although creating a simple case of adding an advise to a method requires a lot of boilerplate code.</p>
-<p>In next part we’ll go deeper into the Plastic API.</p>
+<p>Let's add Plastic code now. To create an object of modified class we need to prepare &lt;code&gt;org.apache.tapestry5.plastic.PlasticManager&lt;/code&gt;. This we may build using static builder methods in it's class, e.g.<script src="//gist.github.com/4432985.js"></script></p>
+<p>Next there's a place for a delegate (meaning class transforming delegation). For this we will use &lt;code&gt;org.apache.tapestry5.internal.plastic.StandardDelegate&lt;/code&gt; adapter, which brings &lt;code&gt;org.apache.tapestry5.plastic.PlasticClassTransformer&lt;/code&gt; interface to &lt;code&gt;Delegate&lt;/code&gt; interface. So now we end up needing a transformer, inside of which we'll use an advice (&lt;code&gt;org.apache.tapestry5.plastic.MethodAdvice&lt;/code&gt;). See creating and putting them together in the following snippet:<script src="//gist.github.com/4433014.js"></script></p>
+<p>As you have seen by now, &lt;strong&gt;Plastic is&lt;/strong&gt; a pretty high level, object oriented and &lt;strong&gt;well designed&lt;/strong&gt; tool for modifying classes. Although creating a simple case of adding an advise to a method requires a lot of boilerplate code.</p>
+<p>In next part we'll go deeper into the Plastic API.</p>
 
         </div>
         <!-- .entry-content -->
