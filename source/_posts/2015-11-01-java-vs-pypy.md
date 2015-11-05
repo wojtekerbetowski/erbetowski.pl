@@ -7,7 +7,9 @@ thumbnail: /img/posts/compare.png
 
 I used to believe that Java has the fastest runtime to execute very typical, business apps. While it was possible to create a faster app with a low level language, I would bet that one wouldn't write it in a reasonable time. JVM, by the release of `1.6` became blazing fast. JIT made running bytecode incredibly fast and one could take the advantage of that without even modifying existing code (furthermore, not even recompiling existing bytecode).
 
-PyPy, on the other hand, is an alternative implementation of Python language (next to CPython, IronPython and Jython). It is known of it's JIT compiler and support for parallel computing without Global Interpreter Lock (GIL).
+PyPy, on the other hand, is an alternative implementation of Python language (next to CPython, IronPython and Jython). It is known of it's JIT compiler and support for parallel computing ~~without Global Interpreter Lock (GIL)~~[^first].
+
+[^first]: Thanks [@haxoza](https://twitter.com/haxoza/status/662034220852858880) for noticing it. [PyPy has GIL](http://doc.pypy.org/en/latest/faq.html#does-pypy-have-a-gil-why). My mistake.
 
 Since I'm familiar with both of these languages, I wanted to know, which one performs better in several different scenarios. I use them for scripting, web apps and integration.
 

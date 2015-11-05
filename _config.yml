@@ -78,3 +78,9 @@ robotstxt:
   useragent: "*"
   sitemap: /sitemap.xml
 
+markdown:
+  plugins:
+    - markdown-it-footnote
+    - markdown-it-sub
+    - markdown-it-sup
+    - markdown-it-abbr
