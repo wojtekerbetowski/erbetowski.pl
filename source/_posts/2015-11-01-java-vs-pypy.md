@@ -1,7 +1,7 @@
 ---
 layout: post
 title: PyPy vs Java - introduction
-date: 2015-10-23 22:05:52
+date: 2015-11-01 18:05:52
 thumbnail: /img/posts/compare.png
 ---
 
