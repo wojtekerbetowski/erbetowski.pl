@@ -274,16 +274,16 @@ Wyruszyłem zatem z rana na &lt;a href=&quot;http://2013.4developers.org.pl/pl/m
 <p>&lt;strong&gt;W pigułce&lt;/strong&gt;</p>
 <p>Na plus:
 &lt;ul&gt;
-&lt;li&gt;listwy w salach&lt;/li&gt;
-&lt;li&gt;bogata agenda&lt;/li&gt;
-&lt;li&gt;poziom prezentacji&lt;/li&gt;
-&lt;li&gt;sprawny net&lt;/li&gt;
-&lt;li&gt;niezbyt wypchane sale&lt;/li&gt;
+	&lt;li&gt;listwy w salach&lt;/li&gt;
+	&lt;li&gt;bogata agenda&lt;/li&gt;
+	&lt;li&gt;poziom prezentacji&lt;/li&gt;
+	&lt;li&gt;sprawny net&lt;/li&gt;
+	&lt;li&gt;niezbyt wypchane sale&lt;/li&gt;
 &lt;/ul&gt;
 Na minus:
 &lt;ul&gt;
-&lt;li&gt;kolejka po lunch&lt;/li&gt;
-&lt;li&gt;miejsce (jednak ciasne korytarze, sypiące się łazienki)&lt;/li&gt;
+	&lt;li&gt;kolejka po lunch&lt;/li&gt;
+	&lt;li&gt;miejsce (jednak ciasne korytarze, sypiące się łazienki)&lt;/li&gt;
 &lt;/ul&gt;
 PS. Wybaczcie nieco chaotyczny styl. Pisane nieraz w trakcie prezentacji pod wpływem chwili :-)</p>
 ]]></content>
@@ -500,7 +500,7 @@ I have moved Scala recently from hard and heavy J2EE/Spring world. I know hord h
 <p>Let's take a look at this example: let's say you're registering a user, and want to hash his password. But it's generally a good idea to add some salt. Not hardcoded one :-) So we keep a salt in our DB, then something that would calculate the has (a hasher) needs to obtain DB connection. And when registering a user we need a hasher instance:</p>
 <p><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">UserRegisterer</span> <span class="title">@Inject</span>(</span>) (hasher: hasher) &#123;</span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">register</span>(</span>username, password) = <span class="type">User</span>(username, hasher.hash(password)).save</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>That is not the Scala beauty we could expect to see. What we want is: &lt;em&gt;password.hash. &lt;/em&gt;So let's take advantage of Scala mixins to use hasher as a hidden dependency and an implicit that would extend String class with &lt;em&gt;hash &lt;/em&gt;method:</p>
-<p><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">trait</span> <span class="title">Hashing</span> &#123;</span></span><br><span class="line">  <span class="annotation">@Inject</span> <span class="keyword">private</span> <span class="function"><span class="keyword">val</span> <span class="title">hasher</span>:</span> <span class="type">Hasher</span> = <span class="literal">null</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">implicit</span> <span class="function"><span class="keyword">def</span> <span class="title">stringToHashable</span>(</span>toBeHashed: <span class="type">String</span>) = <span class="keyword">new</span> &#123;</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">hash</span> =</span> hasher.hash(toBeHashed)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">trait</span> <span class="title">Hashing</span> &#123;</span></span><br><span class="line">  <span class="annotation">@Inject</span> <span class="keyword">private</span> <span class="keyword">val</span> hasher: <span class="type">Hasher</span> = <span class="literal">null</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">implicit</span> <span class="function"><span class="keyword">def</span> <span class="title">stringToHashable</span>(</span>toBeHashed: <span class="type">String</span>) = <span class="keyword">new</span> &#123;</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">hash</span> =</span> hasher.hash(toBeHashed)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>Now we may mixin hashing capability to our class and take a look at beautiful, but still flexible and possible to mock or whateva piece of code:</p>
 <p><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">UserRegistrator</span> <span class="keyword"><span class="keyword">with</span></span> <span class="title">Hashing</span> &#123;</span></span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">register</span>(</span>username, password) = <span class="type">User</span>(username, password.hash).save</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>Notice that thanks to minimal hasher scope UserRegistrator will never know about such details as hasher class nor such field existence.</p>
@@ -612,12 +612,12 @@ Another (and last) thing I'm complaining about is the food - it was weak and it 
 &lt;/off-topic&gt;</p>
 <p>And now the lectures: first in the morning was the keynote given by &lt;strong&gt;WorldIT Systems&lt;/strong&gt; guy. I'm gonna remember two things:
 &lt;ul&gt;
-&lt;li&gt;He showed that server cost per performance is underlinear (1 big computer costs less that two small) - I always believed the opposite&lt;/li&gt;
-&lt;li&gt;He showed us the ease of vertical optimization as the future, not horizontal, as we see it.&lt;/li&gt;
+	&lt;li&gt;He showed that server cost per performance is underlinear (1 big computer costs less that two small) - I always believed the opposite&lt;/li&gt;
+	&lt;li&gt;He showed us the ease of vertical optimization as the future, not horizontal, as we see it.&lt;/li&gt;
 &lt;/ul&gt;
 Somehow I just don't buy it.</p>
 <p>&lt;em&gt;[huh - I didn't make the whole memo that day, so I am finishing it couple of days later, after cooling down]&lt;/em&gt;</p>
-<p>Next one - &lt;strong&gt;Jakub    Koperwas &lt;/strong&gt;with webapps security. Some basic knowledge for beginners, too much about SQL injection (believe or not - we know not to concatenate strings for queries already). And when some more interesting examples were coming to the day light he ran out of time. Good luck next time - I hope to see other examples :-)</p>
+<p>Next one - &lt;strong&gt;Jakub	Koperwas &lt;/strong&gt;with webapps security. Some basic knowledge for beginners, too much about SQL injection (believe or not - we know not to concatenate strings for queries already). And when some more interesting examples were coming to the day light he ran out of time. Good luck next time - I hope to see other examples :-)</p>
 <p>I picked &lt;strong&gt;Adam and Tomek &lt;/strong&gt;with the Amazon cloud stuff as last presentation before lunch, and I picked them because I didn't want to risk :-) I knew that they are going to give a very good show with possible live coding and they didn't disappointed me. It was the best presentation I that day.</p>
 <p>I wanted to prepare a bit for my presentation, so I picked the smallest room with &lt;strong&gt;jPalio &lt;/strong&gt;lecture. For me it's an awful tool (just making people to use not their favourite IDE is enough not to use it). I wish I went for Paweł's or Jarek's sessions that were on the same time, I heard a lot better comments on them.</p>
 <p>Last session - &lt;strong&gt;Mateusz Grzechociński. &lt;/strong&gt;I picked it up because I am about to start some Android development and so I choose everything connected to Android lately. Mateusz has a lot of useful knowledge, but it was hard for me to understand problems he meant.</p>

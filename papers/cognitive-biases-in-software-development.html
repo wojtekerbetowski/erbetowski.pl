@@ -9,19 +9,19 @@
   <meta name="keywords" content="vcard, html5, portfolio">
   <meta name="author" content="Pixelwars">
 
-  <meta name="description" content="This is English version of a &amp;lt;a href=&amp;quot;http://scala.net.pl/wstrzykiwanie-metod-dzieki-guice/&amp;quot;&amp;gt;post&amp;lt;/a&amp;gt; I&apos;ve written for &amp;lt;a href=&amp;quot;http://scala.net.pl/wstrzykiwanie-metod-dz">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Method injection with Guice and Scala">
-<meta property="og:url" content="http://erbetowski.pl/blog/method-injection-with-guice-and-scala/index.html">
+  <meta name="description" content="test 123">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Cognitive biases in software development">
+<meta property="og:url" content="http://erbetowski.pl/papers/cognitive-biases-in-software-development.html">
 <meta property="og:site_name" content="Wojtek Erbetowski homepage">
-<meta property="og:description" content="This is English version of a &amp;lt;a href=&amp;quot;http://scala.net.pl/wstrzykiwanie-metod-dzieki-guice/&amp;quot;&amp;gt;post&amp;lt;/a&amp;gt; I&apos;ve written for &amp;lt;a href=&amp;quot;http://scala.net.pl/wstrzykiwanie-metod-dz">
-<meta property="og:image" content="http://erbetowski.pl/img/posts/scala_logo.png">
-<meta property="og:updated_time" content="2015-09-16T16:46:15.000Z">
+<meta property="og:description" content="test 123">
+<meta property="og:image" content="https://s.gravatar.com/avatar/b4058c5282dfb43ab3542e0f0db3d5ae?s=500">
+<meta property="og:updated_time" content="2015-12-10T15:00:54.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Method injection with Guice and Scala">
-<meta name="twitter:description" content="This is English version of a &amp;lt;a href=&amp;quot;http://scala.net.pl/wstrzykiwanie-metod-dzieki-guice/&amp;quot;&amp;gt;post&amp;lt;/a&amp;gt; I&apos;ve written for &amp;lt;a href=&amp;quot;http://scala.net.pl/wstrzykiwanie-metod-dz">
+<meta name="twitter:title" content="Cognitive biases in software development">
+<meta name="twitter:description" content="test 123">
 
-  <title>Method injection with Guice and Scala - Wojtek Erbetowski</title>
+  <title>Cognitive biases in software development - Wojtek Erbetowski</title>
 
   <!-- FAV and TOUCH ICONS -->
   <link rel="shortcut icon" href="/img/favicon.ico">
@@ -129,7 +129,7 @@
 
         <!-- .entry-header -->
         <header class="entry-header">
-          <h1 class="entry-title">Method injection with Guice and Scala</h1>
+          <h1 class="entry-title">Cognitive biases in software development</h1>
         </header>
         <!-- .entry-header -->
 
@@ -137,7 +137,7 @@
         <div class="entry-meta">
 
                             <span class="posted-on">
-                                <a href="#" title="11:15 pm" rel="bookmark">Created Saturday, February 18th 2012</a>
+                                <a href="#" title="11:15 pm" rel="bookmark">Created Saturday, December 12th 2015</a>
                             </span>
 
 
@@ -150,30 +150,21 @@
 
         <!-- .featured-image -->
         <div class="featured-image">
-          <img src="/img/posts/scala_logo.png" alt="blog-image">
+          <img src="https://s.gravatar.com/avatar/b4058c5282dfb43ab3542e0f0db3d5ae?s=500" alt="blog-image">
         </div>
         <!-- .featured-image -->
 
 
         <!-- .entry-content -->
         <div class="entry-content">
-          <p>This is English version of a &lt;a href=&quot;http://scala.net.pl/wstrzykiwanie-metod-dzieki-guice/&quot;&gt;post&lt;/a&gt; I've written for &lt;a href=&quot;http://scala.net.pl/wstrzykiwanie-metod-dzieki-guice/&quot;&gt;Polish Scala User Group&lt;/a&gt;.
-I have moved Scala recently from hard and heavy J2EE/Spring world. I know hord hard is testing when you don't have a proper dependency injection mechanism. Mocking ability has been a priority for me for years now. On the other hand having several deps in object and delegating them work is not in the functional Spirit of Scala.</p>
-<p>Scala makes it possible to move a step forward and inject methods, which gives you the pleasure of functional writing but still having object oriented flexibility.</p>
-<p>Let's take a look at this example: let's say you're registering a user, and want to hash his password. But it's generally a good idea to add some salt. Not hardcoded one :-) So we keep a salt in our DB, then something that would calculate the has (a hasher) needs to obtain DB connection. And when registering a user we need a hasher instance:</p>
-<p><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">UserRegisterer</span> <span class="title">@Inject</span>(</span>) (hasher: hasher) &#123;</span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">register</span>(</span>username, password) = <span class="type">User</span>(username, hasher.hash(password)).save</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>That is not the Scala beauty we could expect to see. What we want is: &lt;em&gt;password.hash. &lt;/em&gt;So let's take advantage of Scala mixins to use hasher as a hidden dependency and an implicit that would extend String class with &lt;em&gt;hash &lt;/em&gt;method:</p>
-<p><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">trait</span> <span class="title">Hashing</span> &#123;</span></span><br><span class="line">  <span class="annotation">@Inject</span> <span class="keyword">private</span> <span class="keyword">val</span> hasher: <span class="type">Hasher</span> = <span class="literal">null</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">implicit</span> <span class="function"><span class="keyword">def</span> <span class="title">stringToHashable</span>(</span>toBeHashed: <span class="type">String</span>) = <span class="keyword">new</span> &#123;</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">hash</span> =</span> hasher.hash(toBeHashed)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>Now we may mixin hashing capability to our class and take a look at beautiful, but still flexible and possible to mock or whateva piece of code:</p>
-<p><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">UserRegistrator</span> <span class="keyword"><span class="keyword">with</span></span> <span class="title">Hashing</span> &#123;</span></span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">register</span>(</span>username, password) = <span class="type">User</span>(username, password.hash).save</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>Notice that thanks to minimal hasher scope UserRegistrator will never know about such details as hasher class nor such field existence.</p>
+          <p>test 123</p>
 
         </div>
         <!-- .entry-content -->
 
         <a
           class="twitter-share-button"
-          href="https://twitter.com/intent/tweet?text=Method injection with Guice and Scala by @erbetowski"
+          href="https://twitter.com/intent/tweet?text=Cognitive biases in software development by @erbetowski"
           data-counturl="">Tweet</a>
 
 
@@ -220,15 +211,9 @@ I have moved Scala recently from hard and heavy J2EE/Spring world. I know hord h
 
           <div class="nav-previous col-sm-6">
             
-            <h4>PREVIOUS POST</h4>
-            <a href="/blog/33rd-degree-scala-community-talk/" rel="prev"><span class="meta-nav">←</span> 33rd Degree + Scala Community Talk</a>
-            
           </div>
 
           <div class="nav-next col-sm-6">
-            
-            <h4>NEXT POST</h4>
-            <a href="/blog/agilebyexample-2011-survey/" rel="next">AgileByExample 2011 survey <span class="meta-nav">→</span></a>
             
           </div>
 

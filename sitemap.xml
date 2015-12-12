@@ -2,6 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://erbetowski.pl/papers/cognitive-biases-in-software-development.html</loc>
+    <lastmod>2015-12-10T15:00:54.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://erbetowski.pl/papers/index.html</loc>
+    <lastmod>2015-12-10T12:48:51.000Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://erbetowski.pl/blog/git-porcelain-and-plumbing/</loc>
     <lastmod>2015-11-06T17:09:14.000Z</lastmod>
   </url>
@@ -27,16 +37,6 @@
   </url>
   
   <url>
-    <loc>http://erbetowski.pl/blog/4developers-2013-konferencyjne-notatki/</loc>
-    <lastmod>2015-09-16T16:46:15.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://erbetowski.pl/blog/wrazenia-po-wprowadzeniu-do-osgi-jacka-laskowskiego/</loc>
-    <lastmod>2015-09-16T16:46:15.000Z</lastmod>
-  </url>
-  
-  <url>
     <loc>http://erbetowski.pl/blog/warszawski-hackathon-namecollision/</loc>
     <lastmod>2015-09-16T16:46:15.000Z</lastmod>
   </url>
@@ -52,12 +52,12 @@
   </url>
   
   <url>
-    <loc>http://erbetowski.pl/index.html</loc>
+    <loc>http://erbetowski.pl/blog/hurray-to-33rd/</loc>
     <lastmod>2015-09-16T16:46:15.000Z</lastmod>
   </url>
   
   <url>
-    <loc>http://erbetowski.pl/blog/how-to-send-a-link-to-a-gmail-email/</loc>
+    <loc>http://erbetowski.pl/index.html</loc>
     <lastmod>2015-09-16T16:46:15.000Z</lastmod>
   </url>
   
@@ -97,7 +97,17 @@
   </url>
   
   <url>
-    <loc>http://erbetowski.pl/blog/hurray-to-33rd/</loc>
+    <loc>http://erbetowski.pl/blog/4developers-2013-konferencyjne-notatki/</loc>
+    <lastmod>2015-09-16T16:46:15.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://erbetowski.pl/blog/wrazenia-po-wprowadzeniu-do-osgi-jacka-laskowskiego/</loc>
+    <lastmod>2015-09-16T16:46:15.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://erbetowski.pl/blog/how-to-send-a-link-to-a-gmail-email/</loc>
     <lastmod>2015-09-16T16:46:15.000Z</lastmod>
   </url>
   
