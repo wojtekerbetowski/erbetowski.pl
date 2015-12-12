@@ -5,21 +5,20 @@ date: 2015-12-11 18:08:22
 thumbnail: /img/posts/2015-12-11-make-it-stick.jpg
 ---
 
-I have just finished listening to [Make it stick](http://makeitstick.net/) audiobook.
-Hence, I want to summarize it with this blog post.
+I have just finished listening to [Make it stick](http://makeitstick.net/) audiobook. I want to sum it up with this blog post.
 
-But since this book heavily influenced the way I'm gaining new knowledge,
-the review will be in a form of a quiz, which I should be able to solve,
-if I remember and understand the key points of the book. On the other hand,
-it will give you an overview of the content.
+But since this book heavily influenced the way I'm gaining new knowledge, the review will be in a form of a quiz,
+which I should be able to solve, if I remember and understand the key points of the book.
 
-If you're interested in my opinion on the book - check the [review I left on Audible](http://www.audible.com/listener/ANBQYKSXTH496?asin=B00M0EO7EY).
+Answering the questions I prove to myself, that I have successfully learnt the content.
 
-And now the questions:
+Also you can check out [my opinion on Audible](http://www.audible.com/listener/ANBQYKSXTH496?asin=B00M0EO7EY) about the book.
 
-* What is the most common and natural way of strengthening the knowledge (based on a written materials)? Why people trust, it is effective.
+Here are the questions:
 
-[^comment]: # Reading the material multiple times. Supported by confirmation bias. Whenever you hit an information that you read before, you think you have that knowledge available. Taking a test on the subject often shows the opposite.)
+* What is the most common and natural way of strengthening the knowledge (based on a written materials)? Why do people trust, it is effective?
+
+[^comment]: # Reading the material multiple times. Supported by confirmation bias. Whenever you hit an information that you read before, you think you have that knowledge available. Taking a test on the subject often shows the opposite.
 
 * What is the alternative method, described in the book? How would you compare their effectiveness? What are the reasons for this?
 
@@ -37,11 +36,11 @@ And now the questions:
 
 [^comment]: # Tools, which may help you in memorizing new knowledge. Book showed an example of a man, that memorized 3-digit-long strings as single word, which let him quickly memorize long numbers (by these threes).
 
-* Why is it helpful to give new ideas extra meaning?
+* Why it is helpful to give new ideas extra meaning?
 
 [^comment]: # When you attach new knowledge to an existing one (additional meaning) you gain an extra path to retrieve that knowledge.
 
-* Is your intuition of what knowledge do you possess, and which you need to gain, helpful?
+* Is your intuition helpful, on discovering which knowledge have you possessed, and which you need to work on?
 
 [^comment]: # It might even be harmful. Use objective quizzing to test your knowledge. Illusion of knowing may confuse you.
 
