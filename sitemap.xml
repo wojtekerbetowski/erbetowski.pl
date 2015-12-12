@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://erbetowski.pl/blog/make-it-stick/</loc>
+    <lastmod>2015-12-12T08:54:58.000Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://erbetowski.pl/papers/cognitive-biases-in-software-development.html</loc>
     <lastmod>2015-12-10T15:00:54.000Z</lastmod>
   </url>
@@ -37,12 +42,7 @@
   </url>
   
   <url>
-    <loc>http://erbetowski.pl/blog/warszawski-hackathon-namecollision/</loc>
-    <lastmod>2015-09-16T16:46:15.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://erbetowski.pl/blog/a-deep-dive-into-tapestry-plastic-adding-behavior-to-a-method/</loc>
+    <loc>http://erbetowski.pl/blog/agilebyexample-2011-survey/</loc>
     <lastmod>2015-09-16T16:46:15.000Z</lastmod>
   </url>
   
@@ -57,7 +57,7 @@
   </url>
   
   <url>
-    <loc>http://erbetowski.pl/index.html</loc>
+    <loc>http://erbetowski.pl/blog/4developers-2013-konferencyjne-notatki/</loc>
     <lastmod>2015-09-16T16:46:15.000Z</lastmod>
   </url>
   
@@ -72,7 +72,7 @@
   </url>
   
   <url>
-    <loc>http://erbetowski.pl/blog/agilebyexample-2011-survey/</loc>
+    <loc>http://erbetowski.pl/blog/warszawski-hackathon-namecollision/</loc>
     <lastmod>2015-09-16T16:46:15.000Z</lastmod>
   </url>
   
@@ -97,12 +97,17 @@
   </url>
   
   <url>
-    <loc>http://erbetowski.pl/blog/4developers-2013-konferencyjne-notatki/</loc>
+    <loc>http://erbetowski.pl/blog/wrazenia-po-wprowadzeniu-do-osgi-jacka-laskowskiego/</loc>
     <lastmod>2015-09-16T16:46:15.000Z</lastmod>
   </url>
   
   <url>
-    <loc>http://erbetowski.pl/blog/wrazenia-po-wprowadzeniu-do-osgi-jacka-laskowskiego/</loc>
+    <loc>http://erbetowski.pl/blog/a-deep-dive-into-tapestry-plastic-adding-behavior-to-a-method/</loc>
+    <lastmod>2015-09-16T16:46:15.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://erbetowski.pl/index.html</loc>
     <lastmod>2015-09-16T16:46:15.000Z</lastmod>
   </url>
   
