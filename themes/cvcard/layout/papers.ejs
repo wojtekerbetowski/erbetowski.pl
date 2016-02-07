@@ -119,15 +119,7 @@
         </header>
         <!-- .entry-header -->
 
-        <!-- .entry-content -->
-        <div class="entry-content">
-          <%- site.pages.filter(function(it){
-              return it.path.slice(0, 'papers/'.length) == 'papers/' && it.path != page.path;
-          }).map(function(page) {
-            return link_to(page.path, page.title) + "<br/>";
-          }) %>
-        </div>
-        <!-- .entry-content -->
+        <%- page.content %>
 
       </article>
       <!-- .hentry -->
