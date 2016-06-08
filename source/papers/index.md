@@ -25,6 +25,8 @@ On daily basis, he is working with teams. He engages engineers, encourages best 
 
 ## Proposals
 
+* [The Soft Stuff](/papers/the-soft-stuff)
+* [Programmers vs Developers](/papers/programmers-vs-developers)
 * [Cognitive biases in software development](/papers/cognitive-biases-in-software-development)
 * [API design process (workshop)](/papers/API_design_process)
 * [Designing API for mobile apps](/papers/designing-api-for-mobile-apps)
