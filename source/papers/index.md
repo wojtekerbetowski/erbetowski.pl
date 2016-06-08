@@ -18,10 +18,15 @@ for size of `400px` (square).
 
 Wojtek leads people to achieve great goals.
 
-He is contributing to the tech community, influencing its direction,
-engaging talented people. He has a hands on approach, which means organizing, volunteering and speaking at quite few events.
+He is contributing to the tech community, influencing its direction, engaging talented people.
+He has a hands on approach, which means organizing, volunteering and speaking at quite few events.
 
-On daily basis, he is working with teams. He engages engineers, encourages best practices, builds environment, that supports effective, collaborative work. Hands on approach makes him work with many technologies, languages and practices.
+On daily basis, he is working as CTO at Growbots -
+one of the fastest growing Polish startups.
+He engages engineers, encourages best practices, and builds ecosystem,
+that supports effective, collaborative work.
+
+Favorite weapons are Kanban, Lean, XP, Python, Node.js, JVM, TDD and REST APIs.
 
 ## Proposals
 
