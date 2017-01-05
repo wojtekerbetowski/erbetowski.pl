@@ -9,19 +9,22 @@
   <meta name="keywords" content="vcard, html5, portfolio">
   <meta name="author" content="Pixelwars">
 
-  <meta name="description" content="There aren&apos;t much things I&apos;m missing from working in corpo, but saving and attaching emails from M$ Exchange is one of them. You could simply save an email, put that to JIRA or any other store and you">
-<meta property="og:type" content="article">
-<meta property="og:title" content="How to send a link to a Gmail email?">
-<meta property="og:url" content="http://erbetowski.pl/blog/how-to-send-a-link-to-a-gmail-email/index.html">
+  <meta name="description" content="Abstract (polish, contact me for [en] version)
+Z tak piękną dokumentacją, jaką ma Django wydaje się być niemożliwym aby nie zrozumieć jakim prostym zadaniem jest pisanie testów. Niestety od zrozumieni">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Testing advanced Django apps">
+<meta property="og:url" content="http://erbetowski.pl/papers/testing-advanced-Django-apps/index.html">
 <meta property="og:site_name" content="Wojtek Erbetowski homepage">
-<meta property="og:description" content="There aren&apos;t much things I&apos;m missing from working in corpo, but saving and attaching emails from M$ Exchange is one of them. You could simply save an email, put that to JIRA or any other store and you">
-<meta property="og:image" content="http://erbetowski.pl/img/posts/gmail.png">
-<meta property="og:updated_time" content="2015-09-16T16:46:15.000Z">
+<meta property="og:description" content="Abstract (polish, contact me for [en] version)
+Z tak piękną dokumentacją, jaką ma Django wydaje się być niemożliwym aby nie zrozumieć jakim prostym zadaniem jest pisanie testów. Niestety od zrozumieni">
+<meta property="og:image" content="https://s.gravatar.com/avatar/b4058c5282dfb43ab3542e0f0db3d5ae?s=500">
+<meta property="og:updated_time" content="2017-01-04T16:48:37.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="How to send a link to a Gmail email?">
-<meta name="twitter:description" content="There aren&apos;t much things I&apos;m missing from working in corpo, but saving and attaching emails from M$ Exchange is one of them. You could simply save an email, put that to JIRA or any other store and you">
+<meta name="twitter:title" content="Testing advanced Django apps">
+<meta name="twitter:description" content="Abstract (polish, contact me for [en] version)
+Z tak piękną dokumentacją, jaką ma Django wydaje się być niemożliwym aby nie zrozumieć jakim prostym zadaniem jest pisanie testów. Niestety od zrozumieni">
 
-  <title>How to send a link to a Gmail email? - Wojtek Erbetowski</title>
+  <title>Testing advanced Django apps - Wojtek Erbetowski</title>
 
   <!-- FAV and TOUCH ICONS -->
   <link rel="shortcut icon" href="/img/favicon.ico">
@@ -68,17 +71,6 @@
     ga('send', 'pageview');
 
   </script>
-  <!-- Hotjar Tracking Code for http://erbetowski.pl -->
-  <script>
-      (function(h,o,t,j,a,r){
-          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-          h._hjSettings={hjid:305969,hjsv:5};
-          a=o.getElementsByTagName('head')[0];
-          r=o.createElement('script');r.async=1;
-          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-          a.appendChild(r);
-      })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
-  </script>
 </head>
 
 
@@ -104,7 +96,7 @@
 
       <!-- InstanceBeginEditable name="Menu-Content" -->
 
-      <li><a href="/#/blog"><i title="back to blog" class="icon-left-open tooltip" data-tooltip-pos="left"></i></a></li>
+      <li><a href="/papers"><i title="back to papers" class="icon-left-open tooltip" data-tooltip-pos="left"></i></a></li>
       <li><a href="/"><i title="go to home" class="icon-home-1 tooltip" data-tooltip-pos="right"></i></a></li>
 
       <!-- InstanceEndEditable -->
@@ -140,7 +132,7 @@
 
         <!-- .entry-header -->
         <header class="entry-header">
-          <h1 class="entry-title">How to send a link to a Gmail email?</h1>
+          <h1 class="entry-title">Testing advanced Django apps</h1>
         </header>
         <!-- .entry-header -->
 
@@ -148,7 +140,7 @@
         <div class="entry-meta">
 
                             <span class="posted-on">
-                                <a href="#" title="11:15 pm" rel="bookmark">Created Friday, March 30th 2012</a>
+                                <a href="#" title="11:15 pm" rel="bookmark">Created Saturday, December 12th 2015</a>
                             </span>
 
 
@@ -159,35 +151,18 @@
         </div>
         <!-- .entry-meta -->
 
-        <!-- .featured-image -->
-        <div class="featured-image">
-          <img src="/img/posts/gmail.png" alt="blog-image">
-        </div>
-        <!-- .featured-image -->
-
-
         <!-- .entry-content -->
         <div class="entry-content">
-          <p>There aren't much things I'm missing from working in corpo, but saving and attaching emails from M$ Exchange is one of them. You could simply save an email, put that to JIRA or any other store and your grandchildren could read the communication that led to this solution. And even more important functionality was to send someone this response 'you wanted it so - here's the email: &lt;url to that exact email&gt;.</p>
-<p>The latter couldn't be done with Exchange, but at least I could attach that conversation.</p>
-<p>So now being in a small, agile company devs would probably throw up when seeing Exchange. Everyone (including me) want to use GMail. But what about my beloved sending discussion functionality? I don't think GMail has an option to link to the message, &lt;strong&gt;but there's a solution&lt;/strong&gt;. Not very good one or anything, but still worth sharing I think.</p>
-<p>Go to your inbox, let's open some random spam message, settings &gt; show original:</p>
-<p><img src="/img/posts/2012-03-30-how-to-send-a-link-to-a-gmail-email/menu.jpg" alt="Context menu"></p>
-<p> </p>
-<p>Then find message id</p>
-<p><img src="/img/posts/2012-03-30-how-to-send-a-link-to-a-gmail-email/message_id.jpg" alt="Message ID"></p>
-<p>And the ugly hack is that when searching for e-mails GMail searches message id as well, so let's simply search for it and send the link to whom we've been mailing to (message id stays the same for all inboxes). So the url is like</p>
-<p>https://mail.google.com/mail/u/0/#search/rfc822msgid%3A[message id]</p>
-<p>and in our case it's:</p>
-<p><img src="/img/posts/2012-03-30-how-to-send-a-link-to-a-gmail-email/search.jpg" alt="Search"></p>
-<p>That's it, the link is ready to send.</p>
+          <h2>Abstract (polish, contact me for [en] version)</h2>
+<p>Z tak piękną dokumentacją, jaką ma Django wydaje się być niemożliwym aby nie zrozumieć jakim prostym zadaniem jest pisanie testów. Niestety od zrozumienia jak one działają do umiejętności testowania złożonej aplikacji droga jeszcze bardzo długa, a tym gorzej dla nas, że także kręta, z urwiskami po obu stronach.</p>
+<p>Na prezentacji dowiesz się rzeczy, których nie znajdziesz na StackOverflow, ani w tutorialach, doświadczeń zbieranych latami na różnych platformach i w różnych językach, wiedzy, którą zbiera się na dnie urwiska po solidnym upadku.</p>
 
         </div>
         <!-- .entry-content -->
 
         <a
           class="twitter-share-button"
-          href="https://twitter.com/intent/tweet?text=How to send a link to a Gmail email? by @erbetowski"
+          href="https://twitter.com/intent/tweet?text=Testing advanced Django apps by @erbetowski"
           data-counturl="">Tweet</a>
 
 
@@ -234,15 +209,9 @@
 
           <div class="nav-previous col-sm-6">
             
-            <h4>PREVIOUS POST</h4>
-            <a href="/blog/hurray-to-33rd/" rel="prev"><span class="meta-nav">←</span> Hurray to 33rd</a>
-            
           </div>
 
           <div class="nav-next col-sm-6">
-            
-            <h4>NEXT POST</h4>
-            <a href="/blog/33rd-degree-scala-community-talk/" rel="next">33rd Degree + Scala Community Talk <span class="meta-nav">→</span></a>
             
           </div>
 

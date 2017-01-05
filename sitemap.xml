@@ -2,18 +2,58 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://erbetowski.pl/papers/cognitive-biases-in-software-development.html</loc>
-    <lastmod>2015-12-12T09:59:09.000Z</lastmod>
+    <loc>http://erbetowski.pl/papers/API_design_process/index.html</loc>
+    <lastmod>2017-01-04T16:48:37.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://erbetowski.pl/papers/agile_used_to_be_cool/index.html</loc>
+    <lastmod>2017-01-04T16:48:37.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://erbetowski.pl/papers/cognitive-biases-in-software-development/index.html</loc>
+    <lastmod>2017-01-04T16:48:37.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://erbetowski.pl/papers/designing-api-for-mobile-apps/index.html</loc>
+    <lastmod>2017-01-04T16:48:37.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://erbetowski.pl/papers/good-api-documentation-is-executable/index.html</loc>
+    <lastmod>2017-01-04T16:48:37.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://erbetowski.pl/papers/index.html</loc>
+    <lastmod>2017-01-04T16:48:37.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://erbetowski.pl/papers/programmers-vs-developers/index.html</loc>
+    <lastmod>2017-01-04T16:48:37.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://erbetowski.pl/papers/testing-advanced-Django-apps/index.html</loc>
+    <lastmod>2017-01-04T16:48:37.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://erbetowski.pl/papers/the-soft-stuff/index.html</loc>
+    <lastmod>2017-01-04T16:48:37.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://erbetowski.pl/blog/confitura-2011/</loc>
+    <lastmod>2017-01-04T16:48:37.000Z</lastmod>
   </url>
   
   <url>
     <loc>http://erbetowski.pl/blog/make-it-stick/</loc>
     <lastmod>2015-12-12T08:54:58.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://erbetowski.pl/papers/index.html</loc>
-    <lastmod>2015-12-10T12:48:51.000Z</lastmod>
   </url>
   
   <url>
@@ -42,42 +82,7 @@
   </url>
   
   <url>
-    <loc>http://erbetowski.pl/blog/agilebyexample-2011-survey/</loc>
-    <lastmod>2015-09-16T16:46:15.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://erbetowski.pl/blog/plastic-1/</loc>
-    <lastmod>2015-09-16T16:46:15.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://erbetowski.pl/blog/hurray-to-33rd/</loc>
-    <lastmod>2015-09-16T16:46:15.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://erbetowski.pl/blog/4developers-2013-konferencyjne-notatki/</loc>
-    <lastmod>2015-09-16T16:46:15.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://erbetowski.pl/blog/33rd-degree-scala-community-talk/</loc>
-    <lastmod>2015-09-16T16:46:15.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://erbetowski.pl/blog/method-injection-with-guice-and-scala/</loc>
-    <lastmod>2015-09-16T16:46:15.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://erbetowski.pl/blog/warszawski-hackathon-namecollision/</loc>
-    <lastmod>2015-09-16T16:46:15.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://erbetowski.pl/blog/confitura-2011/</loc>
+    <loc>http://erbetowski.pl/blog/a-deep-dive-into-tapestry-plastic-adding-behavior-to-a-method/</loc>
     <lastmod>2015-09-16T16:46:15.000Z</lastmod>
   </url>
   
@@ -97,22 +102,47 @@
   </url>
   
   <url>
+    <loc>http://erbetowski.pl/blog/how-to-send-a-link-to-a-gmail-email/</loc>
+    <lastmod>2015-09-16T16:46:15.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://erbetowski.pl/blog/warszawski-hackathon-namecollision/</loc>
+    <lastmod>2015-09-16T16:46:15.000Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://erbetowski.pl/blog/wrazenia-po-wprowadzeniu-do-osgi-jacka-laskowskiego/</loc>
     <lastmod>2015-09-16T16:46:15.000Z</lastmod>
   </url>
   
   <url>
-    <loc>http://erbetowski.pl/blog/a-deep-dive-into-tapestry-plastic-adding-behavior-to-a-method/</loc>
+    <loc>http://erbetowski.pl/blog/4developers-2013-konferencyjne-notatki/</loc>
     <lastmod>2015-09-16T16:46:15.000Z</lastmod>
   </url>
   
   <url>
-    <loc>http://erbetowski.pl/index.html</loc>
+    <loc>http://erbetowski.pl/blog/33rd-degree-scala-community-talk/</loc>
     <lastmod>2015-09-16T16:46:15.000Z</lastmod>
   </url>
   
   <url>
-    <loc>http://erbetowski.pl/blog/how-to-send-a-link-to-a-gmail-email/</loc>
+    <loc>http://erbetowski.pl/blog/hurray-to-33rd/</loc>
+    <lastmod>2015-09-16T16:46:15.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://erbetowski.pl/blog/agilebyexample-2011-survey/</loc>
+    <lastmod>2015-09-16T16:46:15.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://erbetowski.pl/blog/plastic-1/</loc>
+    <lastmod>2015-09-16T16:46:15.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://erbetowski.pl/blog/method-injection-with-guice-and-scala/</loc>
     <lastmod>2015-09-16T16:46:15.000Z</lastmod>
   </url>
   

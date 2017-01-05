@@ -4,72 +4,60 @@ https://keybase.io/wojtekerbetowski
 
 I hereby claim:
 
-  * I am an admin of http://erbetowski.pl
-    * I am wojtekerbetowski (https://keybase.io/wojtekerbetowski) on keybase.
-      * I have a public key with fingerprint 3B8A D29B D5D2 E758 FB69  900D 0CAF 5BA8 9ACC 5233
+  * I am an admin of https://erbetowski.pl
+  * I am wojtekerbetowski (https://keybase.io/wojtekerbetowski) on keybase.
+  * I have a public key with fingerprint 1104 3368 FEBE 62C8 3748  D647 0AE7 E90D 33F8 7306
 
-      To do so, I am signing this object:
+To do so, I am signing this object:
 
 {
-        "body": {
-                    "key": {
-                                    "eldest_kid": "0101691fd2711599d6ceaa64a4f454fed01092dff92b9620642cca3299256218e84f0a",
-                                                "fingerprint": "3b8ad29bd5d2e758fb69900d0caf5ba89acc5233",
-                                                            "host": "keybase.io",
-                                                                        "key_id": "0caf5ba89acc5233",
-                                                                                    "kid": "0101691fd2711599d6ceaa64a4f454fed01092dff92b9620642cca3299256218e84f0a",
-                                                                                                "uid": "8674389485160991ab29c127f70bdc19",
-                                                                                                            "username": "wojtekerbetowski"
-                                                                                                                        },
-                            "revoke": {
-                                            "sig_ids": [
-                                                                "1a352b0b2f17289a1891b8c9b18ddf257105f06a37ccb02f493e9d56169e57350f"
-                                                                            ]
-                                                                                    },
-                                    "service": {
-                                                    "hostname": "erbetowski.pl",
-                                                                "protocol": "http:"
-                                                                            },
-                                            "type": "web_service_binding",
-                                                    "version": 1
-                                                            },
-            "ctime": 1442482514,
-                "expire_in": 157680000,
-                    "prev": "f62c49b3928d135eda053798771d42612d5897a50673e996033cbf1f979be0b5",
-                        "seqno": 5,
-                            "tag": "signature"
+    "body": {
+        "key": {
+            "eldest_kid": "010185b77df07eae339613e737d78f074b6938caebd5734ef27403229e4ce217e6120a",
+            "fingerprint": "11043368febe62c83748d6470ae7e90d33f87306",
+            "host": "keybase.io",
+            "key_id": "0ae7e90d33f87306",
+            "kid": "010185b77df07eae339613e737d78f074b6938caebd5734ef27403229e4ce217e6120a",
+            "uid": "8674389485160991ab29c127f70bdc19",
+            "username": "wojtekerbetowski"
+        },
+        "service": {
+            "hostname": "erbetowski.pl",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1483548395,
+    "expire_in": 157680000,
+    "prev": "3c4ed46deee2e5521e79bcd5cac4351e388d3b729819445ce755ee0f88a4094c",
+    "seqno": 21,
+    "tag": "signature"
 }
 
 which yields the signature:
 
 -----BEGIN PGP MESSAGE-----
-Version: Keybase OpenPGP v2.0.46
+Version: Keybase OpenPGP v2.0.61
 Comment: https://keybase.io/crypto
 
-yMOJAnicrZJtUBVVGMcvpigXEhiBRAhhx0yDaPfsnt09V6mcaKREBwiCBIJ9OQsb
-cPdy7/I2ekkIKXGGwrEpCJqxKMEER0ZgigaFEVPBacpoyEpCpkhHDQZo6HKT9pJN
-H/ra+XLmnPN//s/vec5z/sEHTGYvv1OZbU0jKbTX8MBiiSnNdShlHyFqcgVh2UcU
-4OUNF8rYoecUqDJhIUiKpFhEKTLgKAoiJLMSFgSWERiFgYyCZUOAgKwoCIiIBSTL
-AEkSaIAQgCygeMwzCikQMYSiWvOw3WZXrbphS4u8IAMkylAGmIO8IrIIkaRMSoIC
-RYFHgiRBQNNGYL7m8EQYcKLgwLGqZtwZh5y/8f6r/5+5S5bteJZjaB4xPKRYEiFK
-EAGSKMApHCnKEoU8Qge2W4UibKjLtFd0XIDtIta1MkeBSjhjCDsu1Qqwp78ONc+A
-dxCWTIISaAhEUgQKxQGjCIpHlMhLSKR4WVYA5CgSKiQr0JwkiSRQGERjJEPWKA1D
-joakQmQb3kbmUlVaNvd06z7Fv/ljbYUGoM2u6ZqkFRpP+bpus3io9ArbMjAWc+6b
-5IiqVTb+yggoxXaHqlkJC2UoJV31uFIMAxgeQIqJIXC5TbXjHNWjgBzLk8bypMGl
-hqXCAolBIo0AL1M0xLJAQppDPMdRMgNYCsiQR5wASZYzakIsSdOSqFAK4pCISRES
-nrKKrRphgQamkGdYGo2zCnqJHRPOwYGslSYvs8l71QrPDJvMPgH/TPaNk/5LlU8O
-flh7y7xQbO0Kfl3Uvo6N6qlqtF693u2Avq7NybER3YHpSyfuOOZ+mF+tu79MO1C0
-ZWamV/VuTOnM3+gzKtWnersmK+7AqdzO6PJ+R/tLCy2hIW3uey05IYO+J954zhUZ
-8kiDlpF5cC682m9/YlTAIdugnnx0b+rL5PC19O1P3A2uGoj+oKFDORIUOVFTF2sd
-amxt379bD1iTTW/oTkrbNdi8VWpo/XnMvBT0Dnx/bZHmjn6oqNf6y/hF9633Hr29
-q2Z1q9+7aTffet7+bNlw81CYeeQbc40+t7ayqDb+1OzFA2+aOhZ+8t9SvhWF5v7m
-vC5XT2RPj192Bx4einSWvX3WsjN90/aT/iturCrqtybPZnz3WrbtXnl8UMbvZ8bL
-Iza+ej7halJfe5ffFW9qc5dtGpTW1vRmPfVHtXz0hZmItPELX12Kf6a/Twr8Pjjp
-yjR0d9q5QH3MOdqhZ327LfALummH79RH9W19CUdmF9eNnj6dJPgkxtXVzSzIk4Nr
-Pj3255lAsvmT7uw9qYcLW/NSb754btz18HzYMamr97Pjor4QHT589rF1TUTUDhRm
-Ty8OiGwipubjxtYfbw81/eosJXOdix/HXb4Q03BuJ7nh7qVGqcnRE576+frMx7Xq
-yaGq5kQdtexe+XRCtusau+fHkcq9AbG3e9zcpm1yXetEfX/B2rq/AMSr27w=
-=fTD/
+yMIqAnicrZJbSBRRGMdXq83cpMJ68dJlkCLYdM6cM3POLF3eIouky4MZxjaXb3Xa
+dWfbGS+rWD10JwvzLXqosJ6yKAuUIFSkm2hZEJaCkUSREEGBXSw7Y0YPvXbgcDjf
+9///znc+vt6sWb7MNP/AoXXm1Ow7aX3dF6t9u6pWjjcIum2mhFCDEIXpA2ImOG44
+aplCSBCRiJisU2pGRAoaYKwqCAPF1KSMh4iuqJgZGuimTDGBiESJiCVJBWKAhCgo
+SBI1IShErHgFJBNJK+5yLEIiwVhhEdBBkQyGKWGmQqioAQVVNDGOMIpFhRsrbcdz
+8OJ0zYFCy+Yxfgn/Lu9f/X+uu3oaxxRKMFMJk5EiqirSdEk1kEQjVNRNA6me0IFk
+XKsCrq6197kQhaQOrl3rRC2hMSjwbI1lgNdg70czyr+awkSMQxJJ27UNO8ZTla6b
+cEKe1U0lpqmgh2coYd2Km7yh3FEDScey40IIcaXhWh4WEYZlvlU5KEBdwkpC2PIU
+MlWYyJf3DtRwJDYImEQxAUACWZYQUFU3TNnQDIJlBJgxE+tUUhlSCZENoLIMIEYY
+04ioEkPw/rU/bgshCfE6tQrOdKyKuOZWJ0Fo7Okqn+1Ly/T556R7k+bLnLfwz/x9
+fTp3avePnrTNrZ1FzvNHBzJGC4rltsP1/rJNa1uOlbapxdt2BK5v+HQpsbQ1t/nN
+l0Rd873C9KZA1tGt/ZWPr50oWcx+xope1odGg13PAk9yVpR+6stdVPKx5UO2vf2q
+/9KpG835bt+qcPbNd3j/SDTWsWLsdfOyut6D37cEb/sO3snIvzLav2BycGjdB/Jt
+T6B4Uff3FwULRto7rqgfB5ds9J9vKl0dL9jWO9GX8ap8PHW2rEg8bt0Pva+jlcLE
+5NDCNqlpwN54Ydh54MtZv+FIKr8xM6/jdO2Z9rtVnTtTw+PbQyez9gYabimX56+p
+z3tjfz70KHfi9Fi0NX35enTuoaO9zSv9BZUoPo0=
+=Wk/O
 -----END PGP MESSAGE-----
 
 And finally, I am proving ownership of this host by posting or
