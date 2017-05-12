@@ -35,6 +35,7 @@ for size of `400px` (square).
 
 * [Delegate responsibility, gain productivity](/papers/responsibility)
 * [Going serverless](/papers/going-serveless)
+* [Event Sourcing for Django apps](/papers/event_sourcing_with_django)
 * [Designing API for mobile apps](/papers/designing-api-for-mobile-apps)
 * [API design process (workshop)](/papers/API_design_process)
 * ~~[The Soft Stuff](/papers/the-soft-stuff)~~
