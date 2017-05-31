@@ -6,17 +6,15 @@ date: 2015-12-12 18:08:22
 
 ## Short bio
 
-Wojtek trusts in people. He always supports individuals
-and communities to learn and grow.
-
-He spent a decade coding in a variety of languages 
-(strongest in JVM, Python, Node.js). He was leading teams of developers, 
-designers and testers as a Head of Engineering at Polidea and CTO at Growbots.
+Wojtek is a coder, event organizer, trainer, and seriously experienced Software Engineer.
+He recently joined Codility after working as a CTO @Growbots and Head of Engineering @Polidea,
+and brings a wealth of experience in hiring and building dev teams.
 
 Wojtek was building many tech communities, e.g. Warsaw JUG, 
 Mobile Warsaw, PyWaw Summit, Mobile Central Europe, Warsjawa and HackWAW.
 
-Currently, he focuses on community and training people in the tech industry.
+He is interested in tools and processes, but at the end of the day, his true passion is people.
+
 
 ## My speaker's qualifications
 Multiple presentations on both technical and soft topics for wide audiences. Starting with local meetup groups, through local events and conferences to international events (33rd Degree, GeeCON, Java2Days, NordicAPIs, Endpointcon).
