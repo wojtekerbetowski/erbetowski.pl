@@ -9,6 +9,7 @@ published: true
 date: 02/01/2013
 thumbnail: /img/posts/tapestry.png
 ---
+{% raw %}
 In the <a title="A deep dive into Tapestry Plastic – part 1" href="http://blog.erbetowski.pl/index.php/plastic-1/" target="_blank">first part</a> we've prepared an environment for work. Now it's time to do some basic stuff with Plastic.
 <!--break-->
 The most basic AOP example often used in hello world examples is logging and we're gonna do that as well. To follow the work you might wanna fork from <a href="https://github.com/wojtekerbetowski/plastic-logging" target="_blank">GitHub project</a>.
@@ -28,3 +29,5 @@ Next there's a place for a delegate (meaning class transforming delegation). For
 As you have seen by now, <strong>Plastic is</strong> a pretty high level, object oriented and <strong>well designed</strong> tool for modifying classes. Although creating a simple case of adding an advise to a method requires a lot of boilerplate code.
 
 In next part we'll go deeper into the Plastic API.
+{% endraw %}
+
