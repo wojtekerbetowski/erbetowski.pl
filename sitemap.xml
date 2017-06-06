@@ -2,8 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://erbetowski.pl/papers/event_sourcing_with_django/index.html</loc>
+    <lastmod>2017-06-06T18:10:57.000Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://erbetowski.pl/papers/index.html</loc>
-    <lastmod>2017-03-01T05:45:26.000Z</lastmod>
+    <lastmod>2017-06-06T18:10:57.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://erbetowski.pl/blog/method-injection-with-guice-and-scala/</loc>
+    <lastmod>2017-06-06T18:10:57.000Z</lastmod>
   </url>
   
   <url>
@@ -32,12 +42,12 @@
   </url>
   
   <url>
-    <loc>http://erbetowski.pl/blog/confitura-2011/</loc>
+    <loc>http://erbetowski.pl/papers/good-api-documentation-is-executable/index.html</loc>
     <lastmod>2017-01-04T16:48:37.000Z</lastmod>
   </url>
   
   <url>
-    <loc>http://erbetowski.pl/papers/API_design_process/index.html</loc>
+    <loc>http://erbetowski.pl/blog/confitura-2011/</loc>
     <lastmod>2017-01-04T16:48:37.000Z</lastmod>
   </url>
   
@@ -57,7 +67,7 @@
   </url>
   
   <url>
-    <loc>http://erbetowski.pl/papers/good-api-documentation-is-executable/index.html</loc>
+    <loc>http://erbetowski.pl/papers/API_design_process/index.html</loc>
     <lastmod>2017-01-04T16:48:37.000Z</lastmod>
   </url>
   
@@ -92,12 +102,7 @@
   </url>
   
   <url>
-    <loc>http://erbetowski.pl/blog/a-deep-dive-into-tapestry-plastic-adding-behavior-to-a-method/</loc>
-    <lastmod>2015-09-16T16:46:15.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://erbetowski.pl/blog/jrebel-with-multiple-module-maven2-build/</loc>
+    <loc>http://erbetowski.pl/blog/how-to-send-a-link-to-a-gmail-email/</loc>
     <lastmod>2015-09-16T16:46:15.000Z</lastmod>
   </url>
   
@@ -112,7 +117,7 @@
   </url>
   
   <url>
-    <loc>http://erbetowski.pl/blog/method-injection-with-guice-and-scala/</loc>
+    <loc>http://erbetowski.pl/blog/agilebyexample-2011-survey/</loc>
     <lastmod>2015-09-16T16:46:15.000Z</lastmod>
   </url>
   
@@ -137,11 +142,6 @@
   </url>
   
   <url>
-    <loc>http://erbetowski.pl/blog/how-to-send-a-link-to-a-gmail-email/</loc>
-    <lastmod>2015-09-16T16:46:15.000Z</lastmod>
-  </url>
-  
-  <url>
     <loc>http://erbetowski.pl/blog/confitura-2011-summary/</loc>
     <lastmod>2015-09-16T16:46:15.000Z</lastmod>
   </url>
@@ -152,7 +152,12 @@
   </url>
   
   <url>
-    <loc>http://erbetowski.pl/blog/agilebyexample-2011-survey/</loc>
+    <loc>http://erbetowski.pl/blog/jrebel-with-multiple-module-maven2-build/</loc>
+    <lastmod>2015-09-16T16:46:15.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://erbetowski.pl/blog/a-deep-dive-into-tapestry-plastic-adding-behavior-to-a-method/</loc>
     <lastmod>2015-09-16T16:46:15.000Z</lastmod>
   </url>
   
