@@ -9,6 +9,7 @@ published: true
 date: 04/12/2013
 thumbnail: /img/posts/4developers2013.png
 ---
+{% raw %}
 W tym roku wyjątkowo mało szumu było wokół 4Developers. Aż dobrze, że miałem zapisane w kalendarzu, kiedy jest, bo bym przegapił :-) Zgłosiłem swoją prezentację na długo przed konferencją, ale dopiero na dwa tygodnie przed została zaakceptowana. Nie mniej jednak się cieszę, że dostałem możliwość zaprezentowania <a href="https://github.com/Polidea/Robospock" target="_blank">RoboSpocka</a>.
 <!--break-->
 
@@ -57,3 +58,4 @@ Na minus:
 	<li>miejsce (jednak ciasne korytarze, sypiące się łazienki)</li>
 </ul>
 PS. Wybaczcie nieco chaotyczny styl. Pisane nieraz w trakcie prezentacji pod wpływem chwili :-)
+{% endraw %}
