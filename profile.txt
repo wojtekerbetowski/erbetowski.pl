@@ -1,0 +1,237 @@
+wojtek@erbetowski.pl
+
+Wojtek Erbetowski
+
+www.linkedin.com/in/
+wojtekerbetowski (LinkedIn)
+erbetowski.pl (Personal)
+blog.erbetowski.pl (Blog)
+www.erga.pl (Company)
+
+Summary
+
+Contact
+
+Top Skills
+Amazon Web Services (AWS)
+C#
+.NET Core
+
+Languages
+Polish
+English
+
+Site Lead @ Island | L8conf Organizer | ex-CTO (Codility &
+Growbots) | ex-Google | Builder of Teams & Tech
+Warsaw, Mazowieckie, Poland
+
+Hands-on leader with ~10 years of APIs / web apps experience.
+Open source library contributor, software developer, agile advocate.
+I was working in several business areas, e.g. sales, old-fashioned
+and new media advertising, e-mail marketing, pharmaceutical corp,
+EU financed portals, wholesale bookstore and more) and turning
+business needs into specialized apps.
+Weapons of choice: Lean + Kanban, Management 3.0, Python, Java,
+ES6, Scala, Groovy, OOP, TDD, PP, CR.
+
+Experience
+Island
+Site lead, Engineering Manager
+
+January 2025 - Present (3 months)
+Warsaw, Mazowieckie, Poland
+Leading the growth of Island's new Warsaw engineering hub, I’m focused
+on attracting top-tier talent, building a team with strong technical expertise,
+and fostering an environment of innovation. Our team is building cutting-edge
+browser technology, driving impactful solutions globally.
+
+L8 Conference
+Co-Founder
+
+March 2024 - Present (1 year 1 month)
+Warsaw, Mazowieckie, Poland
+
+hyperexponential
+Engineering Manager
+
+September 2022 - January 2025 (2 years 5 months)
+Warsaw, Mazowieckie, Poland
+As an Engineering Manager at hyperexponential, I lead agile teams in
+developing innovative, data-driven software solutions for complex financial
+modeling. I focus on architecting scalable systems and driving lean processes,
+Page 1 of 5
+
+while fostering individual growth through mentorship, skill development, and
+creating opportunities for team members to excel and advance.
+
+Google
+Engineering Manager
+
+July 2020 - February 2022 (1 year 8 months)
+Warsaw, Mazowieckie, Poland
+As an Engineering Manager I managed teams driving the critical reliability
+project orchestrating changes made by Software Engineers at Google Cloud
+to safely reach end users, while limiting the negative impact of any corrupt
+changes.
+
+Codility
+3 years 3 months
+
+Principal Software Engineer
+
+December 2019 - June 2020 (7 months)
+Warsaw, Masovian District, Poland
+Scope of responsibilities:
+Product development -- take proactive role in designing and developing our
+product,
+System and code maintenance -- take care of the system, investigate and fix
+defects, improve code
+quality and system’s architecture,
+Software development craftsmanship -- help others maintain high quality of
+developed software, for
+example by contributing to design, reviewing code and pair programming,
+Tech support duties - ensure a responsive technical customer support of high
+quality by responding to
+and effectively addressing incoming client requests of technical nature. Work
+closely with our Tech
+Support Specialist to solve clients’ problems,
+Mentoring - take care of your team mates, share your knowledge and
+expertise, help them grow
+technically and mature as professionals, lead by example,
+Leading -- lead the way in choosing and implementing sound technical
+solutions to our clients problems,
+build the Engineering culture in the team, design and implement effective and
+efficient architecture in all
+parts of the system, contribute to solving biggest challenges and problems,
+
+Page 2 of 5
+
+Other -- other Expert responsibilities, as agreed with Head of Engineering and
+CTO.
+
+Chief Technology Officer
+
+April 2018 - November 2019 (1 year 8 months)
+Warsaw, Masovian District, Poland
+Key responsibilities:
+* the company technical vision and it's execution
+* building and aligning the development, infrastructure and security teams
+* contributing to the product vision and product development execution
+* setting the company security strategy and plan, developing ISO 27001
+compliance,
+* managing the technical debt,
+* mentoring technical staff and leaders,
+* managing technology budgets and time frames,
+* ensuring the technical standards are met and the team has all the knowledge
+and resources required to achieve it
+
+Expert Software Engineer
+
+April 2017 - March 2018 (1 year)
+Warsaw, Masovian District, Poland
+Responsibilities:
+- developing the core product (Python 3.5 & Django on the backend, ES6 with
+React.js on the frontend and Java 8 with Cucumber for acceptance tests)
+- leading a product team (6-8 members, Kanban, team focus: skills testing)
+- being the CTO's representative on the team and vice versa
+- supporting VP of Engineering and Product in building roadmap
+
+Growbots | #500Strong
+Chief Technology Officer
+
+January 2016 - March 2017 (1 year 3 months)
+Warsaw, Masovian District, Poland
+I was responsible for the whole IT department of an "AI for Sales" product
+startup during dynamic growth period (from 30 to 70 ppl). Technology
+stack includes Microservices, Python 2/3, ES6 & React.js, ElasticSearch,
+MySQL&PostgreSQL, Docker, Nomad, Google Cloud Engine. Introduced
+Kanban and Scrum for Dev teams. Member of the strategy team (co-creating
+strategy, V2MOM).
+Some of the key responsibilities:
+* grew Dev Team from 10 to 35 in 8 months
+Page 3 of 5
+
+* introduced Lean and Kanban
+* stabilized the team (from 20-30% rotation per quarter to 0 people quitting in
+next 3 quarters!)
+* transitioned main product from unstable, initial version to one that is stable,
+robust and usable,
+* coaching individuals to become team leaders
+* training people into a self-organizing, self-improving and open team
+* created and executed hiring process
+
+Polidea
+4 years 4 months
+
+Head of Engineering
+
+May 2014 - December 2015 (1 year 8 months)
+
+Technical Lead
+
+September 2011 - May 2014 (2 years 9 months)
+Responsible for backend development, technology evaluation and knowledge
+transfer
+
+Warsaw Java User Group
+Commuity Leader
+2012 - June 2014 (2 years)
+
+Roche
+Software Engineer
+
+September 2010 - July 2011 (11 months)
+My first time in corporation I was dropped into some very old systems (like
+more than 10 years old). I actually really liked it, adding tests and refactoring
+the legacy code, but not slowing down ongoing development. A spectrum of
+technologies I used: from EJB 2.1, Struts and Scout, through JDBC, Oracle
+and Struts 2, to Spring and Wicket.
+
+Self-employed
+Software Engineer
+
+March 2008 - January 2011 (2 years 11 months)
+Warsaw, Mazowieckie, Poland
+I have expertly navigated the complexities of various software development
+projects, showcasing my versatility across different domains and technologies.
+My professional journey is characterized by:
+
+Page 4 of 5
+
+* Diverse Technology Proficiency: Proficient in Java, Python, Javascript, and
+Scala, I have developed a wide array of applications catering to different
+business needs. My expertise in cloud technologies has enabled scalable and
+efficient solutions, enhancing project capabilities.
+* Varied Project Experience: I have successfully delivered projects in both B2B
+and B2C domains. My portfolio includes developing intricate systems for book
+wholesalers, enhancing their operational efficiency, and designing engaging
+contest systems that have amplified user engagement and satisfaction.
+* Software Development: Skilled in translating complex client requirements
+into effective software solutions, I have ensured the delivery of high-quality,
+scalable, and maintainable applications. My coding practices emphasize clean,
+efficient, and robust software development.
+* Automated Testing and Deployment: I have implemented advanced
+automated testing frameworks to guarantee software reliability. My expertise
+in continuous integration and continuous deployment (CI/CD) practices has
+streamlined deployment processes across various environments.
+* Specifications and Documentation: Known for creating precise software
+specifications, I have ensured clear project goals and alignment with client
+needs. My comprehensive documentation practices have supported seamless
+project transitions and maintenance.
+* Adherence to Best Practices: integrating industry best practices, including
+agile methodologies, code reviews, and version control, has consistently
+enhanced project outcomes and client satisfaction.
+My journey has been marked by strong project management skills,
+adaptability, and a deep commitment to delivering exceptional results, leading
+to successful business growth and high client satisfaction.
+
+Education
+University of Warsaw
+mgr (master), Mathematics · (2003 - 2009)
+
+Politechnika Warszawska
+· (2005 - 2006)
+
+Page 5 of 5
+
+
