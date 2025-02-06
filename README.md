@@ -27,11 +27,18 @@ The live site is available at [erbetowski.pl](https://erbetowski.pl).
 
 ✅ Successfully deployed to Cloudflare Pages on March 2, 2025.
 
+### Useful Links
+
+- [Live Website](https://erbetowski.pl)
+- [GitHub Repository](https://github.com/wojtekerbetowski/erbetowski.pl)
+- [GitHub Actions Workflows](https://github.com/wojtekerbetowski/erbetowski.pl/actions)
+- [Cloudflare Pages Dashboard](https://dash.cloudflare.com/6ed2b21bc52cc88088ef444a227eb1d9/pages/view/erbetowski-pl)
+
 ### Setting up Cloudflare Pages Deployment
 
 1. Create a Cloudflare Pages project:
-   - Go to the Cloudflare dashboard
-   - Navigate to Pages
+   - Go to the [Cloudflare dashboard](https://dash.cloudflare.com/)
+   - Navigate to [Workers & Pages](https://dash.cloudflare.com/6ed2b21bc52cc88088ef444a227eb1d9/workers-and-pages)
    - Create a new project named "erbetowski-pl"
    - Connect it to your GitHub repository
 
