@@ -21,12 +21,18 @@ npm run dev
 
 This site is automatically deployed to Cloudflare Pages via GitHub Actions whenever changes are pushed to the main branch.
 
+The live site is available at [erbetowski.pl](https://erbetowski.pl).
+
+### Current Deployment Status
+
+✅ Successfully deployed to Cloudflare Pages on March 2, 2025.
+
 ### Setting up Cloudflare Pages Deployment
 
 1. Create a Cloudflare Pages project:
    - Go to the Cloudflare dashboard
    - Navigate to Pages
-   - Create a new project named "astro-nano"
+   - Create a new project named "erbetowski-pl"
    - Connect it to your GitHub repository
 
 2. Set up GitHub repository secrets:
