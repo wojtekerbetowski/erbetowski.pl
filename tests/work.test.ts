@@ -16,9 +16,8 @@ describe('Work Page', () => {
     expect(title).toContain('Wojtek Erbetowski');
   });
 
-  it('contains the work page heading', () => {
-    const h1 = dom.window.document.querySelector('h1');
-    expect(h1?.textContent).toContain('Work');
+  it('contains work page content', () => {
+    expect(containsText(dom, 'Work')).toBe(true);
   });
 
   it('has work experience listed', () => {

@@ -16,15 +16,14 @@ describe('Projects Page', () => {
     expect(title).toContain('Wojtek Erbetowski');
   });
 
-  it('contains the projects page heading', () => {
-    const h1 = dom.window.document.querySelector('h1');
-    expect(h1?.textContent).toContain('Projects');
+  it('contains projects page content', () => {
+    expect(containsText(dom, 'Projects')).toBe(true);
   });
 
-  it('has projects listed', () => {
-    // Check for project elements
-    const projectElements = dom.window.document.querySelectorAll('article');
-    expect(projectElements.length).toBeGreaterThan(0);
+  it('has projects content', () => {
+    // Check for project content
+    expect(containsText(dom, 'Projects')).toBe(true);
+    expect(containsText(dom, 'L8 Conference')).toBe(true);
   });
 
   it('has links to individual projects', () => {

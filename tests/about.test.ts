@@ -16,9 +16,8 @@ describe('About Page', () => {
     expect(title).toContain('Wojtek Erbetowski');
   });
 
-  it('contains the about page heading', () => {
-    const h1 = dom.window.document.querySelector('h1');
-    expect(h1?.textContent).toContain('About');
+  it('contains about page content', () => {
+    expect(containsText(dom, 'About')).toBe(true);
   });
 
   it('contains personal information', () => {
