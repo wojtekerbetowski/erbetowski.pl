@@ -12,7 +12,27 @@ export default {
         sans: ["Inter", ...defaultTheme.fontFamily.sans],
         serif: ["Lora", ...defaultTheme.fontFamily.serif],
       },
+      colors: {
+        // Define your color palette here for better consistency
+        primary: defaultTheme.colors.stone,
+      },
+      typography: {
+        DEFAULT: {
+          css: {
+            maxWidth: '100%',
+            a: {
+              fontWeight: '400',
+              textDecoration: 'underline',
+              textUnderlineOffset: '2px',
+            },
+          },
+        },
+      },
     },
   },
   plugins: [require("@tailwindcss/typography")],
+  // Improve build performance
+  future: {
+    hoverOnlyWhenSupported: true,
+  },
 };

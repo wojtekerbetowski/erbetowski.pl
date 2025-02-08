@@ -30,10 +30,10 @@ const { title, description, image = "/nano.png" } = Astro.props;
 <meta name="generator" content={Astro.generator} />
 
 <!-- Font preloads -->
-<link rel="preload" href={inter400} as="font" type="font/woff2" crossorigin/>
-<link rel="preload" href={inter600} as="font" type="font/woff2" crossorigin/>
-<link rel="preload" href={lora400} as="font" type="font/woff2" crossorigin/>
-<link rel="preload" href={lora600} as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href={inter400} as="font" type="font/woff2" crossorigin />
+<link rel="preload" href={inter600} as="font" type="font/woff2" crossorigin />
+<link rel="preload" href={lora400} as="font" type="font/woff2" crossorigin />
+<link rel="preload" href={lora600} as="font" type="font/woff2" crossorigin />
 
 <!-- Canonical URL -->
 <link rel="canonical" href={canonicalURL} />
@@ -61,59 +61,75 @@ const { title, description, image = "/nano.png" } = Astro.props;
 
 <script>
   import type { TransitionBeforeSwapEvent } from "astro:transitions/client";
-  document.addEventListener("astro:before-swap", (e) =>
-    [
-      ...(e as TransitionBeforeSwapEvent).newDocument.head.querySelectorAll(
-        "link[as=\"font\"]"
-      ),
-    ].forEach((link) => link.remove())
-  );
+  
+  // Remove font preload links from the new document to prevent duplicate font loading
+  document.addEventListener("astro:before-swap", (e) => {
+    const newDocument = (e as TransitionBeforeSwapEvent).newDocument;
+    const fontLinks = newDocument.head.querySelectorAll('link[as="font"]');
+    fontLinks.forEach((link) => link.remove());
+  });
 </script>
 
 <script is:inline>
+  // Theme management
+  const THEME_STORAGE_KEY = "theme";
+  const THEME = {
+    LIGHT: "light",
+    DARK: "dark",
+    SYSTEM: "system"
+  };
+  
+  // DOM event handlers
   function init() {
     preloadTheme();
     onScroll();
     animate();
+    setupEventListeners();
+  }
 
+  function setupEventListeners() {
+    // Back to top button
     const backToTop = document.getElementById("back-to-top");
     backToTop?.addEventListener("click", (event) => scrollToTop(event));
 
+    // Back button
     const backToPrev = document.getElementById("back-to-prev");
     backToPrev?.addEventListener("click", () => window.history.back());
 
+    // Theme switcher buttons
     const lightThemeButton = document.getElementById("light-theme-button");
     lightThemeButton?.addEventListener("click", () => {
-      localStorage.setItem("theme", "light");
+      localStorage.setItem(THEME_STORAGE_KEY, THEME.LIGHT);
       toggleTheme(false);
     });
 
     const darkThemeButton = document.getElementById("dark-theme-button");
     darkThemeButton?.addEventListener("click", () => {
-      localStorage.setItem("theme", "dark");
+      localStorage.setItem(THEME_STORAGE_KEY, THEME.DARK);
       toggleTheme(true);
     });
 
     const systemThemeButton = document.getElementById("system-theme-button");
     systemThemeButton?.addEventListener("click", () => {
-      localStorage.setItem("theme", "system");
+      localStorage.setItem(THEME_STORAGE_KEY, THEME.SYSTEM);
       toggleTheme(window.matchMedia("(prefers-color-scheme: dark)").matches);
     });
 
+    // Listen for system theme changes
     window.matchMedia("(prefers-color-scheme: dark)")
       .addEventListener("change", event => {
-        if (localStorage.theme === "system") {
+        if (localStorage.getItem(THEME_STORAGE_KEY) === THEME.SYSTEM) {
           toggleTheme(event.matches);
         }
-      }
-    );
+      });
 
+    // Scroll event
     document.addEventListener("scroll", onScroll);
   }
 
+  // Animation handling
   function animate() {
     const animateElements = document.querySelectorAll(".animate");
-
     animateElements.forEach((element, index) => {
       setTimeout(() => {
         element.classList.add("show");
@@ -121,6 +137,7 @@ const { title, description, image = "/nano.png" } = Astro.props;
     });
   }
 
+  // Scroll handling
   function onScroll() {
     if (window.scrollY > 0) {
       document.documentElement.classList.add("scrolled");
@@ -137,45 +154,49 @@ const { title, description, image = "/nano.png" } = Astro.props;
     });
   }
 
-function toggleTheme(dark) {
+  // Theme handling
+  function toggleTheme(dark) {
+    // Prevent transition flicker when changing themes
     const css = document.createElement("style");
-
     css.appendChild(
       document.createTextNode(
         `* {
-             -webkit-transition: none !important;
-             -moz-transition: none !important;
-             -o-transition: none !important;
-             -ms-transition: none !important;
-             transition: none !important;
-          }
-        `,
+           -webkit-transition: none !important;
+           -moz-transition: none !important;
+           -o-transition: none !important;
+           -ms-transition: none !important;
+           transition: none !important;
+        }`
       )
     );
-
     document.head.appendChild(css);
 
+    // Apply theme
     if (dark) {
       document.documentElement.classList.add("dark");
     } else {
       document.documentElement.classList.remove("dark");
     }
 
-  window.getComputedStyle(css).opacity;
+    // Force repaint
+    window.getComputedStyle(css).opacity;
     document.head.removeChild(css);
   }
 
   function preloadTheme() {
-    const userTheme = localStorage.theme;
+    const userTheme = localStorage.getItem(THEME_STORAGE_KEY);
 
-    if (userTheme === "light" || userTheme === "dark") {
-      toggleTheme(userTheme === "dark");
+    if (userTheme === THEME.LIGHT || userTheme === THEME.DARK) {
+      toggleTheme(userTheme === THEME.DARK);
     } else {
       toggleTheme(window.matchMedia("(prefers-color-scheme: dark)").matches);
     }
   }
 
-  document.addEventListener("DOMContentLoaded", () => init());
-  document.addEventListener("astro:after-swap", () => init());
+  // Initialize on page load and after navigation
+  document.addEventListener("DOMContentLoaded", init);
+  document.addEventListener("astro:after-swap", init);
+  
+  // Preload theme immediately to prevent flash of wrong theme
   preloadTheme();
 </script>
