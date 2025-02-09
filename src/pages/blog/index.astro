@@ -6,23 +6,23 @@ import ArrowCard from "@components/ArrowCard.astro";
 import { BLOG } from "@consts";
 
 const data = (await getCollection("blog"))
-  .filter(post => !post.data.draft)
-  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+  .filter((post: CollectionEntry<"blog">) => !post.data.draft)
+  .sort((a: CollectionEntry<"blog">, b: CollectionEntry<"blog">) => b.data.date.valueOf() - a.data.date.valueOf());
   
 type Acc = {
   [year: string]: CollectionEntry<"blog">[];
 }
 
-const posts = data.reduce((acc: Acc, post) => {
+const posts = data.reduce((acc: Acc, post: CollectionEntry<"blog">) => {
     const year = post.data.date.getFullYear().toString();
     if (!acc[year]) {
       acc[year] = [];
     }
     acc[year].push(post);
     return acc;
-  }, {});
+  }, {} as Acc);
 
-const years = Object.keys(posts).sort((a, b) => parseInt(b) - parseInt(a)); 
+const years = Object.keys(posts).sort((a: string, b: string) => parseInt(b) - parseInt(a)); 
 ---
 
 <PageLayout title={BLOG.TITLE} description={BLOG.DESCRIPTION}>
@@ -32,24 +32,27 @@ const years = Object.keys(posts).sort((a, b) => parseInt(b) - parseInt(a));
         Blog
       </div>
       <div class="space-y-4">
-        {years.map(year => (
-          <section class="animate space-y-4">
-            <div class="font-semibold text-black dark:text-white">
-              {year}
-            </div>
-            <div>
-              <ul class="flex flex-col gap-4">
-                {
-                  posts[year].map((post) => (
-                    <li>
-                      <ArrowCard entry={post}/>
-                    </li>
-                  ))
-                }
-              </ul>
-            </div>
-          </section>
-        ))}
+        {years.map((year: string) => {
+          const yearPosts = posts[year] || [];
+          return (
+            <section class="animate space-y-4">
+              <div class="font-semibold text-black dark:text-white">
+                {year}
+              </div>
+              <div>
+                <ul class="flex flex-col gap-4">
+                  {
+                    yearPosts.map((post) => (
+                      <li>
+                        <ArrowCard entry={post}/>
+                      </li>
+                    ))
+                  }
+                </ul>
+              </div>
+            </section>
+          );
+        })}
       </div>
     </div>
   </Container>
