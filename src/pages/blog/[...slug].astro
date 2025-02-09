@@ -19,9 +19,18 @@ type Props = CollectionEntry<"blog">;
 
 const post = Astro.props;
 const { Content } = await post.render();
+
+// Get featured image if available from frontmatter
+// Using optional chaining to safely access potential image properties
+const featuredImage = post.data.image as string | undefined;
 ---
 
-<PageLayout title={post.data.title} description={post.data.description}>
+<PageLayout 
+  title={post.data.title} 
+  description={post.data.description}
+  image={featuredImage}
+  article={true}
+>
   <Container>
     <div class="animate">
       <BackToPrev href="/blog">

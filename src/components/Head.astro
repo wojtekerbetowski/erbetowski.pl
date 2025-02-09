@@ -9,16 +9,29 @@ import inter600 from "@fontsource/inter/files/inter-latin-600-normal.woff2";
 import lora400 from "@fontsource/lora/files/lora-latin-400-normal.woff2";
 import lora600 from "@fontsource/lora/files/lora-latin-600-normal.woff2";
 import { ClientRouter } from "astro:transitions";
+import { SITE } from "@consts";
 
 interface Props {
   title: string;
   description: string;
   image?: string;
+  article?: boolean;
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
-const { title, description, image = "/nano.png" } = Astro.props;
+const { 
+  title, 
+  description, 
+  image = "/astro-nano.png",
+  article = false 
+} = Astro.props;
+
+// Format date for schema
+const datePublished = new Date().toISOString();
+// Default image dimensions
+const imageWidth = 1200;
+const imageHeight = 630;
 ---
 
 <!-- Global Metadata -->
@@ -28,6 +41,8 @@ const { title, description, image = "/nano.png" } = Astro.props;
 <link rel="icon" type="image/svg+xml" href="/favicon-light.svg" media="(prefers-color-scheme: light)">
 <link rel="icon" type="image/x-icon" href="/favicon-light.svg">
 <meta name="generator" content={Astro.generator} />
+<link rel="manifest" href="/manifest.json" />
+<meta name="theme-color" content="#000000" />
 
 <!-- Font preloads -->
 <link rel="preload" href={inter400} as="font" type="font/woff2" crossorigin />
@@ -38,17 +53,25 @@ const { title, description, image = "/nano.png" } = Astro.props;
 <!-- Canonical URL -->
 <link rel="canonical" href={canonicalURL} />
 
+<!-- RSS Feed -->
+<link rel="alternate" type="application/rss+xml" title={`${SITE.NAME} RSS Feed`} href="/rss.xml" />
+
 <!-- Primary Meta Tags -->
 <title>{title}</title>
 <meta name="title" content={title} />
 <meta name="description" content={description} />
+<meta name="author" content={SITE.NAME} />
 
 <!-- Open Graph / Facebook -->
-<meta property="og:type" content="website" />
+<meta property="og:type" content={article ? "article" : "website"} />
 <meta property="og:url" content={Astro.url} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 <meta property="og:image" content={new URL(image, Astro.url)} />
+<meta property="og:image:width" content={imageWidth.toString()} />
+<meta property="og:image:height" content={imageHeight.toString()} />
+<meta property="og:site_name" content={SITE.NAME} />
+<meta property="og:locale" content="en_US" />
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
@@ -56,6 +79,30 @@ const { title, description, image = "/nano.png" } = Astro.props;
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={new URL(image, Astro.url)} />
+<meta name="twitter:creator" content={SITE.NAME} />
+
+<!-- JSON-LD for structured data -->
+<script is:inline type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": article ? "BlogPosting" : "WebPage",
+    "headline": title,
+    "description": description,
+    "image": new URL(image, Astro.url).toString(),
+    "datePublished": datePublished,
+    "author": {
+      "@type": "Person",
+      "name": SITE.NAME,
+      "url": Astro.site?.toString()
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": SITE.NAME,
+      "url": Astro.site?.toString()
+    },
+    "url": Astro.url.toString()
+  }
+</script>
 
 <ClientRouter />
 

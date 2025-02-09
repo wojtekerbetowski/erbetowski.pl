@@ -39,4 +39,16 @@ describe('SEO Files', () => {
     expect(sitemapContent).toContain('<url>');
     expect(sitemapContent).toContain('https://erbetowski.pl');
   });
+  
+  it('has a manifest.json file', () => {
+    const filePath = path.join(process.cwd(), 'dist', 'manifest.json');
+    expect(fs.existsSync(filePath)).toBe(true);
+    
+    const content = fs.readFileSync(filePath, 'utf-8');
+    const manifest = JSON.parse(content);
+    expect(manifest.name).toBe('Wojtek Erbetowski');
+    expect(manifest.short_name).toBe('Erbetowski');
+    expect(manifest.icons).toBeDefined();
+    expect(manifest.icons.length).toBeGreaterThan(0);
+  });
 }); 
