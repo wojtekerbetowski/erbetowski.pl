@@ -1,17 +1,21 @@
 ---
 import Container from "@components/Container.astro";
 import Link from "@components/Link.astro";
+import ThemeSwitcher from "@components/ThemeSwitcher.astro";
 import { SITE } from "@consts";
 ---
 
 <header>
   <Container>
-    <div class="flex flex-wrap gap-y-2 justify-between">
-      <Link href="/" underline={false}>
-        <div class="font-semibold">
-          {SITE.NAME}
-        </div>
-      </Link>
+    <div class="flex flex-wrap gap-y-2 justify-between items-center">
+      <div class="flex items-center gap-4">
+        <Link href="/" underline={false}>
+          <div class="font-semibold">
+            {SITE.NAME}
+          </div>
+        </Link>
+        <ThemeSwitcher class="hidden sm:flex" />
+      </div>
       <nav class="flex gap-1">
         <Link href="/about">
           about
