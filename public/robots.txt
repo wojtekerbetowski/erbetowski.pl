@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://erbetowski.pl/sitemap-index.xml
