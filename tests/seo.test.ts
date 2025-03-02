@@ -42,14 +42,16 @@ describe('SEO Files', () => {
     expect(sitemapContent).toContain('https://erbetowski.pl');
   });
   
-  it('has a sitemap.xml file that redirects to sitemap-index.xml', () => {
+  it('has a sitemap.xml file that references sitemap-index.xml', () => {
     const filePath = path.join(process.cwd(), 'dist', 'sitemap.xml');
     expect(fs.existsSync(filePath)).toBe(true);
     
     const content = fs.readFileSync(filePath, 'utf-8');
-    expect(content).toContain('Redirecting to:');
+    expect(content).toContain('<?xml version="1.0" encoding="UTF-8"?>');
+    expect(content).toContain('<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">');
+    expect(content).toContain('<sitemap>');
+    expect(content).toContain('<loc>');
     expect(content).toContain('sitemap-index.xml');
-    expect(content).toContain('meta http-equiv="refresh"');
   });
   
   it('has a manifest.json file', () => {
