@@ -147,26 +147,26 @@ const imageHeight = 630;
     const lightThemeButton = document.getElementById("light-theme-button");
     lightThemeButton?.addEventListener("click", () => {
       localStorage.setItem(THEME_STORAGE_KEY, THEME.LIGHT);
-      toggleTheme(false);
+      setTheme(THEME.LIGHT);
     });
 
     const darkThemeButton = document.getElementById("dark-theme-button");
     darkThemeButton?.addEventListener("click", () => {
       localStorage.setItem(THEME_STORAGE_KEY, THEME.DARK);
-      toggleTheme(true);
+      setTheme(THEME.DARK);
     });
 
     const systemThemeButton = document.getElementById("system-theme-button");
     systemThemeButton?.addEventListener("click", () => {
       localStorage.setItem(THEME_STORAGE_KEY, THEME.SYSTEM);
-      toggleTheme(window.matchMedia("(prefers-color-scheme: dark)").matches);
+      setTheme(THEME.SYSTEM);
     });
 
     // Listen for system theme changes
     window.matchMedia("(prefers-color-scheme: dark)")
       .addEventListener("change", event => {
         if (localStorage.getItem(THEME_STORAGE_KEY) === THEME.SYSTEM) {
-          toggleTheme(event.matches);
+          setTheme(THEME.SYSTEM);
         }
       });
 
@@ -202,7 +202,7 @@ const imageHeight = 630;
   }
 
   // Theme handling
-  function toggleTheme(dark) {
+  function setTheme(theme) {
     // Prevent transition flicker when changing themes
     const css = document.createElement("style");
     css.appendChild(
@@ -218,8 +218,18 @@ const imageHeight = 630;
     );
     document.head.appendChild(css);
 
+    // Determine if we should use dark mode
+    let isDark = false;
+    
+    if (theme === THEME.DARK) {
+      isDark = true;
+    } else if (theme === THEME.SYSTEM) {
+      isDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    }
+    // THEME.LIGHT will keep isDark as false
+
     // Apply theme
-    if (dark) {
+    if (isDark) {
       document.documentElement.classList.add("dark");
     } else {
       document.documentElement.classList.remove("dark");
@@ -233,10 +243,12 @@ const imageHeight = 630;
   function preloadTheme() {
     const userTheme = localStorage.getItem(THEME_STORAGE_KEY);
 
-    if (userTheme === THEME.LIGHT || userTheme === THEME.DARK) {
-      toggleTheme(userTheme === THEME.DARK);
+    if (userTheme === THEME.LIGHT || userTheme === THEME.DARK || userTheme === THEME.SYSTEM) {
+      setTheme(userTheme);
     } else {
-      toggleTheme(window.matchMedia("(prefers-color-scheme: dark)").matches);
+      // If no theme is set, default to system theme
+      localStorage.setItem(THEME_STORAGE_KEY, THEME.SYSTEM);
+      setTheme(THEME.SYSTEM);
     }
   }
 
