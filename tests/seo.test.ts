@@ -3,13 +3,15 @@ import fs from 'fs';
 import path from 'path';
 
 describe('SEO Files', () => {
-  it('has a robots.txt file', () => {
+  it('has a robots.txt file with sitemap reference', () => {
     const filePath = path.join(process.cwd(), 'dist', 'robots.txt');
     expect(fs.existsSync(filePath)).toBe(true);
     
     const content = fs.readFileSync(filePath, 'utf-8');
     expect(content).toContain('User-agent');
     expect(content).toContain('Allow');
+    expect(content).toContain('Sitemap:');
+    expect(content).toContain('sitemap-index.xml');
   });
 
   it('has an RSS feed', () => {
@@ -23,7 +25,7 @@ describe('SEO Files', () => {
     expect(content).toContain('Wojtek Erbetowski');
   });
 
-  it('has a sitemap', () => {
+  it('has a sitemap-index.xml file', () => {
     const filePath = path.join(process.cwd(), 'dist', 'sitemap-index.xml');
     expect(fs.existsSync(filePath)).toBe(true);
     
@@ -38,6 +40,16 @@ describe('SEO Files', () => {
     expect(sitemapContent).toContain('<urlset');
     expect(sitemapContent).toContain('<url>');
     expect(sitemapContent).toContain('https://erbetowski.pl');
+  });
+  
+  it('has a sitemap.xml file that redirects to sitemap-index.xml', () => {
+    const filePath = path.join(process.cwd(), 'dist', 'sitemap.xml');
+    expect(fs.existsSync(filePath)).toBe(true);
+    
+    const content = fs.readFileSync(filePath, 'utf-8');
+    expect(content).toContain('Redirecting to:');
+    expect(content).toContain('sitemap-index.xml');
+    expect(content).toContain('meta http-equiv="refresh"');
   });
   
   it('has a manifest.json file', () => {
